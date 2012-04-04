@@ -1,36 +1,36 @@
-<% @title = "No satisfecho con la respuesta obtenida?" %>
+﻿<% @title = "No satisfecho con la respuesta obtenida?" %>
 
 <h1>No contento con la respuesta que obtuviste?</h1>
 
 <p>Si ...</p>
 <ul>
-    <li>No obtuviste respuesta en 15 días habiles;</li>
+    <li>No obtuviste respuesta en 20 días habiles;</li>
     <li>No obtuviste todos los datos que pediste; <strong>or</strong></li>
     <li>Tu pedido fue rechazado, pero la razon fundada no es ninguna de las excepciones incluidas en el <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18381#art8">articulo 8 de la Ley 18381</a>.</li>
 </ul>
 
 <p>... tu puedes</p>
 <ol>
-    <li>Hacer una <strong>apelación</strong>, contestandole a la misma institución, diciendoles porque no estas contento con su respuesta.</li>
+    <li>Hacer una <strong>nuevo pedido</strong>, contestandole a la misma institución, diciendoles porque no estas contento con su respuesta.</li>
     <li>Si esto no es de ayuda, puedes presentar un recurso ante la <a href="http://http://informacionpublica.gub.uy/"><strong>Unidad de Acceso</strong></a>.</li>
     <li>También puede contactar a la ONG <a href="http://www.cainfo.org.uy">CAINFO</a>, especializada en procesos de litigio por pedidos de acceso a la información.</li>
 </ol>
 
-<h1 id="internal_review">1. Hacer una apelación</h1>
+<h1 id="internal_review">1. Hacer un pedido de aclaración</h1>
 
 <p>
 <% if !@info_request.nil? %>
     <%= link_to "Pedir una revisión interna", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %> y luego escribe un mensaje pidiendole a la institución que revise tu pedido.
 <% else %>
-    Al pie de la página del pedido <%= site_name %> elije "hacer una apelación” . Luego escribe un mensaje pidiendoles que revisen la decisión de la institución en rechazar el pedido de información.
+    Al pie de la página del pedido <%= site_name %> elije "solicitar una aclaración” y luego escribe un mensaje pidiendoles que revisen la decisión de la institución en rechazar el pedido de información.
 <% end %>
 </p>
 
-<p>En la ley uruguaya no hay realmente espacio para apelaciones por lo que si no te contesta en un plazo prudencial puedes tomar el camino de presentar el recurso ante la Unidad de Acceso.</p>
+<p> Aunque sería muy bueno que las autoridades te contestarán no necesariamente tienen porque contestarte. Si quieres seguir adelante para obtener la información tienes realmente dos caminos: denunciar tu situación frente a la Unidad de Acceso a la Información Pública o realizar una acción judicial </p>
 
 <h1 id="complaining">2. Denuncia ante la Unidad de Acceso</h1>
 
-<p>Si aún no estas satisfecho luego de hacer la apelación ante la institución publica puedes hacer la denuncia ante la Unidad de Acceso. Para hacer esto llena el formulario de contacto en el <a href="http://informacionpublica.gub.uy/sitio/Contactenos.aspx">el sitio web de la Unidad de Acceso</a>.</p>
+<p>Si aún no estas satisfecho luego de hacer la denuncia ante la institución publica puedes hacer la denuncia ante la Unidad de Acceso. Para hacer esto llena el formulario de contacto en el <a href="http://informacionpublica.gub.uy/sitio/Contactenos.aspx">el sitio web de la Unidad de Acceso</a>.</p>
 
 <p>Para que sea más fácil enviar información importante a la Unidad de Acceso, incluye un enlace a tu pedido 
 <% if !@info_request.nil? %>
@@ -42,25 +42,25 @@ en tu queja o imprime toda la página y todos los adjuntos.</p>
 
 <p>Puedes también hacer comentarios sobre el progreso de tu denuncia en el sitio, para mantener a otras personas infromadas.</p>
 
-<p>The European Ombudsman's decisions are not legally binding on the institution, but they are usually taken into account by the EU bodies. Resolving a conflict in this way is also free, easy and fast.</p>
+<p> Aunque aún no se encuentra aún plenamente en funciones el futuro <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18446&Anchor="Instituto Nacional de Derechos Humanos</a> .</p>
 
-<h1 id="court_justice">3. European Court of Justice</h1>
+<h1 id="court_justice">3. Realizar un pedido judicial</h1>
 
-<p>The advantage of appealing in this way is that the Court’s decision is legally binding on an institution. This means that the European Court of Justice can annul a decision refusing public access to documents, thereby obliging the institution holding the documents to review the request for public access.</p>
+<p> La ventaja de recurrir a la vía judicial es que permite la protección integral de tu derecho, y que la decisión de un juez es vinculante para el Estado. En otras palabras, si ganas, la información tiene que ser brindada. Por otra parte, los juzgados de nuestro país han realizado una buena labor en la protección de este derecho. Otra importante ventaja, es que el proceso en Uruguay es relativamente corto, y en primera instancia dura como máximo 6 días hábiles.
 
-<p>However, appeals to the European Court of Justice can take time (around 2 years), and since it requires the assistance of a lawyer registered at the bar in one of the 27 Member States it can also be expensive. Still, it is worth considering because legal challenges contribute to the long term development of the right of access to information and help to create jurisprudence on how the right of access to documents should be implemented in practice.</p>
+Sin embargo para todo esto requieres ayuda de un abogado, el cual deberás contratar. Por otro lado existe una organización especializada, <a href= "www.cainfo.org.uy" el Centro de Archivos y Acceso a la Información Pública </a> que realiza litigios estratégicos y puede recomendarte que acciones tomar.</p>
 
-<h1 id="other_means">4. Think laterally!</h1>
+
+<h1 id="other_means">4. Seamos creativos</h1>
 
 <ul>
-    <li>Make a <strong>new access to information request</strong> for summary information, or for documentation relating indirectly to matters in your refused request. <%= link_to 'Ask us', help_contact_path %> for ideas if you're stuck.</li>
+    <li>Haz <strong>un nuevo pedido de acceso </strong> for s. <%= link_to 'Escribe', help_contact_path %> por ideas que podríamos darte.</li>
 
-    <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
-    then make requests to them.</li>
+    <li>Si <strong>hay otras autoridades involucradas</strong> hazle un pedido a ellas.</li>
     
-    <li>Talk to civil society organisations, journalists or researchers who are interested in a similar issue to yours for ideas.</li>
+    <li>Habla con gente que pueda tener ideas similares o problemas similares.</li>
     
-    <li>Write to <strong>your MEPs</strong> or other politicians and ask for their help in finding the answer.</li>
+    <li>Escribe <strong>a tu diputado</strong>  o a otros líderes políticos.</li>
 </ul>
 
 
