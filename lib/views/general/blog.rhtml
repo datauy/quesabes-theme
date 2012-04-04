@@ -52,7 +52,7 @@
       <div class="blog_post">
           <h2 id="<%= Time.parse(item['pubDate'][0]).to_i %>"><%=h item['title'] %></h2>
           <div><%= item['encoded'] %></div>
-          <p class="subtitle"><%= _("Posted on {{date}} by {{author}}", :date=>simple_date(Time.parse(item['pubDate'][0])), :author=>item['creator']) %></p>
+          <p class="subtitle"><%= _("Publicado en {{date}} por {{author}}", :date=>simple_date(Time.parse(item['pubDate'][0])), :author=>item['creator']) %></p>
           <br/>
           <br/>
       </div>
