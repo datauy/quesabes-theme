@@ -1,46 +1,46 @@
-<% @title = "Unhappy about the response you got?" %>
+<% @title = "No satisfecho con la respuesta obtenida?" %>
 
-<h1>Unhappy about the response you got?</h1>
+<h1>No contento con la respuesta que obtuviste?</h1>
 
-<p>If ...</p>
+<p>Si ...</p>
 <ul>
-    <li>You didn't get a reply within 15 working days;</li>
-    <li>You did not get all of the information that you requested; <strong>or</strong></li>
-    <li>Your request was refused, but with no reasoning based on the exceptions included in Regulation 1049/2001</li>
+    <li>No obtuviste respuesta en 15 días habiles;</li>
+    <li>No obtuviste todos los datos que pediste; <strong>or</strong></li>
+    <li>Tu pedido fue rechazado, pero la razon fundada no es ninguna de las excepciones incluidas en el <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18381#art8">articulo 8 de la Ley 18381</a>.</li>
 </ul>
 
-<p>... you can</p>
+<p>... tu puedes</p>
 <ol>
-    <li>Make an <strong>appeal</strong> (confirmatory application) by replying back to the same EU authority, telling them why you are unsatisfied with their reply.</li>
-    <li>If that doesn't help, complain to the <a href="http://www.ombudsman.europa.eu/start.faces"><strong>European Ombudsman</strong></a>.</li>
-    <li>If you can find a lawyer who has done the bar in an EU country, go to the European Court of Justice, to the General Court.</li>
+    <li>Hacer una <strong>apelación</strong>, contestandole a la misma institución, diciendoles porque no estas contento con su respuesta.</li>
+    <li>Si esto no es de ayuda, puedes presentar un recurso ante la <a href="http://http://informacionpublica.gub.uy/"><strong>Unidad de Acceso</strong></a>.</li>
+    <li>También puede contactar a la ONG <a href="http://www.cainfo.org.uy">CAINFO</a>, especializada en procesos de litigio por pedidos de acceso a la información.</li>
 </ol>
 
-<h1 id="internal_review">1. Make an appeal (confirmatory application)</h1>
+<h1 id="internal_review">1. Hacer una apelación</h1>
 
 <p>
 <% if !@info_request.nil? %>
-    <%= link_to "Request an internal review", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %> and then write a message asking the authority to review your request.
+    <%= link_to "Pedir una revisión interna", show_response_no_followup_url(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup" %> y luego escribe un mensaje pidiendole a la institución que revise tu pedido.
 <% else %>
-    At the bottom of the relevant request page on <%= site_name %> choose "make an appeal” . Then write a message asking for a review of the decision by the EU body not to grant you the information requested. 
+    Al pie de la página del pedido <%= site_name %> elije "hacer una apelación” . Luego escribe un mensaje pidiendoles que revisen la decisión de la institución en rechazar el pedido de información.
 <% end %>
 </p>
 
-<p>Appeals should be processed within 15 working days, and then the EU body should write and let you know the results of the “confirmatory application”, unless they apply another 15 working day extension. You will then either get the information that you originally requested, or you will be told that they are sticking with, or confirming, their original decision.</p>
+<p>En la ley uruguaya no hay realmente espacio para apelaciones por lo que si no te contesta en un plazo prudencial puedes tomar el camino de presentar el recurso ante la Unidad de Acceso.</p>
 
-<h1 id="complaining">2. Complaining to the European Ombudsman</h1>
+<h1 id="complaining">2. Denuncia ante la Unidad de Acceso</h1>
 
-<p>If you are still unhappy after the EU institution, office, body or agency has replied to your appeal (confirmatory application), or in the event that they fail to reply at all, you can then complain to the European Ombudsman. To do this fill in the <a href="http://www.ombudsman.europa.eu/atyourservice/interactiveguide.faces">form on the Ombudsman's website</a>.</p>
+<p>Si aún no estas satisfecho luego de hacer la apelación ante la institución publica puedes hacer la denuncia ante la Unidad de Acceso. Para hacer esto llena el formulario de contacto en el <a href="http://informacionpublica.gub.uy/sitio/Contactenos.aspx">el sitio web de la Unidad de Acceso</a>.</p>
 
-<p>To make it easier to send the relevant information to the European Ombudsman, either include a link to your request
+<p>Para que sea más fácil enviar información importante a la Unidad de Acceso, incluye un enlace a tu pedido 
 <% if !@info_request.nil? %>
     <strong><%=h main_url(request_url(@info_request)) %></strong>
 <% else %>
-    on <%= site_name %>
+    en <%= site_name %>
 <% end %>
-in your complaint or print out the whole page of your request and all attachments.</p>
+en tu queja o imprime toda la página y todos los adjuntos.</p>
 
-<p><%= site_name %> has no special facilities for handling a request at this stage - it passes into the European Ombudsman's system. You can, however, make comments about the progress of your complaint on this site, in order to keep other people informed.</p>
+<p>Puedes también hacer comentarios sobre el progreso de tu denuncia en el sitio, para mantener a otras personas infromadas.</p>
 
 <p>The European Ombudsman's decisions are not legally binding on the institution, but they are usually taken into account by the EU bodies. Resolving a conflict in this way is also free, easy and fast.</p>
 
