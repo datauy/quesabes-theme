@@ -1,5 +1,6 @@
 PublicBodyCategories.add(:es, [
-    "Administración Central",
+    "Poder Ejecutivo",
+        [ "presidencia", "Presidencia y Organismos Asociados", "una Agencia de Presidencia" ],
         [ "ministerio", "Ministerios", "un Ministerio" ],
         [ "secretaria_estado", "Secretarías de Estado", "una Secretaría de Estado"],
         [ "direccion_general", "Direcciones Generales", "una Dirección General"],
@@ -12,7 +13,7 @@ PublicBodyCategories.add(:es, [
         [ "universidad", "Universidades", "una universidad"],
         [ "partido_politico", "Partidos Políticos", "un partido político"],
     "Administración Autonómica",
-        [ "ca", "Gobiernos Autonómicos", "un gobierno autonómico"],
+        [ "universidad", "Gobiernos Autonómicos", "un gobierno autonómico"],
         [ "asamblea_ca", "Asambleas Autonómicas", "una asamblea autonómica"],
         [ "delegacion_gobierno", "Delegaciones del Gobierno", "una delegación del gobierno"],
     "Administración Local",
