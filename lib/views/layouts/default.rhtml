@@ -77,7 +77,9 @@
 <div class="entirebody">
     <div id="banner">
       <div id="banner_inner">
-        <div class="lang"><%= render :partial => 'general/locale_switcher' %></div>
+        <%= render :partial => 'general/topnav' %>
+ 
+        <%= render :partial => 'general/orglink' %>
         
         <% if not (controller.action_name == 'signin' or controller.action_name == 'signup') %>
           <div id="logged_in_bar">
@@ -95,7 +97,7 @@
               <%= link_to _("Sign in or sign up"), signin_url(:r => request.request_uri) %>
           <% end %>
           </div>
-        <% end %>   
+        <% end %>
 
         <div id="navigation_search">
             <% form_tag({:controller => "general", :action => "search_redirect"}, {:id => "navigation_search_form"}) do %>
@@ -103,12 +105,8 @@
                    <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query" } %>
                    <%= image_submit_tag('search-button.png') %>
                </p>
-            <% end %>
+          <% end %>
         </div>
-        
-        <%= render :partial => 'general/orglink' %>
-        
-        <%= render :partial => 'general/topnav' %>
       </div>
     </div>
     <div id="wrapper">
@@ -133,10 +131,9 @@
 </div>
 <div id="other-country-notice"></div>
 <div id="link_box"><span class="close-button">X</span>
-<%= _("Paste this link into emails, tweets, and anywhere else:") %>
-<br />
-<input type="text">
+  <%= _("Paste this link into emails, tweets, and anywhere else:") %>
+  <br />
+  <input type="text">
 </div>
-    </body>
+</body>
 </html>
-

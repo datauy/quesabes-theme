@@ -2,22 +2,23 @@
 
 <div id="frontpage-intro">
     <div id="frontpage-intro-lead">
-        <div class="frontpage-lead-cell"><h2><%= _("Ejerce tu derecho a saber.") %></h2></div>
+        <div class="frontpage-lead-cell"><h2><%= _("¿Querés información sobre un organismo público?") %></h2></div>
         <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">1</p></div>
         <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">2</p></div>
         <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">3</p></div>
         <div style="clear:both"></div>
         
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("Para obtener información de instituciones públicas:") %></p></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("Piensa una pregunta para un organismo público.") %></p></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("Nosotros enviamos la pregunta por ti.") %></p></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("Te avisamos cuando haya una respuesta.") %></p></div>
+        <div class="frontpage-lead-cell"><p class="frontpage-lead-text">
+          <%= link_to _("Hacé click acá para comenzar."), body_index_path %>
+          </p>
+        </div>
+        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("Elegí el organizmo y formulá tu pregunta") %></p></div>
+        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("El sistema le da formato y envia tu consulta") %></p></div>
+        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("La respuesta llega a vos y queda registrada") %></p></div>
         <div style="clear:both"></div>
 
         <div class="frontpage-lead-cell short"></div>
-        <div class="frontpage-lead-cell short">
-            <span id="frontpage-lead-button"><%= link_to _("Preguntar »"), body_index_path %></span>
-        </div>
+        <div class="frontpage-lead-cell short"></div>
         <div class="frontpage-lead-cell short"></div>
         <div class="frontpage-lead-cell short">
             <%= link_to _("¿Contestarán? »"), help_requesting_path(:anchor => 'making_requests') %>
@@ -50,19 +51,6 @@
 
 <div id="frontpage-content">
     <div id="frontpage-inner-content">
-        <div id="frontpage-search-box">
-            <h4><%= _("Haz una búsqueda entre las peticiones ya realizadas:") %></h4>
-
-            <div id="frontpage-search-form">
-              <% form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
-              <div>
-                <%= text_field_tag 'query', params[:query], { :size => 80 } %>
-                <%= submit_tag _('Search') %>
-              </div>
-              <% end %>
-            </div>            
-        </div>
-        
         <div id="frontpage-updates">
             <div id="frontpage-updates-news">
                 <h2><%= _("Novedades") %></h2>
@@ -96,6 +84,18 @@
                       } %>
                 <% end %>
             </div>
+            <div id="frontpage-search-box">
+              <h4><%= _("Buscar un pedido:") %></h4>
+
+             <div id="frontpage-search-form">
+               <% form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
+               <div>
+                 <%= text_field_tag 'query', params[:query], { :size => 80 } %>
+                 <%= submit_tag _('Search') %>
+              </div>
+              <% end %>
+            </div>
+        </div>
 
             <div style="clear:both"></div>
         </div>
