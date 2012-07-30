@@ -1,5 +1,5 @@
 PublicBodyCategories.add(:es, [
-  Poder Ejecutivo",
+ "Poder Ejecutivo",
     ["presidencia","Presidencia y organismos asociados", "una agencia de presidencia"],
     ["Agencias", "Presidencia y organismos asociados", "una agencia de presidencia"],
     ["Unidades","Presidencia y organismos asociados" "una unidad de presidencia"],
