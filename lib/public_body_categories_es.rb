@@ -34,7 +34,7 @@ PublicBodyCategories.add(:es, [
 ["UTE","un entes autonomos", "una administracion nacional usinas y telecomunicaciones electricas"],
 ["ANCAP","un entes autonomos", "una administracion nacional de alcohol, combustible y portland"],
 ["BHU", "un entes autonomos", "un banco hipotecario del Uruguay"],
-["ANEP",,"un entes autonomos", "una administraciona nacional de educacion publica"],
+["ANEP","un entes autonomos", "una administraciona nacional de educacion publica"],
 ["CODICEN", "un entes autonomos", "Un consejo de educacion central"],
 ["Consejo de Ed. Primaria", "un entes autonomos","un consejo de educacion primaria"],
 ["Consejo de Ed. Secundaria", "un entes autonomos", "un consejo de educacion secundaria"],
