@@ -66,15 +66,21 @@ body {
 
 /** HEADER **/ 
 #banner {
-    background: #ECECEC;
+    background: transparent;
     border: none;
-    height: 120px;
+    height: 160px;
     position: relative;
 }
-
+#banner_back{
+    height: 80px;
+    position:relative;
+    top: 25%;
+    background: #D8D8D8;
+}
 #banner_inner {
     width: 960px;
-    height: 120px;
+    height: 108px;
+    top: -14px;
 }
     #banner_inner a:hover {
         text-decoration: underline; 
@@ -100,44 +106,30 @@ div.lang {
         text-decoration: none;
     }
 
-#logged_in_bar {
-    font-weight: bold;
-    font-size: 12px;
-    padding: 3px 8px 1px 8px;
-    height: 19px;
-    background: #b0b0b0;
-    border-radius: 5px;
-    float: right;
-}
-    #logged_in_bar, #logged_in_bar a, #logged_in_bar a:visited {
-        color: #FFF;
-        text-decoration: none;
-    }
-    #logged_in_bar a {
-        margin-left: 5px;
-        margin-right: 4px;
-    }
-
-
-/** NAVIGATION BAR **/ 
-#topnav {
+/** NAVIGATION MENU **/ 
+.menu_nav {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     float: left;
-    margin-left: 0px;
-    top: 90px;
+    left: 0;
+    position: relative;
+    top: 50%;
 }
-    #topnav ul li {
-        padding: 6px 8px 5px 8px;
-        margin-right: 8px;
+    .menu_nav ul {
+        display: inline;
+    }
+    .menu_nav ul li {
+	display: inline;
+        padding: 6px 8px 5px;
 
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
-    #topnav ul li a {
-        color: #E94E00 !important;
+    .menu_nav ul li a {
+        color: #08088A !important;
     }
+
 
 
 /** MAIN SITE **/
