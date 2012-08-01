@@ -1,4 +1,4 @@
-<div id="topnav">
+<div id="topnav" class="topnav_left">
     <ul id="navigation">
         <li class="<%= 'selected' if params[:controller] == 'help' and params[:action] == 'requesting'%>"><%= link_to _("¿Como funciona?"), help_requesting_path %></li>
         <li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>"><%= link_to _("Hacer un pedido"), body_index_path, :class => 'make-request-link' %></li>
