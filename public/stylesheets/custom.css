@@ -254,28 +254,41 @@ h3, h3 a {
         padding-left: 30px;
         padding-right: 10px;
     }
+    .frontpage-lead-cell {
+	color: white;
+}
+    .first-cell {
+	margin-top: 25px;	
+}
     .frontpage-lead-cell.short {
         height: 60px;
         margin-top: -30px;
     }
     #frontpage-intro-lead h2 {
-        color: #E84E00;
+        color: white;
         font-size: 22px;
         font-weight: 600;
         margin-top: 35px;
     }
     .frontpage-lead-enum {
-        color: #3C3C3B;
-        font-size: 118px;
-        font-weight: 700;
-        margin-top: -5px;
+        color: white;
+        font-size: 50px;
+        font-weight: 500;
+        margin-top: 25px;
+	margin-left: 45px;
     }
     .frontpage-lead-text {
-        color: #3C3C3B;
+        color: white;
         font-size: 15px;
         font-weight: 600;
         margin: 0px;
     }
+    .frontpage-lead-text a {
+        color: white;
+    }
+	.frontpage-lead-text a:hover {
+		color: yellow;
+}
     #frontpage-lead-button a {
         color: #FFFFFF;
         font-size: 16px;

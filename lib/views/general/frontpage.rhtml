@@ -8,7 +8,7 @@
         <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">3</p></div>
         <div style="clear:both"></div>
         
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text">
+        <div class="frontpage-lead-cell first-cell"><p class="frontpage-lead-text">
           <%= link_to _("Hacé click acá para comenzar."), body_index_path %>
           </p>
         </div>
@@ -20,16 +20,17 @@
         <div class="frontpage-lead-cell short"></div>
         <div class="frontpage-lead-cell short"></div>
         <div class="frontpage-lead-cell short"></div>
-        <div class="frontpage-lead-cell short">
+<!--        <div class="frontpage-lead-cell short">
             <%= link_to _("¿Contestarán? »"), help_requesting_path(:anchor => 'making_requests') %>
-        </div>
+        </div>-->
     </div>
 
     <div id="frontpage-intro-sidebar">
-        <div id="frontpage-lead-ad">
+	 <%= link_to image_tag("/quesabes-theme/images/periodista.png"), help_requesting_path(:anchor => 'making_requests') %>
+<!--        <div id="frontpage-lead-ad">
             <h4>Ley de Derecho a Acceso a la Información Pública</h4>
             <p>En Noviembre del 2008 el gobierno sancióno <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18381">la Ley Nro 18381</a> que garantizará el derecho fundamental de las personas al acceso a la información pública en Uruguay.</p>
-        </div>
+        </div> -->
 
 <!-- NOTICIA DESTACADA       <div id="frontpage-lead-ad">
             <h4>¡Nos vemos el lunes!</h4>
