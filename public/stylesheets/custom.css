@@ -75,7 +75,7 @@ body {
     height: 80px;
     position:relative;
     top: 25%;
-    background: #D8D8D8;
+    background: #848484;
 }
 #banner_inner {
     width: 960px;
@@ -363,13 +363,13 @@ h3, h3 a {
     position: relative;
     padding-bottom: 20px;
 }
-/*
+
 #frontpage-search-rss {
-    background: #848484,
+    background: #D8D8D8,
     height: 120px;
     position: relative;
-    display: inline;
-}*/
+    width: 960px;
+}
 #frontpage-search-box {
     background-color: #08088A;
     float: left;
@@ -414,8 +414,7 @@ h3, h3 a {
 
 #rss_subscribe {
     float:left;
-    margin: 20px 12px 30px;
-    padding: 12px 18px;
+    margin: 25px 0px 25px 20px;
 }
 #frontpage-updates h2 {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
@@ -437,8 +436,7 @@ h3, h3 a {
 }
 #frontpage-updates-news {
     width: 575px;
-    padding: 0px 25px 10px 0px;
-    margin: 10px 20px 20px 20px;    
+    margin: 10px 45px 20px 20px;
 }
 .frontpage-blog-post {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
@@ -448,10 +446,12 @@ h3, h3 a {
     #frontpage-updates-news .left {
         padding-right: 12px;
         float: left;
+	width: 275px;
     }
     #frontpage-updates-news .right {
         padding-left: 12px;
         float: right;
+	width: 275px;
     }
     .frontpage-blog-post h4 {
         font-weight: 700;
@@ -906,13 +906,14 @@ TODO: Need to add states for
 #footer {
     height: 240px;
     margin: 0px;
-    border-top: 1px solid #C6C6C5;
     background-color: transparent;
     padding-top: 10px;
 }
 #footer-sub {
-    background-color: #848484;
+    background-color: #D8D8D8;
+    position:relative;
 }
+#footer-sub-inner,
 #footer-inner {
     width: 960px;
     margin: auto;
