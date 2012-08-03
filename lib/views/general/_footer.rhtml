@@ -39,12 +39,17 @@
                     <img src="/quesabes-theme/images/cainfo_logo.png" alt="Cainfo logo">
                   </a>
             </p>
-            <h4 class="shy"><%= _("Con la ayuda de") %></h4>
+          <!--  <h4 class="shy"><%= _("Con la ayuda de") %></h4> -->
            <!-- <a class="footer-logo" href="">
                 <img src="/quesabes-theme/images/sponsors/goteo_wide.png" alt="Goteo logo">
               </a> -->
         </div>
 
         <div style="clear:both"></div>
+    </div>
+    <div id="footer-sub">
+	<%= link_to image_tag("/quesabes-theme/images/cc_by_sa.png"), help_requesting_path(:anchor => 'making_requests') %>
+	<%= link_to _("Condiciones de uso"), help_requesting_path(:anchor => 'making_requests') %>
+	<%= link_to _("Política de privacidad"), help_requesting_path(:anchor => 'making_requests') %>
     </div>
 </div>
