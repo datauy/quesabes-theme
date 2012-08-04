@@ -66,15 +66,21 @@ body {
 
 /** HEADER **/ 
 #banner {
-    background: #ECECEC;
+    background: transparent;
     border: none;
-    height: 120px;
+    height: 160px;
     position: relative;
 }
-
+#banner_back{
+    height: 80px;
+    position:relative;
+    top: 25%;
+    background: #848484;
+}
 #banner_inner {
     width: 960px;
-    height: 120px;
+    height: 108px;
+    top: -14px;
 }
     #banner_inner a:hover {
         text-decoration: underline; 
@@ -100,45 +106,37 @@ div.lang {
         text-decoration: none;
     }
 
-#logged_in_bar {
-    font-weight: bold;
-    font-size: 12px;
-    padding: 3px 8px 1px 8px;
-    height: 19px;
-    background: #b0b0b0;
-    border-radius: 5px;
-    float: right;
-}
-    #logged_in_bar, #logged_in_bar a, #logged_in_bar a:visited {
-        color: #FFF;
-        text-decoration: none;
-    }
-    #logged_in_bar a {
-        margin-left: 5px;
-        margin-right: 4px;
-    }
-
-
-/** NAVIGATION BAR **/ 
-#topnav {
+/** NAVIGATION MENU **/ 
+.menu_nav {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     float: left;
-    margin-left: 0px;
-    top: 90px;
+    position: relative;
+    top: 50%;
 }
-    #topnav ul li {
-        padding: 6px 8px 5px 8px;
-        margin-right: 8px;
+    .menu_nav ul {
+        display: inline;
+	padding: 0px;
+    }
+    .menu_nav ul li {
+	display: inline;
+        padding: 6px 8px 5px;
 
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
-    #topnav ul li a {
-        color: #E94E00 !important;
+    .menu_nav ul li a {
+        color: #08088A !important;
     }
-
+#top_nav {
+    margin-left: 0px;
+    margin-right: 15px;
+}
+#usernav {
+    margin-left: 15px;
+    margin-right: 0px;
+}
 
 /** MAIN SITE **/
 h1, h1 a {
@@ -152,7 +150,7 @@ h1, h1 a {
 
 h2, h2 a {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
-    color: #F05A29;
+    color: #08088A;
     font-size: 18px;
     font-weight: 700;
 }
@@ -262,28 +260,41 @@ h3, h3 a {
         padding-left: 30px;
         padding-right: 10px;
     }
+    .frontpage-lead-cell {
+	color: white;
+}
+    .first-cell {
+	margin-top: 25px;	
+}
     .frontpage-lead-cell.short {
         height: 60px;
         margin-top: -30px;
     }
     #frontpage-intro-lead h2 {
-        color: #E84E00;
+        color: white;
         font-size: 22px;
         font-weight: 600;
         margin-top: 35px;
     }
     .frontpage-lead-enum {
-        color: #3C3C3B;
-        font-size: 118px;
-        font-weight: 700;
-        margin-top: -5px;
+        color: white;
+        font-size: 50px;
+        font-weight: 500;
+        margin-top: 25px;
+	margin-left: 45px;
     }
     .frontpage-lead-text {
-        color: #3C3C3B;
+        color: white;
         font-size: 15px;
         font-weight: 600;
         margin: 0px;
     }
+    .frontpage-lead-text a {
+        color: white;
+    }
+	.frontpage-lead-text a:hover {
+		color: yellow;
+}
     #frontpage-lead-button a {
         color: #FFFFFF;
         font-size: 16px;
@@ -343,7 +354,7 @@ h3, h3 a {
     }
 
 #frontpage-content {
-    background-color: #F5F5F5;
+    background-color: transparent;
 }
 
 #frontpage-inner-content {
@@ -353,55 +364,64 @@ h3, h3 a {
     padding-bottom: 20px;
 }
 
+#frontpage-search-rss {
+    background: #D8D8D8,
+    height: 120px;
+    position: relative;
+    width: 960px;
+}
 #frontpage-search-box {
-    background-color: #D9D9D9;
+    background-color: #08088A;
     float: left;
-    margin: 20px 12px 20px 12px;
-    padding: 12px 18px;
-    border-radius: 5px;
-    width: 900px;
+    padding: 22px 18px 18px 18px;
+    margin: 25px 45px 25px 20px;
 }
     #frontpage-search-box h4 {
       font-family: 'Open Sans', 'Helvetica Neue', Arial;
-      font-weight: 600;
-      font-size: 18px;
-      color: #3C3C3B;
+      font-weight: 800;
+      font-size: 20px;
+      color: white;
       line-height: 1.1;
       
-      width: 260px;
       float: left;
-      margin: 10px 0px 10px 30px;
+      margin: 5px 4px 0px 0px;
+      vertical-align: middle;
     }
     
 #frontpage-search-form {
     float: left;
-    margin: 10px;
 }
     #frontpage-search-form #search_form {
-        margin-bottom: 10px;
+        margin: 0 0 0 0;
     }
   
     #frontpage-search-form #query {
-        height: 24px;
-        width: 430px;
-        font-size: 18px;
+        height: 20px;
+        width: 300px;
+        font-size: 12px;
+	border-radius: 0px;
+	border: none;
+	vertical-align: top;
     }
     
     #frontpage-search-form input[type="submit"] {
-        background: url("/quesabes-theme/images/button-gradient.png") repeat scroll 0 0 transparent;
-        height: 34px;
-        width: 100px;
-        font-size: 16px;
-        border-radius: 6px;
+        background: url("/quesabes-theme/images/search_button.png");
+        height: 30px;
+        width: 30px;
+        font-size: 0px;
+	border-radius: 0px;
     }
 
+#rss_subscribe {
+    float:left;
+    margin: 25px 0px 25px 20px;
+}
 #frontpage-updates h2 {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
     font-weight: 700;
     font-size: 22px;
-    color: #3C3C3B;
+    color: #08088A;
     
-    border-bottom: 1px solid #D9D9D9;
     padding-bottom: 12px;
 }
 
@@ -409,17 +429,15 @@ h3, h3 a {
 #frontpage-updates-requests {
     background-color: #FFFFFF;
     float: left;
-    margin: 20px 12px 30px 12px;
-    padding: 12px 18px;
-
-    border-radius: 5px;
-    border-bottom: 2px solid #C6C6C5;
 }
-
+#frontpage-updates-requests {
+    border-bottom: 1px solid #D9D9D9;
+    margin: 20px;
+}
 #frontpage-updates-news {
-    width: 580px;
+    width: 575px;
+    margin: 10px 45px 20px 20px;
 }
-
 .frontpage-blog-post {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
     width: 278px;
@@ -428,10 +446,12 @@ h3, h3 a {
     #frontpage-updates-news .left {
         padding-right: 12px;
         float: left;
+	width: 275px;
     }
     #frontpage-updates-news .right {
         padding-left: 12px;
         float: right;
+	width: 275px;
     }
     .frontpage-blog-post h4 {
         font-weight: 700;
@@ -561,7 +581,7 @@ a,
 .request_listing a, 
 .body_listing a, 
 .user_listing a {
-    color: #E94E00;
+    color: #08088A;
     text-decoration: none !important;
 }
     a:hover,
@@ -886,11 +906,14 @@ TODO: Need to add states for
 #footer {
     height: 240px;
     margin: 0px;
-    border-top: 1px solid #C6C6C5;
-    background-color: #ECECEC;
+    background-color: transparent;
     padding-top: 10px;
 }
-
+#footer-sub {
+    background-color: #D8D8D8;
+    position:relative;
+}
+#footer-sub-inner,
 #footer-inner {
     width: 960px;
     margin: auto;

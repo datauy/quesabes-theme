@@ -1,0 +1,11 @@
+<div id="usernav" class="menu_nav">
+  <ul>
+  <% if @user %>
+    	<li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>"><%=link_to _("My requests"), show_user_requests_path(:url_name => @user.url_name) %></li>
+    	<li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>"><%=link_to _("My profile"), show_user_profile_path(:url_name => @user.url_name) %></li>
+    	<li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>"><%= link_to _("Sign out"), signout_url(:r => request.request_uri) %></li>
+  <% else %>
+	<li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>"><%= link_to _("Sign in or sign up"), signin_url(:r => request.request_uri) %>
+<% end %>
+</ul>
+</div>

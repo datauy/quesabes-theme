@@ -71,18 +71,20 @@
 %>
 
 <div class="ribbon">
-  <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %>
+<!--  <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %> -->
 </div>
 
 <div class="entirebody">
     <div id="banner">
+      <div id="banner_back">
       <div id="banner_inner">
         <%= render :partial => 'general/topnav' %>
  
         <%= render :partial => 'general/orglink' %>
         
         <% if not (controller.action_name == 'signin' or controller.action_name == 'signup') %>
-          <div id="logged_in_bar">
+		<%= render :partial => 'general/usernav' %>
+        <!--  <div id="logged_in_bar">
           <% if @user %>
               <%= _('Hello, {{username}}!', :username => h(@user.name))%>
 
@@ -96,17 +98,18 @@
           <% else %>
               <%= link_to _("Sign in or sign up"), signin_url(:r => request.request_uri) %>
           <% end %>
-          </div>
+          </div>-->
         <% end %>
 
-        <div id="navigation_search">
+<!--        <div id="navigation_search">
             <% form_tag({:controller => "general", :action => "search_redirect"}, {:id => "navigation_search_form"}) do %>
                <p>
                    <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query" } %>
                    <%= image_submit_tag('search-button.png') %>
                </p>
           <% end %>
-        </div>
+        </div>-->
+      </div>
       </div>
     </div>
     <div id="wrapper">
