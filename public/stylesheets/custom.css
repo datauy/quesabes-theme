@@ -1,6 +1,4 @@
-/* @override http://www.quesabes.org/quesabes-theme/stylesheets/custom.css?1343959878 */
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,700);
+@import url(./fonts.css);
 
 /** LAYOUT **/
 body {
