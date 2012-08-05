@@ -1,3 +1,5 @@
+/* @override http://www.quesabes.org/quesabes-theme/stylesheets/custom.css?1343959878 */
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600,700);
 
 /** LAYOUT **/
@@ -149,7 +151,7 @@ h1, h1 a {
 }
 
 h2, h2 a {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial;
+    font-family: RamblaOscura, "Helvetica Neue", Arial;
     color: #08088A;
     font-size: 18px;
     font-weight: 700;
@@ -985,6 +987,3 @@ TODO: Need to add states for
   /* shadow */
   text-shadow: 0 0 0.5em #444;
 }
-
-
-
