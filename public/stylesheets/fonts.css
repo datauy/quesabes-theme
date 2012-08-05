@@ -73,3 +73,44 @@
 
 }
 
+@font-face {
+    font-family: 'RamblaLibroLibro';
+    src: url('./fonts/rambla-libro-webfont.eot');
+    src: url('./fonts/rambla-libro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/rambla-libro-webfont.woff') format('woff'),
+         url('./fonts/rambla-libro-webfont.ttf') format('truetype'),
+         url('./fonts/rambla-libro-webfont.svg#RamblaLibroLibro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'RamblaOscura';
+    src: url('./fonts/rambla-oscura-webfont.eot');
+    src: url('./fonts/rambla-oscura-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/rambla-oscura-webfont.woff') format('woff'),
+         url('./fonts/rambla-oscura-webfont.ttf') format('truetype'),
+         url('./fonts/rambla-oscura-webfont.svg#RamblaOscura') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'RamblaRegular';
+    src: url('./fonts/rambla-regular-webfont.eot');
+    src: url('./fonts/rambla-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/rambla-regular-webfont.woff') format('woff'),
+         url('./fonts/rambla-regular-webfont.ttf') format('truetype'),
+         url('./fonts/rambla-regular-webfont.svg#RamblaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
