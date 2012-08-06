@@ -1,4 +1,4 @@
-/* @override http://www.quesabes.org/quesabes-theme/stylesheets/custom.css?1343959878 */
+/* @override http://www.quesabes.org/quesabes-theme/stylesheets/custom.css?1344214358 */
 
 @import url(./fonts.css);
 
@@ -289,9 +289,10 @@ h3, h3 a {
 }
     .frontpage-lead-text a {
         color: white;
-    }
+	font-family: RamblaLibroLibro;
+}
 	.frontpage-lead-text a:hover {
-		color: yellow;
+		color: #3399CC;
 }
     #frontpage-lead-button a {
         color: #FFFFFF;
