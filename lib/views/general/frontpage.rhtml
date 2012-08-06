@@ -26,7 +26,16 @@
     </div>
 
     <div id="frontpage-intro-sidebar">
-	 <%= link_to image_tag("/quesabes-theme/images/periodista.png"), help_requesting_path(:anchor => 'making_requests') %>
+	 <div id="fb-root"></div>
+		<script>(function(d, s, id) {
+ 	 var js, fjs = d.getElementsByTagName(s)[0];
+  	if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=272455316105552";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="fb-like-box" data-href="https://www.facebook.com/pages/Qu&#xe9;-Sab&#xe9;s/127727360700703" data-width="260" data-height="240" data-show-faces="true" data-stream="false" data-header="false"></div>
 <!--        <div id="frontpage-lead-ad">
             <h4>Ley de Derecho a Acceso a la Información Pública</h4>
             <p>En Noviembre del 2008 el gobierno sancióno <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18381">la Ley Nro 18381</a> que garantizará el derecho fundamental de las personas al acceso a la información pública en Uruguay.</p>
@@ -44,18 +53,6 @@
 <span>
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.quesabes.org" data-lang="es">Twittear</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=272455316105552";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="fb-like-box" data-href="https://www.facebook.com/pages/Qu&#xe9;-Sab&#xe9;s/127727360700703" data-width="260" data-height="240" data-show-faces="true" data-stream="false" data-header="false"></div>
-
 </span>
         </div>
     </div>
@@ -74,7 +71,11 @@
                     position = position + 1; %>
                     
                   <div class="frontpage-blog-post <%= position.even? ? 'right' : 'left' %>" <%= position == 3 ? '' 'style="clear:left"' : '' %> >
-                    <img src="/quesabes-theme/images/posts/<%= item['title'].to_s.gsub(/[^A-Za-z]/,'').downcase %>.jpg" width="278" height="128"/>
+                    <% if item.has_key?('thumbnail') %>
+                    	<img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
+                  	<% else %>
+                    	<img src="/quesabes-theme/images/posts/novedades.png" width="278" height="128"/>
+                    <%end %>
                     <h4>
                       <a href='<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>'><%= h item['title'] %></a>
                     </h4>
