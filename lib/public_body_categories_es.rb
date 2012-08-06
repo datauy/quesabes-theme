@@ -21,11 +21,11 @@ PublicBodyCategories.add(:es, [
 ["Juzgados", "juzgados", "un juzgado del poder judicial"],
 "Corte Electoral",
 ["Corte Electoral" "Corte electoral" "una corte electoral"],
-"Tribunal de lo Contencioso Administrativo"
+"Tribunal de lo Contencioso Administrativo",
 ["Tribunal de los Contencioso Administrativo", "tribunal", "un tribunal"],
 "Tribunal de Cuentas",
 ["Tribunal de Cuentas", "un tribunal", "un tribunal de cuentas"],
-"Personas Publicas no Estatales"
+"Personas Publicas no Estatales",
 ["Personas Publicas No Estatales", "persona publica no estatal" "una persona publica no estatal"],
 ["Congreso de Intendentes","un congreso", "un congreso de intendentes"],
 ["Entes Autonomos"],
