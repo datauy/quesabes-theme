@@ -280,17 +280,15 @@ h3, h3 a {
     }
     .frontpage-lead-enum {
         color: white;
-        font-size: 50px;
-        font-weight: 500;
         margin-top: 25px;
 	margin-left: 45px;
-    }
+	font: 500 50px Rambla;
+}
     .frontpage-lead-text {
         color: white;
-        font-size: 15px;
-        font-weight: 600;
         margin: 0px;
-    }
+	font: 15px RamblaLibroLibro;
+}
     .frontpage-lead-text a {
         color: white;
     }
