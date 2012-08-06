@@ -1,4 +1,4 @@
-/* @override http://www.quesabes.org/quesabes-theme/stylesheets/custom.css?1344214358 */
+/* @override http://www.quesabes.org/quesabes-theme/stylesheets/custom.css?1344215510 */
 
 @import url(./fonts.css);
 
@@ -278,18 +278,21 @@ h3, h3 a {
     }
     .frontpage-lead-enum {
         color: white;
-        margin-top: 25px;
-	margin-left: 45px;
+        margin-top: 33px;
+	margin-left: 48px;
 	font: 500 50px Rambla;
 }
     .frontpage-lead-text {
         color: white;
-        margin: 0px;
-	font: 15px RamblaLibroLibro;
+	font: 18px RamblaLibroLibro;
+	margin-left: 10px;
 }
     .frontpage-lead-text a {
         color: white;
-	font-family: RamblaLibroLibro;
+	float: left;
+	margin-top: 9px;
+	margin-left: -11px;
+	font: 16px RamblaLibroLibro;
 }
 	.frontpage-lead-text a:hover {
 		color: #3399CC;
