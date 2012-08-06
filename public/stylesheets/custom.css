@@ -151,10 +151,8 @@ h1, h1 a {
 }
 
 h2, h2 a {
-    font-family: RamblaOscura, Rambla;
     color: #08088A;
-    font-size: 18px;
-    font-weight: 700;
+	font: 18px RamblaOscura;
 }
 
 h3, h3 a {
@@ -377,16 +375,13 @@ h3, h3 a {
     margin: 25px 45px 25px 20px;
 }
     #frontpage-search-box h4 {
-      font-family: 'Open Sans', 'Helvetica Neue', Arial;
-      font-weight: 800;
-      font-size: 20px;
       color: white;
-      line-height: 1.1;
       
       float: left;
       margin: 5px 4px 0px 0px;
       vertical-align: middle;
-    }
+	font: 800 20px/1.1 RamblaOscura;
+}
     
 #frontpage-search-form {
     float: left;
@@ -417,12 +412,10 @@ h3, h3 a {
     margin: 25px 0px 25px 20px;
 }
 #frontpage-updates h2 {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial;
-    font-weight: 700;
-    font-size: 22px;
     color: #08088A;
     
     padding-bottom: 12px;
+	font: 700 22px RamblaOscura;
 }
 
 #frontpage-updates-news,
@@ -931,10 +924,9 @@ TODO: Need to add states for
     }
     .footer-column h4 {
         margin-bottom: 0px;
-        font-family: 'Open Sans', 'Helvetica Neue', Arial;
-        font-size: 15px;
         color: #444;
-    }
+	font: 15px RamblaOscura;
+}
     .footer-column h4.shy {
         color: #555;
         font-weight: 200;
