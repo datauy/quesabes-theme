@@ -1,3 +1,5 @@
+/* @override http://www.quesabes.org/quesabes-theme/stylesheets/custom.css?1343959878 */
+
 @import url(./fonts.css);
 
 /** LAYOUT **/
@@ -149,7 +151,7 @@ h1, h1 a {
 }
 
 h2, h2 a {
-    font-family: RamblaOscura, "Helvetica Neue", Arial;
+    font-family: "Courier New", Courier, mono;
     color: #08088A;
     font-size: 18px;
     font-weight: 700;
