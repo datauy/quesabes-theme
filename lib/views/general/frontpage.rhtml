@@ -82,11 +82,9 @@
                     <p><a href="<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>"><%= _("Leer más »") %></a></p>
                   </div>
                 <% end %>
-
+                <div id="more-news"><a href="<%= blog_url %>"><%= _("Más novedades...") %></a></div>
                 <div style="clear:both"></div>
-                <!-- <div class="link-arrow"><a href="<%= blog_url %>"><%= _("Más novedades »") %></a></div> -->
             </div>
-            
             <div id="frontpage-updates-requests">
                 <h2><%= _("Peticiones destacadas") %></h2>
                 <% @featured_requests.each do |featured_request| %>
@@ -98,6 +96,7 @@
                       } %>
                 <% end %>
             </div>
+          </div>
 	  <div id="frontpage-search-rss">
             <div id="frontpage-search-box">
               <h4><%= _("Buscar un pedido:") %></h4>
@@ -114,7 +113,6 @@
 	    <div id="rss_subscribe">
 		<%= link_to image_tag("/quesabes-theme/images/rss_subscribe.png"), help_requesting_path(:anchor => 'making_requests') %>
 	    </div>
-	  </div>
         </div>
     </div>
 </div>

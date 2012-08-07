@@ -370,10 +370,10 @@ h3, h3 a {
 }
 
 #frontpage-search-rss {
-    background: #D8D8D8,
-    height: 120px;
-    position: relative;
+    background-color: #D8D8D8,
     width: 960px;
+    margin: auto;
+    position: relative;
 }
 #frontpage-search-box {
     background-color: #004590;
@@ -431,7 +431,6 @@ h3, h3 a {
     float: left;
 }
 #frontpage-updates-requests {
-    border-bottom: 1px solid #D9D9D9;
     margin: 20px;
 }
 #frontpage-updates-news {
@@ -465,6 +464,15 @@ h3, h3 a {
         color: #6F6F6E;
     }
 
+#more-news {
+    color: #004590;
+    font: 700 15px RamblaOscura;
+    float: left;
+    width: 575px;
+    border-top: 1px solid #D9D9D9;
+    margin: 20px 45px 0px 0px;
+    padding-top: 15px;
+}
 #frontpage-updates-requests {
     width: 260px;
     line-height: 1.1;
@@ -920,11 +928,13 @@ TODO: Need to add states for
     position: relative;
 	text-align: left;
 }
-
+#footer-sub-inner {
+    padding-left: 40px;
+}
 .footer-column {
     width: 290px;
     float: left;
-    padding-left: 30px;
+    padding-left: 20px;
     text-align: left;
 }
     .footer-column.wide {
