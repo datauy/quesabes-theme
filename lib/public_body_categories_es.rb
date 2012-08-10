@@ -90,5 +90,4 @@ PublicBodyCategories.add(:es, [
 ["junta_soriano","Junta de Soriano", "una Junta Departamental"],
 ["junta_treintaytres","Junta de Treinta y Tres", "una Junta Departamental"],
 "Alcaldia",
-"Junta Local Autonoma"
-
+"Junta Local Autonoma"])
