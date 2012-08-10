@@ -88,6 +88,4 @@ PublicBodyCategories.add(:es, [
 ["junta_rivera","Junta de Rivera", "una Junta Departamental"],
 ["junta_tacuarembo","Junta de Tacuarembo", "una Junta Departamental"],
 ["junta_soriano","Junta de Soriano", "una Junta Departamental"],
-["junta_treintaytres","Junta de Treinta y Tres", "una Junta Departamental"],
-"Alcaldia",
-"Junta Local Autonoma"])
+["junta_treintaytres","Junta de Treinta y Tres", "una Junta Departamental"]])
