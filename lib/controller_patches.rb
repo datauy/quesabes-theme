@@ -5,10 +5,10 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 require 'dispatcher'
-Dispatcher.to_prepare do    
+Dispatcher.to_prepare do
     # Front page needs some additional info
     GeneralController.class_eval do
-        # Make sure it doesn't break if blog is not available 
+        # Make sure it doesn't break if blog is not available
         def frontpage
             begin
                 blog
@@ -16,7 +16,7 @@ Dispatcher.to_prepare do
                 @blog_items = []
                 @twitter_user = MySociety::Config.get('TWITTER_USERNAME', '')
             end
-            
+
             begin
                 @featured_requests = MySociety::Config.get("FRONTPAGE_FEATURED_REQUESTS", []).map{|i| InfoRequest.find(i)}
             rescue

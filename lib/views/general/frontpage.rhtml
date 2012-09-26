@@ -7,9 +7,9 @@
         <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">2</p></div>
         <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">3</p></div>
         <div style="clear:both"></div>
-        
+
         <div class="frontpage-lead-cell first-cell"><p class="frontpage-lead-text">
-          <%= link_to _("Hacé click acá para comenzar."), body_index_path %>
+          <%= link_to _("Hacé click acá para comenzar."), list_public_bodies_default_path %>
           </p>
         </div>
         <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("Elegí el organismo y formulá tu pregunta") %></p></div>
@@ -64,12 +64,12 @@
         <div id="frontpage-updates">
             <div id="frontpage-updates-news">
                 <h2><%= _("Novedades") %></h2>
-                
+
                 <%
                   position = 0;
-                  for item in @blog_items[0..3]: 
+                  for item in @blog_items[0..3]:
                     position = position + 1; %>
-                    
+
                   <div class="frontpage-blog-post <%= position.even? ? 'right' : 'left' %>" <%= position == 3 ? '' 'style="clear:left"' : '' %> >
                     <% if item.has_key?('thumbnail') %>
                     	<img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
@@ -88,8 +88,8 @@
             <div id="frontpage-updates-requests">
                 <h2><%= _("Peticiones destacadas") %></h2>
                 <% @featured_requests.each do |featured_request| %>
-                <%= render :partial => 'track/tracking_request_links', 
-                      :locals => { 
+                <%= render :partial => 'track/tracking_request_links',
+                      :locals => {
                         :track_thing => TrackThing.create_track_for_request(featured_request),
                         :own_request => featured_request.user == @user,
                         :location => "frontpage"

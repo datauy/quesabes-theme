@@ -3,10 +3,11 @@
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip">
+
   <h1><%=@title %></h1>
 
     <h2>Introducción</h2>
-      <p>El proyecto quesabes.org.uy funciona de acuerdo con los principios de los datos abiertos, disponibles para los programadores que quieran utilizarlos en otros sitios web y software.</p> 
+      <p>El proyecto quesabes.org.uy funciona de acuerdo con los principios de los datos abiertos, disponibles para los programadores que quieran utilizarlos en otros sitios web y software.</p>
       <p>quesabes.org.uy todavía no tiene un API completo pero vamos gradualmente añadiendo una gran cantidad de cosas que semejan en el uso a un API, según requieren los programadores.</p>
 
     <h2>Enlaces a nuevas solicitudes</h2>
@@ -43,7 +44,7 @@
       </p>
 
       <p>Solicitudes, usuarios y autoridades, todos tienen una versión JSON con informaciones básicas sobre ellos. Cada formato Atom tiene un equivalente JSON con informaciones sobre los objetos incluidos en el feed.</p>
-    
+
     <h2>Información sobre todos los organismos públicos de Uruguay</h2>
       <p>Un fichero CSV con información sobre todos los organismos de Uruguay está disponible en el sitio web de quesabes.org.uy: <%= link_to "all-authorities.csv", all_public_bodies_csv_url() %>
       </p>
@@ -52,4 +53,3 @@
 
   <div id="hash_link_padding"></div>
 </div>
-

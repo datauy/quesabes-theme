@@ -28,16 +28,16 @@
         <% end %>
 
         <%= stylesheet_link_tag 'admin-theme/jquery-ui-1.8.15.custom.css', :rel => 'stylesheet'%>
-        <!--[if LT IE 7]> 
-        <style type="text/css">@import url("/stylesheets/ie6.css");</style> 
+        <!--[if LT IE 7]>
+        <style type="text/css">@import url("/stylesheets/ie6.css");</style>
         <![endif]-->
-        <!--[if LT IE 7]> 
-        <style type="text/css">@import url("/stylesheets/ie6-custom.css");</style> 
+        <!--[if LT IE 7]>
+        <style type="text/css">@import url("/stylesheets/ie6-custom.css");</style>
         <![endif]-->
-        <!--[if LT IE 8]> 
-        <style type="text/css">@import url("/stylesheets/ie7.css");</style> 
+        <!--[if LT IE 8]>
+        <style type="text/css">@import url("/stylesheets/ie7.css");</style>
         <![endif]-->
-  
+
 
         <% if @feed_autodetect %>
             <% for feed in @feed_autodetect %>
@@ -59,7 +59,7 @@
     </head>
     <body <%= "class='front'" if params[:action] == 'frontpage' %>>
 
-        
+
 <% # code for popup advert for a campaign etc.
 =begin
     <div id="everypage" class="jshide">
@@ -71,7 +71,7 @@
 %>
 
 <div class="ribbon">
-<!--  <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %> -->
+<!--  <%= link_to _("¡Colabora con nosotros!"), help_contact_path %> -->
 </div>
 
 <div class="entirebody">
@@ -79,9 +79,9 @@
       <div id="banner_back">
       <div id="banner_inner">
         <%= render :partial => 'general/topnav' %>
- 
+
         <%= render :partial => 'general/orglink' %>
-        
+
         <% if not (controller.action_name == 'signin' or controller.action_name == 'signup') %>
 		<%= render :partial => 'general/usernav' %>
         <!--  <div id="logged_in_bar">
