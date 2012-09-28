@@ -36,7 +36,7 @@ body {
     .feed_link a, 
     .act_link a, 
     #header_right > a {
-        color: #E94E00;
+        color: #004590;
         font-size: 12px;
         text-decoration: none;
     }
@@ -99,7 +99,7 @@ body {
 
 div.lang {
     top: 23px;
-    color: #E94E00;
+    color: #004590;
     font-size: 12px;
     text-transform: capitalize;
 }
@@ -201,7 +201,7 @@ h3, h3 a {
         margin-left: 10px;
     }
     .controller_help h3 {
-        color: #E94E00;
+        color: #004590;
         text-decoration: none;
         margin-top: 20px !important;
         font-weight: normal;
@@ -582,7 +582,7 @@ h3, h3 a {
 .body_listing span.head a {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
     font-size: 16px;
-    color: #E94E00;
+    color: #004590;
 }
 
 a,
@@ -596,7 +596,7 @@ a,
     .request_listing a:hover, 
     .body_listing a:hover, 
     .user_listing a:hover {
-        color: #E94E00;
+        color: #004590;
         text-decoration: underline !important;
     }
 
@@ -691,7 +691,7 @@ p.public-body-name-prefix {
     color: #444444; /* XXX */
 }
     #stepwise_make_request strong {
-        color: #E94E00;
+        color: #004590;
     }
 
 h2.foi_results {
@@ -804,7 +804,7 @@ div[id|="incoming"] p {
 
 #request_form label, 
 label.form_label {
-    color: #E94E00;
+    color: #004590;
     font-family: Verdana, 'Helvetica Neue', Arial;
     font-size: 14px;
     font-weight: bold;
@@ -875,7 +875,7 @@ TODO: Need to add states for
 #signin-successful,
 #signin-successful a {
     font-family: 'Helvetica Neue', Arial;
-    color: #E94E00;   
+    color: #004590;   
     font-size: 14px;
     font-weight: bold;
     padding-top: 50px;
@@ -969,7 +969,7 @@ TODO: Need to add states for
 
 /** HELP OUT RIBBON (thanks http://unindented.org/articles/2009/10/github-ribbon-using-css-transforms/ )*/
 .ribbon {
-  background-color: #E94E00;
+  background-color: #004590;
   overflow: hidden;
   /* top left corner */
   position: absolute;

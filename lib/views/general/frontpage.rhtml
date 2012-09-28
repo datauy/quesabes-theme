@@ -97,23 +97,25 @@
                 <% end %>
             </div>
           </div>
-	  <div id="frontpage-search-rss">
-            <div id="frontpage-search-box">
-              <h4><%= _("Buscar un pedido:") %></h4>
-
-              <div id="frontpage-search-form">
-               <% form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
-                <div>
-                 <%= text_field_tag 'query', params[:query], { :size => 60 } %>
-                 <%= submit_tag _('Search') %>
-                </div>
-              <% end %>
-              </div>
+	</div>
+      </div>
+      <div id="frontpage-search-rss">
+	<div id="frontpage-search-rss-inner">
+        <div id="frontpage-search-box">
+          <h4><%= _("Buscar un pedido:") %></h4>
+          <div id="frontpage-search-form">
+            <% form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
+            <div>
+              <%= text_field_tag 'query', params[:query], { :size => 60 } %>
+              <%= submit_tag _('Search') %>
             </div>
-	    <div id="rss_subscribe">
-		<%= link_to image_tag("/quesabes-theme/images/rss_subscribe.png"), help_requesting_path(:anchor => 'making_requests') %>
-	    </div>
+            <% end %>
+          </div>
         </div>
+      <div id="rss_subscribe">
+        <%= link_to image_tag("/quesabes-theme/images/rss_subscribe.png"), help_requesting_path(:anchor => 'making_requests') %>
+      </div>
+    </div>
     </div>
 </div>
 
