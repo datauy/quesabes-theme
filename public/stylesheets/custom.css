@@ -360,21 +360,29 @@ h3, h3 a {
 
 #frontpage-content {
     background-color: transparent;
+    text-align: center;
 }
 
 #frontpage-inner-content {
     width: 960px;
     margin: auto;
-    position: relative;
     padding-bottom: 20px;
+    display: inline-block;
+    text-align: left;
 }
 
 #frontpage-search-rss {
-    background-color: #D8D8D8,
-    width: 960px;
-    margin: auto;
+    background: none repeat scroll 0 0 #CCCCCC;
     position: relative;
+    height: 118px;
 }
+
+#frontpage-search-rss-inner {
+    width: 960px;
+    height: 118px;
+    margin: auto;
+}
+
 #frontpage-search-box {
     background-color: #004590;
     float: left;
