@@ -171,6 +171,7 @@ h3, h3 a {
     padding-left: 30px;
     margin-right: 30px;
     width: 600px;
+    float: left;
 }
     #left_column_flip li {
         padding-bottom: 8px;
@@ -281,8 +282,8 @@ h3, h3 a {
 }
     .frontpage-lead-enum {
         color: white;
-        margin-top: 33px;
-	margin-left: 48px;
+        margin-top: 26px;
+	margin-left: 46px;
 	font: 500 50px Rambla;
 }
     .frontpage-lead-text {
@@ -441,6 +442,7 @@ h3, h3 a {
 #frontpage-updates-requests {
     margin: 20px;
 }
+
 #frontpage-updates-news {
     width: 575px;
     margin: 10px 45px 20px 20px;
@@ -488,9 +490,8 @@ h3, h3 a {
 .tracking-links-frontpage {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
     margin: 0px 12px;
-    
-    border-bottom: 1px solid #D9D9D9;
     padding-bottom: 12px;
+    border-top: 1px solid #D9D9D9;
 }
     .tracking-links-frontpage h4 {
         font-weight: 700;
