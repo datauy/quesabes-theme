@@ -60,6 +60,15 @@
     <body <%= "class='front'" if params[:action] == 'frontpage' %>>
 
 
+<%  # Codigo para poner un mensaje popup en todas las paginas.
+=begin
+  <div id="everypage" class="jshide">
+    ACA VA LA NOTA QUE QUEREMOS PONER.
+    <p style="text-align: right"><a href="#top" onclick="$.cookie('seen_foi2', 1, { expires: 7, path: '/' }); $('#everypage').hide('slow'); return false;">Cerrar</a></p>
+  </div>
+=end
+%>
+
 <div class="ribbon">
 <!--  <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %> -->
 </div>
