@@ -6,7 +6,7 @@ require File.dirname(__FILE__)+'/../lib/irekia_bridge'
 # TODO: Filter to check the ones still waiting for response
 events = InfoRequestEvent.find_by_sql(
       "select 
-        ire.id, ir.title, ir.described_state, ire.event_type, ire.params_yaml, tags.value 
+        ire.id, ir.id as ir_id, ir.title, ir.described_state, ire.event_type, ire.params_yaml, tags.value 
       from 
         info_request_events ire,
         info_requests ir,
@@ -22,5 +22,5 @@ events = InfoRequestEvent.find_by_sql(
 events.each do |event|
   question_id = event.params[:question_id]
   puts "Checking responses for event #{event.id} (#{event['title']}) => Irekia ID #{question_id}"
-  IrekiaBridge.get_response(question_id)
+  IrekiaBridge.get_response(event['ir_id'], question_id)
 end

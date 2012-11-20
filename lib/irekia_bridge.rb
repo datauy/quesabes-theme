@@ -60,8 +60,9 @@ class IrekiaBridge
     end
   end
 
-  def self.get_response(question_id)
+  def self.get_response(request_id, question_id)
     uri = URI(MySociety::Config.get('IREKIA_BASE_URL', '')+"questions/#{question_id}.json")
+
     req = Net::HTTP::Get.new(uri.request_uri)
     req['Accept'] = 'application/json'
     req['Content-type'] = 'application/json'
@@ -85,6 +86,10 @@ class IrekiaBridge
       # If answered, check answer.body
       if question and question['answer']
         puts "Got response '#{question['answer']['body']}' at #{question['answer']['answered_at']}"
+
+        # Create a fake email with a minimal header and the fetched answer
+        raw_email = "To: #{InfoRequest.magic_email_for_id('request-', request_id)}\n\n#{question['answer']['body']}"
+        RequestMailer.receive(raw_email)
       else
         puts "Got no response so far"
       end
