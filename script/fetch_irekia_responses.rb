@@ -26,14 +26,24 @@ events = InfoRequestEvent.find_by_sql(
         tags.name = 'special_delivery'")
 
 events.each do |event|
-  request = InfoRequest.find(event['ir_id'])
+  request_id = event['ir_id']
+  if request_id.nil?
+    puts "No request id associated to event #{event.id} (#{event['title']}). Skipping..."
+    next
+  end
+
+  request = InfoRequest.find(request_id)
   if request.incoming_messages.size > 0
     puts "We already had a response, skipping request ##{request.id} (#{request.title})..."
     next
   end
 
   question_id = event.params[:question_id]
-  puts "Checking responses for event #{event.id} (#{event['title']}) => Irekia ID #{question_id}"
+  if question_id.nil?
+    puts "No question id associated to event #{event.id} (#{event['title']}). Skipping..."
+    next
+  end
 
+  puts "Checking responses for event #{event.id} (#{event['title']}) => Irekia ID #{question_id}"
   IrekiaBridge.get_response(request, question_id)
 end
