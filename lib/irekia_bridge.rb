@@ -36,7 +36,7 @@ class IrekiaBridge
       }
     # The target server doesn't handle the Rails encoding of accented characters in the output JSON.
     # See http://stackoverflow.com/questions/5123993/json-encoding-wrongly-escaped-rails-3-ruby-1-9-2
-    }.to_json.gsub!(/\\u([0-9a-z]{4})/) {|s| [$1.to_i(16)].pack("U")}
+    }.to_json.gsub(/\\u([0-9a-z]{4})/) {|s| [$1.to_i(16)].pack("U")}
 
     self.connect(uri) do |http|
       self.authenticate(req)
