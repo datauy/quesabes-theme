@@ -28,6 +28,7 @@ PublicBodyCategories.add(:es, [
 ["INAU", "INAU", "Un instituto Nacional del Nino y el Adolescente"],
 "Gobiernos Departamentales",
 ["intendencia_montevideo", "Intendencia de Montevideo", "una intendencia"],
+["intendencia_canelones", "Intendencia de Canelones", "una intendencia"]
 "Junta Departamental",
 ["junta_montevideo", " Junta de Montevideo", "una Junta Departamental"]
 ])
