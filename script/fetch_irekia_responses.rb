@@ -33,7 +33,7 @@ events.each do |event|
   end
 
   request = InfoRequest.find(request_id)
-  if (event['id'] != 54) and request.incoming_messages.size > 0
+  if request.incoming_messages.size > 0
     puts "We already had a response, skipping request ##{request.id} (#{request.title})..."
     next
   end
