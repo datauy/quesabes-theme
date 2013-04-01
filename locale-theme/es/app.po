@@ -22,3 +22,12 @@ msgstr "Solicitudes de información realizadas por este usuario"
 
 msgid "{{title}} - a Freedom of Information request to {{public_body}}"
 msgstr "{{title}} - una solicitud de información realizada a {{public_body}}"
+
+msgid "You can make a complain to the Public Information Access Unit by filling the form: "
+msgstr "Puede realizar una denuncia frente a la Unidad de Acceso a la Información Pública llenando el formulario: "
+
+msgid "If you think the rejection was unjustified, please make a complain through the Public Information Access Unit "
+msgstr "Si cree que el rechazo de la información fue injustificado, por favor haga una denuncia frente a la Unidad de Acceso a la Información Pública "
+
+msgid "Complain"
+msgstr "Denunciar"
