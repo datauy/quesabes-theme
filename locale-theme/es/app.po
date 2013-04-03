@@ -29,5 +29,5 @@ msgstr "Puede realizar una denuncia frente a la Unidad de Acceso a la Informaci�
 msgid "If you think the rejection was unjustified, please make a complain through the Public Information Access Unit "
 msgstr "Si cree que el rechazo de la información fue injustificado, por favor haga una denuncia frente a la Unidad de Acceso a la Información Pública "
 
-msgid "Complain"
-msgstr "Denunciar"
+msgid "Complain to the UAIP"
+msgstr "Denunciar ante la UAIP"
