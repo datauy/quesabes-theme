@@ -1,0 +1,59 @@
+<% @title = "Informació per a institucions" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip">
+    <h1>Informació per a institucions</h1>
+
+    <h3><a href="#what">Què és tuderechoasaber.es?</a></h3>
+    <h3><a href="#processing_requests">Procés de les sol·licituds</a></h3>
+    <h3><a href="#privacy_issues">Privadesa</a></h3>
+
+    <h1 id="what">Què és tuderechoasaber.es?</h1>
+    
+    <h2>He arribat a aquest enllaç a través d'una sol·licitud d'informació. De què es tracta?</h2>
+    <p>Tuderechoasaber.es és una pàgina web gestionada per l'ONG de drets humans <a href="http://www.access-info.org">Access Info Europe</a> i per la <a href="http://www.civio.es">Fundació Ciutadana Civio</a>. Ajuda als ciutadans a sol·licitar informació a institucions públiques espanyoles i a compartir les respostes amb la resta dels ciutadans.</p>
+    <p>La sol·licitud que ha rebut va ser enviada a través de tuderechoasaber.es.</p>
+    <p>Tan sol haurà de respondre a la sol·licitud de la mateixa forma que una sol·licitud d'informació corrent. L'única diferència és que la resposta es publicarà automàticament a la pàgina web de tuderechoasaber.es.</p> 
+    <p>Si té dubtes sobre privadesa o qualsevol altre assumpte, per favor segueixi llegint, ja que potser es resoldran més endavant.</p> 
+    <p>És possible que estigui interessat a llegir la secció <%= link_to 'Qui Som', help_about_path %> per conèixer amb més detall en què consisteix aquest projecte, l'equip darrere d'ell i a què ens dediquem.</p>
+    <p>També pot navegar per la pàgina per veure quines altres sol·licituds s'han realitzat a la seva institució i comprovar quin és l'estat de resposta.</p>
+    <p>Ens encantarà rebre els seus comentaris, idees o suggeriments sobre aquesta web. Per favor, <%= link_to 'contacti amb nosaltres', help_contact_path %>.</p>
+    
+    <h2>Per què es publiquen les respostes a les sol·licituds d'informació?</h2>
+    <p>Creiem que aporta beneficis. Principalment animarà als ciutadans a estar més interessats i compromesos amb les activitats de les institucions públiques.</p> 
+    <p>També esperem que, d'aquesta manera, es redueixi el nombre de sol·licituds d'informació duplicades que puguin rebre organismes com el seu.</p> 
+    <p>La informació que es va a sol·licitar és informació pública pel que la seva posterior publicació no suposa cap problema, al contrari: com esmentàvem, és una forma eficient que aquesta no torni a ser sol·licitada.</p>
+    
+    <h2>Les persones que realitzen sol·licituds són reals?</h2>
+    <p>Per descomptat. Abans de poder enviar una sol·licitud, tots els usuaris han de registrar-se a la pàgina web aportant un e-mail que verifiquem.</p>
+    <p>Perquè el sistema funcioni de manera automàtica, utilitzem adreces de correu electrònic generades per ordinador per a cadascuna de les sol·licituds. És per això que l'adreça de contacte que a vostè li apareix posa “@tuderechoasaber.es”.</p>
+    
+    <h2>tuderechoasaber.es està enviant massa sol·licituds!</h2>
+    <p>tuderechoasaber.es no realitza cap sol·licitud. Les enviem en nom dels usuaris, que són persones reals que sol·liciten informació sobre els temes en els quals estan interessats. Si està rebent moltes peticions, és un senyal que hi ha interès en la seva institució o les seves activitats.</p>
+
+    <h1 id="processing_requests">Procés de les sol·licituds</h1>
+    
+    <h2 id="spam_problems">Veig en tuderechoasaber.es que s'ha realitzat una petició a la meva institució, però nosaltres no hem rebut cap correu electrònic!</h2>
+    <p>Si una petició apareix en tuderechoasaber.es, és que hem intentat enviar-la a l'òrgan pertinent via e-mail. Qualsevol missatge de fallada en la recepció apareixerà automàticament en la web.</p>
+    <p>Pot comprovar l'adreça de contacte a la qual estem enviant les peticions a través de l’enllaç “Veure adreça d'e-mail” que apareix a la pàgina de cada institució.</p>
+    <p>Per favor, si té una adreça millor que puguem utilitzar, li agrairíem que es posés <%= link_to 'en contacte', help_contact_path %> amb nosaltres. De vegades les peticions són bloquejades pels “filtres de spam”. Per assegurar-se que això no ocorri, demani al seu departament d'informàtica que afegeixi qualsevol e-mail de @tuderechoasaber.es a la llista de remitents autoritzats.</p>
+    <p>Si <a href="mailto:contacto@tuderechoasaber.es">ens ho demana</a>, podem reexpedir el correu de la sol·licitud realitzada a la seva institució i/o donar-li detalls tècnics del lliurament, de manera que el seu departament d'informàtica pugui identificar el que ha ocorregut amb el missatge.</p>
+    
+    <h2 id="days">Com calculen la data límit que apareix a la pàgina de peticions?</h2>
+    <p>Calculem tres mesos des de l'enviament de la sol·licitud, tal com s'estableix en l'article 35 de la <a href="http://noticias.juridicas.com/base_datos/Admin/l30-1992.t4.html#a37">Llei 30/1992 de Règim Jurídic de les Administracions Públiques i del Procediment Administratiu Comú</a>.</p>
+    <p>Si es tracta d'informació mediambiental, calculem un mes des de l'enviament de la sol·licitud, tal com estableix la <a href="http://www.boe.es/aeboe/consultas/bases_datos/doc.php?id=BOE-A-2006-13010">llei d'accés a informació mediambiental</a>.</p>
+    
+    <h2>Com responc a la sol·licitud?</h2>
+    <p>Simplement, respongui al correu electrònic de manera normal. La sol·licitud es farà arribar al sol·licitant i es publicarà també a la pàgina web de tuderechoasaber.es.</p>
+    
+    <h2>Com puc enviar un arxiu gran que no pot anar per correu electrònic?</h2>
+    <p><%= link_to 'Contacti amb nosaltres', help_contact_path %> i li facilitarem una adreça web per pujar l'arxiu des del seu navegador.</p>
+    
+    <h1 id="privacy_issues">Privadesa</h1>
+    <h2>Per què publiquen els noms dels funcionaris i el text dels correus?</h2>
+    <p>Considerem que el treball dels funcionaris ha de ser informació pública. Únicament eliminarem aquesta informació sota circumstàncies excepcionals. Vegeu la nostra <%= link_to 'política per retirar dades', help_privacy_path(:anchor=>'takedown') %>.</p>
+
+    <h2 id="mobiles">Publiquen les adreces de correu electrònic o els números de telèfon mòbil?</h2>
+    <p>Per prevenir el correu brossa, intentem eliminar automàticament totes les adreces de correu i possibles números de telèfon mòbil de les respostes a les peticions. Per favor, <%= link_to 'contacti amb nosaltres', help_contact_path %> si hem oblidat retirar alguna. Per raons tècniques no sempre podem eliminar-los dels arxius adjunts, així com d'alguns documents en PDF.</p>
+</div>

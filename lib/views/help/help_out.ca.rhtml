@@ -1,0 +1,56 @@
+<% @title = "Com ens pots ajudar?" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip">
+    <h1>Com ens pots ajudar?</h1>
+    
+    <h2>Aportacions econòmiques</h2>
+    <p>tuderechoasaber.es ha arrancat gràcies al suport econòmic de <a href="http://www.goteo.org/project/tuderechoasaber.es/">més de 150 persones que ens han donat un total de 6.138€</a> a través de la plataforma de crowdfunding Goteo. Però encara ens queda molt per fer i necessitem la teva ajuda.</p>
+    <p>Tota petita contribució, fins i tot de 5€ o 10€, ens ajudarà a realitzar millor les tasques de manteniment diari. La teva donació servirà per garantir el bon funcionament de la web, ampliar la nostra xarxa de contactes d'institucions i fer arribar el missatge de la necessitat d'una administració oberta a molta més gent.</p>
+    <p>A més:
+      <ul>
+        <li>Si dónes més de 10 euros t'esmentarem en els agraïments. (Som molt transparents amb el nostre finançament, publicant qui dóna i com gastem els diners. Però també respectem la teva privadesa. Si prefereixes que el teu nom no aparegui, fes-nos-ho saber.)</li>
+        <li>Si dónes més de 400 euros apareixeràs com a <%= link_to _("patrocinador"), help_about_path(:anchor => 'supporters') %> en la web.</li>
+      </ul>
+    </p>
+    <p>Pots fer-nos arribar la teva donació de les següents maneres:
+      <ul>
+        <li><strong>Preferiblement</strong>, per transferència bancària al següent compte (gestionada per <a href="http://www.access-info.org/es/nuestra-mision-y-estrategia">Access Info Europe</a>, ONG registrada a Espanya):<br/>
+          <blockquote>
+          Banc: La Caixa, Paseo de la Habana 5, 28036 Madrid<br/>
+          Número de compte: 2100 - 2133 - 99 - 0200291748<br/>
+          Per favor, usa la referència  "DON-TDAS"<br/>
+          </blockquote>
+        </li>
+        <li>Si vols, pots fer-ho a través de PayPal, encara que d'aquesta manera es perd un percentatge en comissions pel camí:
+          
+          <blockquote>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="KATYF9NXGZRQA">
+          <input type="image" src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal button">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+          </blockquote>
+          
+        </li>
+      </ul>
+    </p>
+
+    
+    <h2>Voluntaris</h2>
+    <p>
+        <ul>
+            <li>Pots ajudar-nos a traduir el contingut de la web i les sol·licituds al català, al basc i al gallec.</li>
+            <li>Ajuda'ns a difondre aquest projecte, amb una entrada en la teua web o en el teu bloc, per exemple o a través de Twitter recomanant <a href="http://twitter.com/#!/tuderechoasaber">@tuderechoasaber</a>.</li>
+            <li>Si veus algun problema amb la web, avisa'ns, encara estem treballant en ella.</li>
+            <li>Si vols ajudar-nos amb el disseny i la programació de la web, o amb l'administració del servidor, ets més que benvingut, <a href="mailto:contacto@tuderechoasaber.es">escriu-nos a contacto@tuderechoasaber.es</a>.</li>
+        </ul>
+    </p>
+    
+    <h2>Institucions públiques</h2>
+    <p>Si ets una institució pública, pots ser entitat col·laboradora. No pots donar-nos diners però podem col·laborar per fer que la web sigui millor i més col·laborativa. Aquestes són les <a href="/tuderechoasaber-theme/docs/colaboracion.pdf">condicions de col·laboració</a></span>.</p>
+
+    <%= render :partial => 'help/public_partners' %>
+</div>

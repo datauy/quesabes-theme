@@ -116,40 +116,40 @@ msgid "Patrocinadores"
 msgstr "Patrocinadors"
 
 msgid "¿Cómo nos puedes ayudar?"
-msgstr "¿Cómo nos puedes ayudar?"
+msgstr "Com ens pots ajudar?"
 
 msgid "Solicitar información"
-msgstr "Solicitar información"
+msgstr "Sol·licitar informació"
 
 msgid "Localizar la institución adecuada"
-msgstr "Localizar la institución adecuada"
+msgstr "Localitzar la institució adequada"
 
 msgid "Idiomas"
-msgstr "Idiomas"
+msgstr "Idiomes"
 
 msgid "Consejos sobre las solicitudes"
-msgstr "Consejos sobre las solicitudes"
+msgstr "Consells sobre les sol·licituds"
 
 msgid "Respuestas y apelaciones"
-msgstr "Respuestas y apelaciones"
+msgstr "Respostes i apel·lacions"
 
 msgid "Moderación de las solicitudes"
-msgstr "Moderación de las solicitudes"
+msgstr "Moderació de les sol·licituds"
 
 msgid "Tu privacidad"
 msgstr "La teva privacitat"
 
 msgid "Información para instituciones"
-msgstr "Información para funcionarios"
+msgstr "Informació per a institucions"
 
 msgid "¿Qué es tuderechoasaber.es?"
-msgstr "¿Qué es tuderechoasaber.es?"
+msgstr "Què és tuderechoasaber.es?"
 
 msgid "Proceso de las solicitudes"
-msgstr "Proceso de las solicitudes"
+msgstr "Procés de les sol·licituds"
 
 msgid "Privacidad"
-msgstr "Privacitat"
+msgstr "Privadesa"
 
 msgid "Basado en Alaveteli"
 msgstr "Basat en Alaveteli"
