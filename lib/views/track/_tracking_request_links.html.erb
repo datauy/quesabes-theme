@@ -22,7 +22,7 @@
                     <p>
                         <%= track_thing.params[:verb_on_page_already] %>
                         <%= hidden_field_tag 'track_medium', "delete" %>
-                        <%= hidden_field_tag 'r', request.request_uri %>
+                        <%= hidden_field_tag 'r', request.fullpath %>
                         <%= submit_tag _("unsubscribe") %>
                     </p>
                 <% end %>
