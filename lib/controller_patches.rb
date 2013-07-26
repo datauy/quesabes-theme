@@ -31,4 +31,30 @@ Rails.configuration.to_prepare do
             render :template => "public_body/list"
         end
     end
+
+    HelpController.class_eval do
+        def help_out
+            render :template => "help/help_out"
+        end
+
+        def press
+            render :template => "help/press"
+        end
+
+        def privacy_policy
+            render :template => "help/privacy_policy"
+        end
+
+        def terms_of_use
+            render :template => "help/terms_of_use"
+        end
+
+        def borrador_transparencia
+            render :template => "help/borrador_transparencia"
+        end
+
+        def proyecto_transparencia
+            render :template => "help/proyecto_transparencia"
+        end
+    end
 end
