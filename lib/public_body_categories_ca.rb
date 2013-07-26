@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 PublicBodyCategories.add(:ca, [
     "Administració Central",
         [ "ministerio", "Ministeris", "un Ministerio" ],

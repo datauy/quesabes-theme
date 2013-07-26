@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 PublicBodyCategories.add(:gl, [
     "Administración Central",
         [ "ministerio", "Ministerios", "un Ministerio" ],

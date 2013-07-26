@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 PublicBodyCategories.add(:eu, [
     "Administrazio Zentrala",
         [ "ministerio", "Ministerioak", "un Ministerio" ],
