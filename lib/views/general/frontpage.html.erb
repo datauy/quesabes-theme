@@ -71,12 +71,12 @@
                     break if item.nil? %>
                   
                   <div class="frontpage-blog-post <%= position.even? ? 'left' : 'right' %>">
-                    <img src="<%= item['thumbnail'] %>" width="278" height="128"/>
+                    <img src="<%= item['thumbnail'][0] %>" width="278" height="128"/>
                     <h4>
-                      <a href='<%= item['link'] %>' target="_blank"><%= h item['title'] %></a>
+                      <a href='<%= item['link'][0] %>' target="_blank"><%= h item['title'][0] %></a>
                     </h4>
-                    <p><%= h excerpt(item['description'].to_s, "", 200) %></p>
-                    <p><a href="<%= item['link'] %>" target="_blank"><%= _("Leer más »") %></a></p>
+                    <p><%= h excerpt(item['description'][0].to_s, "", 200) %></p>
+                    <p><a href="<%= item['link'][0] %>" target="_blank"><%= _("Leer más »") %></a></p>
                   </div>
               
                   <% if position.odd? %>
