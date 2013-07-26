@@ -26,7 +26,8 @@ Rails.configuration.to_prepare do
 
     PublicBodyController.class_eval do
         def index
-            @public_bodies = PublicBody.paginate([], :page => 10)
+            @public_bodies = PublicBody.where(false).paginate(:page => 10)
+            @description = ''
             render :template => "public_body/list"
         end
     end
