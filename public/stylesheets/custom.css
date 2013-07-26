@@ -590,11 +590,16 @@ a,
 
 .request_left {
     width: 600px;
+    padding-right: 0px; 
 }
 
 .request_right {
     width: 240px;
 }
+
+    .request_right span.desc {
+        padding-left: 20px;
+    }
 
 form input[type="submit"], a.link_button_green, a.link_button_green_large {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
