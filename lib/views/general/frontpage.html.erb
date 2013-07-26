@@ -54,7 +54,7 @@
             <h4><%= _("Haz una búsqueda entre las peticiones ya realizadas:") %></h4>
 
             <div id="frontpage-search-form">
-              <% form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
+              <%= form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
               <div>
                 <%= text_field_tag 'query', params[:query], { :size => 80 } %>
                 <%= submit_tag _('Search') %>
