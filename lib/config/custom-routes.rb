@@ -1,20 +1,16 @@
 if Rails.env != "test"
-    ActionController::Routing::Routes.draw do |map|
+    Alaveteli::Application.routes.draw do
         # Additional help pages
-        map.with_options :controller => 'help' do |help|
-            help.help_help_out '/help/help_out', :action => 'help_out'
+        match '/help/help_out' => 'help#help_out', :as => 'help_help_out'
 
-            help.help_press '/help/press', :action => 'press'
-            help.help_privacy_policy '/help/privacy_policy', :action => 'privacy_policy'
-            help.help_terms_of_use '/help/terms_of_use', :action => 'terms_of_use'
-            
-            help.help_borrador_transparencia '/help/borrador_transparencia', :action => 'borrador_transparencia'
-            help.help_proyecto_transparencia '/help/proyecto_transparencia', :action => 'proyecto_transparencia'
-        end
+        match '/help/press' => 'help#press', :as => 'help_press'
+        match '/help/privacy_policy' => 'help#privacy_policy', :as => 'help_privacy_policy'
+        match '/help/terms_of_use' => 'help#terms_of_use', :as => 'help_terms_of_use'
+
+        match '/help/borrador_transparencia' => 'help#borrador_transparencia', :as => 'help_borrador_transparencia'
+        match '/help/proyecto_transparencia' => 'help#proyecto_transparencia', :as => 'help_proyecto_transparencia'
         
         # We want to start by showing the public bodies categories and search only
-        map.with_options :controller => 'public_body' do |body|
-            body.body_index "/body/", :action => "index"
-        end
+        match '/body/' => 'public_body#index', :as => "body_index"
     end
 end
