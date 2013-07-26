@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>" prefix="og: http://ogp.me/ns#">
     <head>
+        <meta charset="utf-8">
+        <title>
         <% if @title %>
-        <title><%=@title%> - <%= site_name %></title>
-        <meta property="og:title" content="<%=@title%> - <%= site_name %>" />
+            <%=@title%> - <%= site_name %>
+            <meta property="og:title" content="<%=@title%> - <%= site_name %>" />
         <% else %>
-        <title><%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %></title>
-        <meta property="og:title" content="<%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>" />
+            <%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>
+            <meta property="og:title" content="<%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>" />
         <% end %>
+        </title>
 
         <meta property="og:type" content="website" />
         <meta property="og:image" content="http://www.tuderechoasaber.es/tuderechoasaber-theme/images/logo_cuadrado.png" />
 
         <link rel="shortcut icon" href="/tuderechoasaber-theme/images/favicon.gif">
-        <%= stylesheet_link_tag 'main', :title => "Main", :rel => "stylesheet", :media => "all" %>
-        <%= stylesheet_link_tag 'fonts', :rel => "stylesheet", :media => "all"  %>
-        <%= stylesheet_link_tag 'print', :rel => "stylesheet", :media => "print"  %>
-        <% if !params[:print_stylesheet].nil? %>
-         <%= stylesheet_link_tag 'print', :rel => "stylesheet", :media => "all"  %>
-        <% end %>
-        <%= javascript_include_tag 'jquery.js', 'jquery-ui.min','jquery.cookie.js' %>
 
+        <%= render :partial => 'general/stylesheet_includes' %>
+        <% if is_admin? %>
+          <%= stylesheet_link_tag "/admin/stylesheets/admin", :title => "Main", :rel => "stylesheet" %>
+        <% end %>
+
+        <%= javascript_include_tag 'jquery.js', 'jquery-ui.min','jquery.cookie.js', 'general.js' %>     
         <% if @profile_photo_javascript %>
             <script type="text/javascript" src="/javascripts/jquery.Jcrop.js"></script>
             <script type="text/javascript" src="/javascripts/profile_photo.js"></script>
             <link rel="stylesheet" href="/stylesheets/jquery.Jcrop.css" type="text/css" >
-        <% end %>
-
-        <%= stylesheet_link_tag 'admin-theme/jquery-ui-1.8.15.custom.css', :rel => 'stylesheet'%>
-        <!--[if LT IE 7]> 
-        <style type="text/css">@import url("/stylesheets/ie6.css");</style> 
-        <![endif]-->
-        <!--[if LT IE 7]> 
-        <style type="text/css">@import url("/stylesheets/ie6-custom.css");</style> 
-        <![endif]-->
-        <!--[if LT IE 8]> 
-        <style type="text/css">@import url("/stylesheets/ie7.css");</style> 
-        <![endif]-->
-  
+        <% end %>  
 
         <% if @feed_autodetect %>
             <% for feed in @feed_autodetect %>
@@ -48,7 +38,7 @@
             <% end %>
         <% end %>
         <% if @has_json %>
-            <link rel="alternate" type="application/json" title="JSON version of this page" href="<%=h main_url(request.fullpath, '.json') %>">
+            <link rel="alternate" type="application/json" title="JSON version of this page" href="<%=h url_for(request.params.merge(:format => 'json')) %>">
         <% end %>
 
         <% if @no_crawl %>
@@ -57,22 +47,23 @@
 
         <%= render :partial => 'general/before_head_end' %>
     </head>
-    <body <%= "class='front'" if params[:action] == 'frontpage' %>>
+    <body class="<%= 'front' if params[:action] == 'frontpage' %>">
 
-        
-<% # code for popup advert for a campaign etc.
-=begin
-    <div id="everypage" class="jshide">
-    <p style="float:right"><a href="#top" onclick="$.cookie('seen_foi2', 1, { expires: 7, path: '/' }); $('#everypage').hide('slow'); return false;">Close</a></p>
-    [ message goes here ]
-    <p style="text-align: right"><a href="#top" onclick="$.cookie('seen_foi2', 1, { expires: 7, path: '/' }); $('#everypage').hide('slow'); return false;">Close</a></p>
+    <div class="ribbon">
+      <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %>
     </div>
-=end
-%>
 
-<div class="ribbon">
-  <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %>
+<% if is_admin? %>
+  <%= render :partial => 'admin_general/admin_navbar' %>
+<% end %>
+<% popup_banner = render(:partial => "general/popup_banner").strip %>
+<% if popup_banner.present? %>
+<div id="everypage" class="jshide">
+  <p class="popup-close"><a href="#top" onclick="$.cookie('seen_foi2', 1, { expires: 7, path: '/' }); $('#everypage').hide('slow'); return false;"><%= _('Close') %></a></p>
+  <%= raw popup_banner %>
+  <p class="popup-close"><a href="#top" onclick="$.cookie('seen_foi2', 1, { expires: 7, path: '/' }); $('#everypage').hide('slow'); return false;"><%= _('Close') %></a></p>
 </div>
+<% end %>
 
 <div class="entirebody">
     <div id="banner">
@@ -129,7 +120,6 @@
 
     <%= render :partial => 'general/footer' %>
 
-    <%= render :partial => 'general/before_body_end' %>
 </div>
 <div id="other-country-notice"></div>
 <div id="link_box"><span class="close-button">X</span>
@@ -137,6 +127,20 @@
 <br />
 <input type="text">
 </div>
+    <%
+      unless AlaveteliConfiguration::ga_code.empty? || (@user && @user.super?) %>
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+          var pageTracker = _gat._getTracker("<%= AlaveteliConfiguration::ga_code %>");
+          pageTracker._trackPageview();
+        </script>
+
+      <% end %>
+
+      <%= render :partial => 'general/before_body_end' %>
     </body>
 </html>
 
