@@ -24,7 +24,6 @@ class IrekiaBridge
 
     area_id = outgoing_message.info_request.public_body.get_tag_values('area').first
     req.body = {
-      # TODO: Move id/password to config file
       'user' => {
         'email' => MySociety::Config.get('IREKIA_USER_ID', ''),
         'password' => MySociety::Config.get('IREKIA_PASSWORD', '')
@@ -62,7 +61,6 @@ class IrekiaBridge
 
   def self.get_response(request, question_id)
     uri = URI(MySociety::Config.get('IREKIA_BASE_URL', '')+"questions/#{question_id}.json")
-    # uri = URI('http://www.irekia.euskadi.net/es/api/questions/311.json') # XXXXX For initial testing
 
     req = Net::HTTP::Get.new(uri.request_uri)
     req['Accept'] = 'application/json'
