@@ -2,15 +2,13 @@
 <html lang="<%= I18n.locale %>" prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="utf-8">
-        <title>
         <% if @title %>
-            <%=@title%> - <%= site_name %>
+            <title><%=@title%> - <%= site_name %></title>
             <meta property="og:title" content="<%=@title%> - <%= site_name %>" />
         <% else %>
-            <%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>
+            <title><%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %></title>
             <meta property="og:title" content="<%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>" />
         <% end %>
-        </title>
 
         <meta property="og:type" content="website" />
         <meta property="og:image" content="http://www.tuderechoasaber.es/tuderechoasaber-theme/images/logo_cuadrado.png" />
