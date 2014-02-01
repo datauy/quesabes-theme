@@ -9,6 +9,7 @@ PublicBodyCategories.add(:gl, [
         [ "embajada", "Embaixadas", "una Embajada Española"],
         [ "organo_constitucional", "Órganos Constitucionais", "un órgano constitucional"],
         [ "organo_regulador", "Organismos Reguladores", "un organismo regulador"],
+        [ "delegacion_gobierno", "Delegacions do Goberno", "una delegación del gobierno"],
         [ "empresa_publica", "Empresas Públicas", "una empresa pública"],
         [ "fundacion_publica", "Fundacións Públicas", "una fundación pública"],
         [ "universidad", "Universidades", "una universidad"],
@@ -16,7 +17,6 @@ PublicBodyCategories.add(:gl, [
     "Administración Autonómica",
         [ "ca", "Gobiernos Autonómicos", "un gobierno autonómico"],
         [ "asamblea_ca", "Asambleas Autonómicas", "una asamblea autonómica"],
-        [ "delegacion_gobierno", "Delegacions do Goberno", "una delegación del gobierno"],
     "Administración Local",
         [ "ayuntamiento", "Concello", "un ayuntamiento"]
 ])

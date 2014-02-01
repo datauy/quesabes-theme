@@ -9,6 +9,7 @@ PublicBodyCategories.add(:eu, [
         [ "embajada", "Enbaxadak", "una Embajada Española"],
         [ "organo_constitucional", "Organo Konstituzionalak", "un órgano constitucional"],
         [ "organo_regulador", "Erakunde Arautzaileak", "un organismo regulador"],
+        [ "delegacion_gobierno", "Gobernuko Ordezkaritzak", "una delegación del gobierno"],
         [ "empresa_publica", "Enpresa Publikoak", "una empresa pública"],
         [ "fundacion_publica", "Fundazio Publikoak", "una fundación pública"],
         [ "universidad", "Unibertsitateak", "una universidad"],
@@ -16,7 +17,6 @@ PublicBodyCategories.add(:eu, [
     "Administrazio Autonomikoa",
         [ "ca", "Gobernu Autonomikoa", "un gobierno autonómico"],
         [ "asamblea_ca", "Biltzar Autonomikoak", "una asamblea autonómica"],
-        [ "delegacion_gobierno", "Gobernuko Ordezkaritzak", "una delegación del gobierno"],
     "Administrazio Lokala",
         [ "ayuntamiento", "Udalak", "un ayuntamiento"]
 ])
