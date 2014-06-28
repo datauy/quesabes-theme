@@ -77,7 +77,7 @@ msgid "Piensa una pregunta para un organismo público."
 msgstr "Pensa una pregunta per a un organisme públic."
 
 msgid "Preguntar »"
-msgstr "Preguntar »"
+msgstr "Pregunta »"
 
 msgid "Nosotros enviamos la pregunta por ti."
 msgstr "Nosaltres enviem la pregunta per tu."
@@ -102,6 +102,9 @@ msgstr "Novetats"
 
 msgid "Peticiones destacadas"
 msgstr "Peticions destacades"
+
+msgid "¿Quieres estar informado de todas las novedades? Suscríbete a nuestro boletín:"
+msgstr "Vols estar informat de totes les novetats? Subscriu-te al nostre butlletí:"
 
 
 # Sidebar
