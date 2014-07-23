@@ -22,8 +22,5 @@ require 'patch_mailer_paths.rb'
 # Plug theme-specific locale strings
 require 'gettext_setup.rb'
 
-# Include classes handling connections to external platforms
-require 'irekia_bridge.rb'
-
 # Add theme routes
 $alaveteli_route_extensions << 'custom-routes.rb'
