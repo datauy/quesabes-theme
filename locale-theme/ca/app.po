@@ -41,7 +41,7 @@ msgid "{{law_used}} requests at {{public_body}}"
 msgstr "{{public_body}}"
 
 msgid "details"
-msgstr "más detalles"
+msgstr "més detalls"
 
 msgid "[{{public_body}} request email]"
 msgstr "[dirección de {{public_body}}]"
@@ -52,6 +52,18 @@ msgstr "[dirección editada]"
 msgid "[{{site_name}} contact email]"
 msgstr "[dirección de {{site_name}}]"
 
+msgid "Make a new FOI request to"
+msgstr "Fes una nova sol·licitud a"
+
+msgid "Quiero recibir el boletín con novedades."
+msgstr "Vull rebre el butlletí amb novetats."
+
+msgid "He leído las <a href=\"{{terms_url}}\" target=\"_blank\">Condiciones de Uso</a> de la web y su <a href=\"{{privacy_url}}\" target=\"_blank\">Política de Privacidad</a>."
+msgstr "He llegit les <a href=\"{{terms_url}}\" target=\"_blank\">Condicions d'Ús</a> del web i la seva <a href=\"{{privacy_url}}\" target=\"_blank\">Política de Privacitat</a>."
+
+msgid "to"
+msgstr "a"
+
 
 # Homepage
 
@@ -60,6 +72,9 @@ msgstr "Qui som"
 
 msgid "Guía para solicitantes"
 msgstr "Guia per a sol·licitants"
+
+msgid "Guía para realizar solicitudes"
+msgstr "Guia per a realitzar sol·licituds"
 
 msgid "Solicitar información"
 msgstr "Sol·licitar información"
@@ -86,7 +101,7 @@ msgid "Te avisamos cuando haya una respuesta."
 msgstr "T'avisem quan hi hagi una resposta."
 
 msgid "¿Contestarán? »"
-msgstr "¿Contestarán? »"
+msgstr "Contestaran? »"
 
 msgid "Cuenta atrás por la transparencia en España"
 msgstr "Compte enrere per la transparència a Espanya."
@@ -105,6 +120,12 @@ msgstr "Peticions destacades"
 
 msgid "¿Quieres estar informado de todas las novedades? Suscríbete a nuestro boletín:"
 msgstr "Vols estar informat de totes les novetats? Subscriu-te al nostre butlletí:"
+
+msgid "dirección de correo"
+msgstr "adreça de correu"
+
+msgid "Suscríbeme"
+msgstr "Subscriu-me"
 
 
 # Sidebar
@@ -163,15 +184,17 @@ msgstr "API per a programadors"
 msgid "Agradecimientos"
 msgstr "Agraïments"
 
+msgid "Si tu pregunta no está resuelta aquí, o quieres hacernos llegar algún comentario sobre la web, "
+msgstr "Si la teva pregunta no està resolta aquí, o vols fer-nos arribar algun comentari sobre el web, "
 
 
 # Custom states
 
 msgid "Authority has provided an unsatisfactory response."
-msgstr "La respuesta no ha sido satisfactoria."
+msgstr "La resposta no ha estat satisfactòria."
 
 msgid "Unsatisfactory response."
-msgstr "Respuesta no satisfactoria."
+msgstr "Resposta no satisfactoria."
 
 msgid "Authority has provided an <strong>unsatisfactory response</strong>"
 msgstr "La respuesta <strong>no ha sido satisfactoria</strong>"
@@ -180,5 +203,47 @@ msgid "The response has been unsatisfactory."
 msgstr "La respuesta no ha sido satisfactoria."
 
 
+# Footer
+
+msgid "Contacto"
+msgstr "Contacte"
+
+msgid "Prensa"
+msgstr "Premsa"
+
+msgid "¿Cómo puedes colaborar?"
+msgstr "Com ens pots ajudar?"
+
+msgid "Condiciones de uso"
+msgstr "Condicions d'ús"
+
+msgid "Política de privacidad"
+msgstr "Política de privacitat"
+
+msgid "Contenido bajo licencia CC BY SA 3.0<br/>Creative Commons Attribution Share-Alike"
+msgstr "Contingut amb llicència CC BY SA 3.0<br/>Creative Commons Reconeixement-CompartirIgual 3.0"
+
+msgid "Un proyecto de"
+msgstr "Un projecte de"
+
+msgid "Con la ayuda de"
+msgstr "Amb l'ajuda de"
+
+msgid "Contáctanos"
+msgstr "Contacta'ns"
 
 
+
+# Misc
+
+msgid "Persona siguiendo esta petición"
+msgstr "Persona seguint aquesta petició"
+
+msgid "Personas siguiendo esta petición"
+msgstr "Persones seguint aquesta petició"
+
+msgid "También quiero saber"
+msgstr "També vull saber"
+
+msgid "¡Colabora con nosotros!"
+msgstr "Col·labora amb nosaltres!"

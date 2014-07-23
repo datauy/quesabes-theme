@@ -18,5 +18,5 @@ PublicBodyCategories.add(:ca, [
         [ "ca", "Governs Autonòmics", "un gobierno autonómico"],
         [ "asamblea_ca", "Assemblees Autonòmiques", "una asamblea autonómica"],
     "Administració Local",
-        [ "ayuntamiento", "Ajuntaments", "un ayuntamiento"]
+        [ "ayuntamiento", "Ajuntaments", "un ajuntament"]
 ])
