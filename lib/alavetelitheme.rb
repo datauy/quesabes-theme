@@ -17,8 +17,10 @@ end
 
 # Monkey patch app code
 require 'controller_patches.rb'
-require 'model_patches.rb'
 require 'patch_mailer_paths.rb'
 
 # Plug theme-specific locale strings
 require 'gettext_setup.rb'
+
+# Add theme routes
+$alaveteli_route_extensions << 'custom-routes.rb'

@@ -1,5 +1,3 @@
-<% view_cache :ttl => 5.minutes.to_i, :tag => I18n.locale do %>
-
 <div id="frontpage-intro">
     <div id="frontpage-intro-lead">
         <div class="frontpage-lead-cell"><h2><%= _("¿Querés información sobre un organismo público?") %></h2></div>
@@ -77,10 +75,14 @@
                     	<img src="/quesabes-theme/images/posts/novedades.png" width="278" height="128"/>
                     <%end %>
                     <h4>
-                      <a href='<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>'><%= h item['title'] %></a>
+                      <a href='<%= item['link'][0] %>' target="_blank"><%= h item['title'][0] %></a>
                     </h4>
                     <p><a href="<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>"><%= _("Leer más »") %></a></p>
                   </div>
+
+                  <% if position.odd? %>
+                  <div style="clear:both"></div>
+                  <% end %>
                 <% end %>
                 <div id="more-news"><a href="<%= blog_url %>"><%= _("Más novedades...") %></a></div>
                 <div style="clear:both"></div>
@@ -118,5 +120,3 @@
     </div>
     </div>
 </div>
-
-<% end %>

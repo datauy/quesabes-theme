@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 PublicBodyCategories.add(:es, [
 "Poder Ejecutivo",
 ["presidencia","Presidencia y Org. Asociados", "una agencia de presidencia"],

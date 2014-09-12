@@ -22,7 +22,7 @@
                     <p>
                         <%= track_thing.params[:verb_on_page_already] %>
                         <%= hidden_field_tag 'track_medium', "delete" %>
-                        <%= hidden_field_tag 'r', request.request_uri %>
+                        <%= hidden_field_tag 'r', request.fullpath %>
                         <%= submit_tag _("unsubscribe") %>
                     </p>
                 <% end %>
@@ -37,7 +37,7 @@
             <% if location != 'frontpage' %>
               <div style="clear:both"></div>
               <div class="feed_link feed_link_<%=location%>">
-                  <%= link_to '<img src="/images/feed-16.png" alt="">', do_track_url(track_thing, 'feed') %> 
+                  <%= link_to raw('<img src="/images/feed-16.png" alt="">'), do_track_url(track_thing, 'feed') %> 
                   <%= link_to (location == 'sidebar' ? _('RSS feed of updates') : _('RSS feed')),  do_track_url(track_thing, 'feed') %>
               </div>
             <% end %>

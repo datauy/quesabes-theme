@@ -320,7 +320,7 @@ h3, h3 a {
     width: 260px;
     float: left;
     
-    margin: 50px 12px 30px 12px;
+    margin: 50px 12px 0px 12px;
     padding: 0px 18px;
 }
 
@@ -358,7 +358,15 @@ h3, h3 a {
         text-decoration: underline !important;
         font-weight: bold;
     }
-
+    #frontpage-lead-ad input[type="submit"] {
+        height: 34px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+    #frontpage-lead-ad input[type="email"] {
+        font-size: 14px;
+    }
+    
 #frontpage-content {
     background-color: transparent;
     text-align: center;
@@ -633,11 +641,16 @@ a,
 
 .request_left {
     width: 600px;
+    padding-right: 0px; 
 }
 
 .request_right {
     width: 240px;
 }
+
+    .request_right span.desc {
+        padding-left: 20px;
+    }
 
 form input[type="submit"], a.link_button_green, a.link_button_green_large {
     font-family: 'Open Sans', 'Helvetica Neue', Arial;
@@ -820,6 +833,10 @@ div[id|="incoming"] p {
     background-color: #777;
 }
 
+#follow_count {
+    color: #F05A29;
+} 
+
 
 /** REQUEST FILTER **/
 #filter_requests_form {
@@ -889,6 +906,11 @@ TODO: Need to add states for
     background-image: url("/quesabes-theme/images/states/icon_user_withdrawn.gif");
     color: #E10613;
 }
+.icon_unsatisfactory_response {
+    background-image: url("/tuderechoasaber-theme/images/states/icon_info_refused.gif");
+    color: #E10613;
+}
+
 /* TODO: Missing from designer
 .icon_waiting_classification {
 .icon_waiting_response_overdue {

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>" prefix="og: http://ogp.me/ns#">
     <head>
+        <meta charset="utf-8">
         <% if @title %>
-        <title><%=@title%> - <%= site_name %></title>
-        <meta property="og:title" content="<%=@title%> - <%= site_name %>" />
+            <title><%=@title%> - <%= site_name %></title>
+            <meta property="og:title" content="<%=@title%> - <%= site_name %>" />
         <% else %>
-        <title><%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %></title>
-        <meta property="og:title" content="<%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>" />
+            <title><%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %></title>
+            <meta property="og:title" content="<%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>" />
         <% end %>
 
         <meta property="og:type" content="website" />
@@ -19,8 +20,8 @@
         <% if !params[:print_stylesheet].nil? %>
          <%= stylesheet_link_tag 'print', :rel => "stylesheet", :media => "all"  %>
         <% end %>
-        <%= javascript_include_tag 'jquery.js', 'jquery-ui.min','jquery.cookie.js' %>
 
+        <%= javascript_include_tag 'jquery.js', 'jquery-ui.min','jquery.cookie.js', 'general.js' %>
         <% if @profile_photo_javascript %>
             <script type="text/javascript" src="/javascripts/jquery.Jcrop.js"></script>
             <script type="text/javascript" src="/javascripts/profile_photo.js"></script>
@@ -48,7 +49,7 @@
             <% end %>
         <% end %>
         <% if @has_json %>
-            <link rel="alternate" type="application/json" title="JSON version of this page" href="<%=h main_url(request.request_uri, '.json') %>">
+            <link rel="alternate" type="application/json" title="JSON version of this page" href="<%=h url_for(request.params.merge(:format => 'json')) %>">
         <% end %>
 
         <% if @no_crawl %>
@@ -57,8 +58,7 @@
 
         <%= render :partial => 'general/before_head_end' %>
     </head>
-    <body <%= "class='front'" if params[:action] == 'frontpage' %>>
-
+    <body class="<%= 'front' if params[:action] == 'frontpage' %>">
 
 <%  # Codigo para poner un mensaje popup en todas las paginas.
 =begin
@@ -72,6 +72,7 @@
 <div class="ribbon">
 <!--  <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %> -->
 </div>
+<% end %>
 
 <div class="entirebody">
     <div id="banner">
@@ -93,16 +94,16 @@
                 <% end %>
 
 
-              <%= link_to _("Sign out"), signout_url(:r => request.request_uri) %>
+              <%= link_to _("Sign out"), signout_url(:r => request.fullpath) %>
           <% else %>
-              <%= link_to _("Sign in or sign up"), signin_url(:r => request.request_uri) %>
+              <%= link_to _("Sign in or sign up"), signin_url(:r => request.fullpath) %>
           <% end %>
           </div>-->
         <% end %>
 
 <!--        <div id="navigation_search">
             <% form_tag({:controller => "general", :action => "search_redirect"}, {:id => "navigation_search_form"}) do %>
-               <p>
+         <p>
                    <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query" } %>
                    <%= image_submit_tag('search-button.png') %>
                </p>
@@ -129,7 +130,6 @@
 
     <%= render :partial => 'general/footer' %>
 
-    <%= render :partial => 'general/before_body_end' %>
 </div>
 <div id="other-country-notice"></div>
 <div id="link_box"><span class="close-button">X</span>

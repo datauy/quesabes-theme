@@ -4,8 +4,7 @@
 # classes are reloaded, but initialization is not run each time.
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
-require 'dispatcher'
-Dispatcher.to_prepare do    
+Rails.configuration.to_prepare do
     # Front page needs some additional info
     GeneralController.class_eval do
         # Make sure it doesn't break if blog is not available 
@@ -27,8 +26,35 @@ Dispatcher.to_prepare do
 
     PublicBodyController.class_eval do
         def index
-            @public_bodies = PublicBody.paginate([], :page => 10)
+            @public_bodies = PublicBody.where(false).paginate(:page => 10)
+            @description = ''
             render :template => "public_body/list"
+        end
+    end
+
+    HelpController.class_eval do
+        def help_out
+            render :template => "help/help_out"
+        end
+
+        def press
+            render :template => "help/press"
+        end
+
+        def privacy_policy
+            render :template => "help/privacy_policy"
+        end
+
+        def terms_of_use
+            render :template => "help/terms_of_use"
+        end
+
+        def borrador_transparencia
+            render :template => "help/borrador_transparencia"
+        end
+
+        def proyecto_transparencia
+            render :template => "help/proyecto_transparencia"
         end
     end
 end
