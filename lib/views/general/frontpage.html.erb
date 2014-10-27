@@ -70,9 +70,9 @@
 
                   <div class="frontpage-blog-post <%= position.even? ? 'right' : 'left' %>" <%= position == 3 ? '' 'style="clear:left"' : '' %> >
                     <% if item.has_key?('thumbnail') %>
-                    	<img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
-                  	<% else %>
-                    	<img src="/quesabes-theme/images/posts/novedades.png" width="278" height="128"/>
+                      <img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
+                    <% else %>
+                    <%= image_tag('posts/novedades.png', :width => '278', :height => '128') %>
                     <%end %>
                     <h4>
                       <a href='<%= item['link'][0] %>' target="_blank"><%= h item['title'][0] %></a>

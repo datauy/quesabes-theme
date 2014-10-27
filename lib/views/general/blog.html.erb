@@ -5,8 +5,9 @@
 <div id="header_right">
   <div class="act_link">
     <h2><%= _("Stay up to date") %></h2>
-    <img src="/images/twitter-16.png" alt="twitter icon"  class="twitter-icon"> <a href="http://www.twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on twitter") %></a><br/><br/>
-    <img src="/images/feed-16.png" alt="RSS icon" valign="middle"> <a href="<%= AlaveteliConfiguration::blog_feed %>"><%= _("Subscribe to blog") %></a>
+    <%= image_tag('twitter-16.png', :alt => "twitter icon", :class => "twitter icon") %>
+    <a href="http://www.twitter.com/<%= AlaveteliConfiguration::twitter_username %>"><%= _("Follow us on twitter") %></a><br/><br/>
+    <%= image_tag('feed-16.png', :alt => "RSS icon", :valign => 'middle') %><a href="<%= AlaveteliConfiguration::blog_feed %>"><%= _("Subscribe to blog") %></a>
   </div>
   <div id="twitter">
   <script src="http://widgets.twimg.com/j/2/widget.js"></script>
