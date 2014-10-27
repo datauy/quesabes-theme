@@ -13,11 +13,11 @@ Rails.configuration.to_prepare do
                 blog
             rescue
                 @blog_items = []
-                @twitter_user = MySociety::Config.get('TWITTER_USERNAME', '')
+                @twitter_user = AlaveteliConfiguration::twitter_username
             end
             
             begin
-                @featured_requests = MySociety::Config.get("FRONTPAGE_FEATURED_REQUESTS", []).map{|i| InfoRequest.find(i)}
+                @featured_requests = AlaveteliConfiguration::frontpage_featured_requests.map{|i| InfoRequest.find(i)}
             rescue
                 @featured_requests = []
             end
