@@ -33,7 +33,6 @@ msgstr "Si cree que el rechazo de la información fue injustificado, por favor h
 
 msgid "Complain to the UAIP"
 msgstr "Denunciar ante la UAIP"
-msgstr "{{title}} - Solicitud de información realizada a {{public_body}}"
 
 msgid "show quoted sections"
 msgstr "mostrar el resto del mensaje"
