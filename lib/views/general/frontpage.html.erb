@@ -65,7 +65,7 @@
 
                 <%
                   position = 0;
-                  for item in @blog_items[0..3]:
+                  for item in @blog_items[0..3]
                     position = position + 1; %>
 
                   <div class="frontpage-blog-post <%= position.even? ? 'right' : 'left' %>" <%= position == 3 ? '' 'style="clear:left"' : '' %> >
