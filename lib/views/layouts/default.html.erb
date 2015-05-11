@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>" prefix="og: http://ogp.me/ns#">
-    <head>
-        <meta charset="utf-8">
-        <% if @title %>
-            <title><%=@title%> - <%= site_name %></title>
-            <meta property="og:title" content="<%=@title%> - <%= site_name %>" />
-        <% else %>
-            <title><%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %></title>
-            <meta property="og:title" content="<%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% if @title %>
+      <title><%=@title%> - <%= site_name %></title>
+      <meta property="og:title" content="<%=@title%> - <%= site_name %>" />
+    <% else %>
+      <title><%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %></title>
+      <meta property="og:title" content="<%= site_name %> - <%= _('Make and browse Freedom of Information (FOI) requests') %>" />
+    <% end %>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.quesabes.org/quesabes-theme/images/logocolor.png" />
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="/quesabes-theme/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/quesabes-theme/stylesheets/style.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="/quesabes-theme/images/favicon.gif">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <% if @profile_photo_javascript %>
+      <script type="text/javascript" src="/javascripts/jquery.Jcrop.js"></script>
+      <script type="text/javascript" src="/javascripts/profile_photo.js"></script>
+      <link rel="stylesheet" href="/stylesheets/jquery.Jcrop.css" type="text/css" >
+    <% end %>
+
+    <% if @feed_autodetect %>
+      <% for feed in @feed_autodetect %>
+        <link rel="alternate" type="application/atom+xml" title="<%=h feed[:title] %>" href="<%=h feed[:url]%>">
+        <% if feed[:has_json] %>
+          <link rel="alternate" type="application/json" title="JSON version of <%=h feed[:title] %>" href="<%=h feed[:url]%>.json">
         <% end %>
+      <% end %>
+    <% end %>
 
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://www.quesabes.org/quesabes-theme/images/logo_cuadrado.png" />
+    <% if @has_json %>
+      <link rel="alternate" type="application/json" title="JSON version of this page" href="<%=h url_for(request.params.merge(:format => 'json')) %>">
+    <% end %>
 
-        <link rel="shortcut icon" href="/quesabes-theme/images/favicon.gif">
-        <%= stylesheet_link_tag 'main', :title => "Main", :rel => "stylesheet", :media => "all" %>
-        <%= stylesheet_link_tag 'fonts', :rel => "stylesheet", :media => "all"  %>
-        <%= stylesheet_link_tag 'print', :rel => "stylesheet", :media => "print"  %>
-        <% if !params[:print_stylesheet].nil? %>
-         <%= stylesheet_link_tag 'print', :rel => "stylesheet", :media => "all"  %>
-        <% end %>
-
-        <%= javascript_include_tag 'jquery.js', 'jquery-ui.min','jquery.cookie.js', 'general.js' %>
-        <% if @profile_photo_javascript %>
-            <script type="text/javascript" src="/javascripts/jquery.Jcrop.js"></script>
-            <script type="text/javascript" src="/javascripts/profile_photo.js"></script>
-            <link rel="stylesheet" href="/stylesheets/jquery.Jcrop.css" type="text/css" >
-          <% end %>
-          <link rel="stylesheet" href="/quesabes-theme/stylesheets/custom.css" type="text/css" >
-
-        <%= stylesheet_link_tag 'admin-theme/jquery-ui-1.8.15.custom.css', :rel => 'stylesheet'%>
-        <!--[if LT IE 7]>
-        <style type="text/css">@import url("/stylesheets/ie6.css");</style>
-        <![endif]-->
-        <!--[if LT IE 7]>
-        <style type="text/css">@import url("/stylesheets/ie6-custom.css");</style>
-        <![endif]-->
-        <!--[if LT IE 8]>
-        <style type="text/css">@import url("/stylesheets/ie7.css");</style>
-        <![endif]-->
-
-
-        <% if @feed_autodetect %>
-            <% for feed in @feed_autodetect %>
-                <link rel="alternate" type="application/atom+xml" title="<%=h feed[:title] %>" href="<%=h feed[:url]%>">
-                <% if feed[:has_json] %>
-                    <link rel="alternate" type="application/json" title="JSON version of <%=h feed[:title] %>" href="<%=h feed[:url]%>.json">
-                <% end %>
-            <% end %>
-        <% end %>
-        <% if @has_json %>
-            <link rel="alternate" type="application/json" title="JSON version of this page" href="<%=h url_for(request.params.merge(:format => 'json')) %>">
-        <% end %>
-
-        <% if @no_crawl %>
-            <meta name="robots" content="noindex, nofollow">
-        <% end %>
-
-        <%= render :partial => 'general/before_head_end' %>
-    </head>
-    <body class="<%= 'front' if params[:action] == 'frontpage' %>">
+    <% if @no_crawl %>
+      <meta name="robots" content="noindex, nofollow">
+    <% end %>
+  </head>
+  <body>
 
 <%  # Codigo para poner un mensaje popup en todas las paginas.
 =begin
@@ -70,82 +60,32 @@
 =end
 %>
 
-<div class="ribbon">
-<!--  <%= link_to _("¡Colabora con nosotros!"), help_help_out_path %> -->
-</div>
-
-<div class="entirebody">
-    <div id="banner">
-      <div id="banner_back">
-      <div id="banner_inner">
+<div id="main_header">
+  <div class="content">
+    <header class="dark-ui-header">
+      <nav>
         <%= render :partial => 'general/topnav' %>
+        <%= render :partial => 'general/usernav' %>
+      </nav>
+    </header>
+  </div>
 
-        <%= render :partial => 'general/orglink' %>
+  <div id="intro">
+    <div class="content">
+      <% if flash[:notice] %>
+        <div id="notice"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:error] %>
+        <div id="error"><%= flash[:error] %></div>
+      <% end %>
 
-        <% if not (controller.action_name == 'signin' or controller.action_name == 'signup') %>
-		<%= render :partial => 'general/usernav' %>
-        <!--  <div id="logged_in_bar">
-          <% if @user %>
-              <%= _('Hello, {{username}}!', :username => h(@user.name))%>
+      <%= yield :layout %>
 
-                <% if @user %>
-                    <%=link_to _("My requests"), show_user_requests_path(:url_name => @user.url_name) %>
-                    <%=link_to _("My profile"), show_user_profile_path(:url_name => @user.url_name) %>
-                <% end %>
-
-
-              <%= link_to _("Sign out"), signout_url(:r => request.fullpath) %>
-          <% else %>
-              <%= link_to _("Sign in or sign up"), signin_url(:r => request.fullpath) %>
-          <% end %>
-          </div>-->
-        <% end %>
-
-<!--        <div id="navigation_search">
-            <% form_tag({:controller => "general", :action => "search_redirect"}, {:id => "navigation_search_form"}) do %>
-         <p>
-                   <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query" } %>
-                   <%= image_submit_tag('search-button.png') %>
-               </p>
-          <% end %>
-        </div>-->
-      </div>
-      </div>
+      <%= render :partial => 'general/footer' %>
     </div>
-    <div id="wrapper">
-        <div id="content">
-            <% if flash[:notice] %>
-                <div id="notice"><%= flash[:notice] %></div>
-            <% end %>
-            <% if flash[:error] %>
-                <div id="error"><%= flash[:error] %></div>
-            <% end %>
-
-            <div id="<%= controller.controller_name + "_" + controller.action_name %>" class="controller_<%= controller.controller_name %>">
-            <%= yield :layout %>
-            </div>
-            <div style="clear:both"></div>
-        </div>
-    </div>
-
-    <%= render :partial => 'general/footer' %>
-
-</div>
-<div id="other-country-notice"></div>
-<div id="link_box"><span class="close-button">X</span>
-  <%= _("Paste this link into emails, tweets, and anywhere else:") %>
-  <br />
-  <input type="text">
 </div>
 
-<script type="text/javascript">
-  var uvOptions = {};
-  (function() {
-    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/wWwtFpWYvRp2Lt0dcQ0Biw.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-  })();
-</script>
+<!--%= render "general/uservoice" %-->
 
 </body>
 </html>

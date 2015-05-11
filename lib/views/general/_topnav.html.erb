@@ -1,7 +1,17 @@
-<div id="top_nav" class="menu_nav">
-    <ul id="navigation">
-        <li class="<%= 'selected' if params[:controller] == 'help' and params[:action] == 'requesting'%>"><%= link_to _("¿Como funciona?"), help_requesting_path %></li>|
-        <li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>"><%= link_to _("Hacer un pedido"), body_index_path, :class => 'make-request-link' %></li>|
-        <li class="<%= 'selected' if params[:controller] == 'request' and ['list'].include?(params[:action]) %>"><%= link_to _("Buscar pedido"), request_list_all_url %></li>
-    </ul>
-</div>
+<ul class="main-menu">
+  <li id="logo" >
+    <%= link_to "Quesabes.uy",
+        frontpage_url,
+        { class: "logo-blanco" }
+        %>
+  </li>
+  <li class="<%= 'selected' if params[:controller] == 'help' and params[:action] == 'requesting'%>">
+    <%= link_to _("¿Como funciona?"), help_requesting_path %>
+  </li>
+  <li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
+    <%= link_to _("Hacer un pedido"), body_index_path, :class => 'make-request-link' %>
+  </li>
+  <li class="<%= 'selected' if params[:controller] == 'request' and ['list'].include?(params[:action]) %>">
+    <%= link_to _("Buscar pedido"), request_list_all_url %>
+  </li>
+</ul>

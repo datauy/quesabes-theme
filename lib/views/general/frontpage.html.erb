@@ -1,106 +1,120 @@
-<div id="frontpage-intro">
-    <div id="frontpage-intro-lead">
-        <div class="frontpage-lead-cell"><h2><%= _("¿Querés información sobre un organismo público?") %></h2></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">1</p></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">2</p></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-enum">3</p></div>
-        <div style="clear:both"></div>
+<h1><%= _("¿Querés información sobre un organismo público?") %></h1>
+<small>Es muy simple:</small>
+<div class="steps">
+  <div class="step">
+    <img src="/quesabes-theme/images/icon1.png">
+    <p><%= _("Elegí el organismo y formulá tu pregunta") %></p>
 
-        <div class="frontpage-lead-cell first-cell"><p class="frontpage-lead-text">
-          <%= link_to _("Hacé click acá para comenzar."), body_index_path %>
-          </p>
-        </div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("Elegí el organismo y formulá tu pregunta") %></p></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("El sistema le da formato y envía tu consulta") %></p></div>
-        <div class="frontpage-lead-cell"><p class="frontpage-lead-text"><%= _("La respuesta llega a vos y queda registrada") %></p></div>
-        <div style="clear:both"></div>
-
-        <div class="frontpage-lead-cell short"></div>
-        <div class="frontpage-lead-cell short"></div>
-        <div class="frontpage-lead-cell short"></div>
-<!--        <div class="frontpage-lead-cell short">
-            <%= link_to _("¿Contestarán? »"), help_requesting_path(:anchor => 'making_requests') %>
-        </div>-->
+    <div class="number">
+      <p>1</p>
     </div>
+  </div>
 
-    <div id="frontpage-intro-sidebar">
-	 <div id="fb-root"></div>
-		<script>(function(d, s, id) {
- 	 var js, fjs = d.getElementsByTagName(s)[0];
-  	if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=272455316105552";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-
-	<div class="fb-like-box" data-href="https://www.facebook.com/pages/Qu&#xe9;-Sab&#xe9;s/127727360700703" data-width="260" data-height="240" data-show-faces="true" data-stream="false" data-header="false"></div>
-<!--        <div id="frontpage-lead-ad">
-            <h4>Ley de Derecho a Acceso a la Información Pública</h4>
-            <p>En Noviembre del 2008 el gobierno sancióno <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18381">la Ley Nro 18381</a> que garantizará el derecho fundamental de las personas al acceso a la información pública en Uruguay.</p>
-        </div> -->
-
-<!-- NOTICIA DESTACADA       <div id="frontpage-lead-ad">
-            <h4>¡Nos vemos el lunes!</h4>
-            <p>Este lunes 26 a las 20:00 horas<br/> estaremos en <a href="http://www.utopicus.es/">Utopic_US</a> (Madrid) presentando tuderechoasaber.es. ¡Os esperamos!.</p>
-            <p>También puedes vernos <a href="https://www.irekia.euskadi.net/es/events/9755">por streaming</a>.</p>
-        </div>
-        -->
-        <div id="frontpage-share-buttons">
-<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fquesabes&amp;send=false&amp;layout=button_count&amp;width=118&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:118px; height:21px;" allowTransparency="true"></iframe>
-
-<span>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.quesabes.org" data-lang="es">Twittear</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</span>
-        </div>
+  <div class="step">
+    <img src="/quesabes-theme/images/icon3.png">
+    <p><%= _("El sistema le da formato y envía tu consulta") %></p>
+    <div class="number">
+      <p>2</p>
     </div>
-    <div style="clear:both"></div>
+  </div>
+
+  <div class="step">
+    <img src="/quesabes-theme/images/icon2.png">
+    <p><%= _("La respuesta llega a vos y queda registrada") %></p>
+    <div class="number">
+      <p>3</p>
+    </div>
+  </div>
+
+  <p>
+    <small>Organismos como:</small><br>
+    Presidencia y Org. Asociados
+  </p>
+
 </div>
+<a class="rounded big" href="#">Comenzar ahora</a>
+<a style="width:100%" class="slink" href="#">Conoce más acerca de
+  QuéSabés?</a>
+</div>
+</div>
+</div>
+<!--Header ends here-->
 
-<div id="frontpage-content">
-    <div id="frontpage-inner-content">
-        <div id="frontpage-updates">
-            <div id="frontpage-updates-news">
-                <h2><%= _("Novedades") %></h2>
-
-                <%
-                  position = 0;
-                  for item in @blog_items[0..3]
-                    position = position + 1; %>
-
-                  <div class="frontpage-blog-post <%= position.even? ? 'right' : 'left' %>" <%= position == 3 ? '' 'style="clear:left"' : '' %> >
-                    <% if item.has_key?('thumbnail') %>
-                    	<img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
-                  	<% else %>
-                    	<img src="/quesabes-theme/images/posts/novedades.png" width="278" height="128"/>
-                    <%end %>
-                    <h4>
-                      <a href='<%= item['link'][0] %>' target="_blank"><%= h item['title'][0] %></a>
-                    </h4>
-                    <p><a href="<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>"><%= _("Leer más »") %></a></p>
-                  </div>
-
-                  <% if position.odd? %>
-                  <div style="clear:both"></div>
-                  <% end %>
-                <% end %>
-                <div id="more-news"><a href="<%= blog_url %>"><%= _("Más novedades...") %></a></div>
-                <div style="clear:both"></div>
-            </div>
-            <div id="frontpage-updates-requests">
-                <h2><%= _("Peticiones destacadas") %></h2>
-                <% @featured_requests.each do |featured_request| %>
-                  <%= render :partial => 'track/tracking_request_links',
-                        :locals => {
-                          :track_thing => TrackThing.create_track_for_request(featured_request),
-                          :own_request => featured_request.user == @user,
-                          :location => "frontpage"
-                        } %>
-                <% end %>
-            </div>
-          </div>
-	</div>
+<!--Main content starts here-->
+<div class="maincontent">
+  <div id="search">
+    <div class="content">
+      <div class="input rounded">
+        <input type="text" placeholder="Ejemplo: Salario anual del Presidente de la República">
+        <input class="submit" type="submit" value="Buscar pedido">
       </div>
+      <p>First, type in the name of the UK public authority you'd like information from. By law, they have to respond <a href="#">(why?)</a>.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-8">
+        <section>
+          <div class="headline">
+            <h2><%= _("Novedades") %></h2>
+            <a href="<%= blog_url %>" class="link">Mas novedades</a>
+          </div>
+
+          <% position = 0
+             for item in @blog_items[0..3]
+               position = position + 1 %>
+            <article>
+              <figure>
+                <% if item.has_key?('thumbnail') %>
+                  <img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
+                <% else %>
+                  <img src="/quesabes-theme/images/posts/novedades.png" width="278" height="128"/>
+                <% end %>
+              </figure>
+              <h1>
+                <a href='<%= item['link'][0] %>' target="_blank">
+                  <%= h item['title'][0] %>
+                </a>
+              </h1>
+              <% if item.has_key?('thumbnail') %>
+                <img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
+              <% else %>
+                <img src="/quesabes-theme/images/posts/novedades.png" width="278" height="128"/>
+              <% end %>
+              <h4>
+                <a href='<%= item['link'][0] %>' target="_blank"><%= h item['title'][0] %></a>
+              </h4>
+              <p>
+                <a href="<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}"%>">
+                  <%= _("Leer más »") %>
+                </a>
+              </p>
+            </article>
+          <% end %>
+        </section>
+      </div>
+
+      <div class="col-md-4">
+        <aside>
+          <div class="headline">
+            <h2><%= _("Peticiones destacadas") %></h2>
+            <a class="link" href="#">ver todas</a>
+          </div>
+          <% @featured_requests.each do |featured_request| %>
+          <%= render :partial => 'track/tracking_request_links',
+                                   :locals => {
+                                   :track_thing => TrackThing.create_track_for_request(featured_request),
+                                   :own_request => featured_request.user == @user,
+                                   :location => "frontpage"
+                                   }
+          %>
+          <% end %>
+        </aside>
+	    </div>
+    </div>
+
+    
       <div id="frontpage-search-rss">
 	<div id="frontpage-search-rss-inner">
         <div id="frontpage-search-box">
