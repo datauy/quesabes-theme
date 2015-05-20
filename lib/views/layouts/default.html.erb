@@ -60,9 +60,14 @@
 =end
 %>
 
-<div id="main_header">
+<%
+   if is_root?
+%>
+   <div id="main_header">
+<% end %>
   <div class="content">
-    <header class="dark-ui-header">
+
+    <header class="<%= header_class %>">
       <nav>
         <%= render :partial => 'general/topnav' %>
         <%= render :partial => 'general/usernav' %>
@@ -83,8 +88,10 @@
 
       <%= render :partial => 'general/footer' %>
     </div>
+  </div>
+<% if is_root? %>
 </div>
-
+<% end %>
 <!--%= render "general/uservoice" %-->
 
 </body>

@@ -1,7 +1,7 @@
 class ActionController::Base
     before_filter :set_view_paths
 
-    def set_view_paths         
+    def set_view_paths
         self.prepend_view_path File.join(File.dirname(__FILE__), "views")
     end
 end
@@ -17,6 +17,7 @@ end
 
 # Monkey patch app code
 require 'controller_patches.rb'
+require 'helper_patches.rb'
 require 'patch_mailer_paths.rb'
 
 # Plug theme-specific locale strings
