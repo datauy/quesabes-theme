@@ -101,7 +101,7 @@
         <aside>
           <div class="headline">
             <h2><%= _("Peticiones destacadas") %></h2>
-            <a class="link" href="#">ver todas</a>
+            <a class="link" href="<%= request_list_path %>">ver todas</a>
           </div>
           <% @featured_requests.each do |featured_request| %>
           <%= render :partial => 'track/tracking_request_links',

@@ -7,7 +7,7 @@
       <%=link_to _("My profile"), show_user_profile_path(:url_name => @user.url_name) %>
     </li>
     <li class="rounded <%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
-      <%= link_to _("Sign out"), signout_url(:r => request.request_uri) %>
+      <%= link_to _("Sign out"), signout_url() %>
     </li>
 
   <% else %>
