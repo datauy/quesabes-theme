@@ -13,10 +13,9 @@ module LayoutHelper
   end
 
   def show_status(status)
-    css = if ["internal_review", "waiting_response", "waiting_clarification",
-              "requires_admin", "not_held"].include? status
+    css = if ["internal_review", "requires_admin", "not_held"].include? status
             "delate"
-          elsif[].include? status
+          elsif["waiting_response", "waiting_clarification"].include? status
             "waiting"
           elsif ["error_message", "rejected", "unsatisfactory_response",
                  "gone_postal", "user_withdrawn"].include? status
