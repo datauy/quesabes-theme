@@ -171,7 +171,7 @@ header .dropdown-menu li a:hover, header .dropdown-menu li a:focus , header .dro
 .maincontent article { border-bottom: 1px solid #dbe7ed; margin-bottom: 30px; padding-bottom: 10px; margin-top: 25px;}
 .maincontent article figure { border: 1px solid #dbe7ed; width: 100%; min-height: 200px; display: block; text-align: center; padding: 30px}
 .maincontent article p { margin-top: 20px;}
-.maincontent article h1 a { color: #384a52;} 
+.maincontent article h1 a { color: #384a52;}
 
 
 aside .item { border-bottom: 1px solid #dbe7ed; padding-bottom: 10px;}
@@ -179,7 +179,7 @@ aside .item h3 { color:#384a52}
 .status {font-weight:300;}
 .status:before{ content: "\25CF "; padding-right: 5px }
 
-.sucess {color: #00c853;}
+.success {color: #00c853;}
 .wrong { color: #e74c3c}
 .delate {color: #34495e}
 .waiting { color: #ffa311}

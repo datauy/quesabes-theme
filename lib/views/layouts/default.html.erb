@@ -60,13 +60,10 @@
 =end
 %>
 
-<%
-   if is_root?
-%>
+<% if is_root? %>
    <div id="main_header">
 <% end %>
   <div class="content">
-
     <header class="<%= header_class %>">
       <nav>
         <%= render :partial => 'general/topnav' %>
@@ -75,7 +72,9 @@
     </header>
   </div>
 
+<% if is_root? %>
   <div id="intro">
+<% end %>
     <div class="content">
       <% if flash[:notice] %>
         <div id="notice"><%= flash[:notice] %></div>
@@ -86,12 +85,14 @@
 
       <%= yield :layout %>
 
-      <%= render :partial => 'general/footer' %>
+
     </div>
-  </div>
 <% if is_root? %>
-</div>
+    </div><!-- #intro div -->
+</div><!-- #main_header div -->
 <% end %>
+
+<%= render :partial => 'general/footer' %>
 <!--%= render "general/uservoice" %-->
 
 </body>
