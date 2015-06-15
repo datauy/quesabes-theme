@@ -76,3 +76,41 @@ msgstr "La respuesta <strong>no ha sido satisfactoria</strong>"
 msgid "The response has been unsatisfactory."
 msgstr "La respuesta no ha sido satisfactoria."
 
+
+# Statuses
+
+msgid "internal_review"
+msgstr "En revisión interna"
+
+msgid "requires_admin"
+msgstr "Requiere intervención de administración"
+
+msgid "not_held"
+msgstr "No celebrada"
+
+msgid "waiting_response"
+msgstr "Esperando respuesta"
+
+msgid "waiting_clarification"
+msgstr "Esperando clarificación"
+
+msgid "error_message"
+msgstr "Mensaje de Error"
+
+msgid "rejected"
+msgstr "Rechazada"
+
+msgid "unsatisfactory_response"
+msgstr "Respuesta instatisfactoria"
+
+msgid "gone_postal"
+msgstr "Postal"
+
+msgid "user_withdrawn"
+msgstr "Retirada por el usuario"
+
+msgid "successful"
+msgstr "Exitosa"
+
+msgid "partially_successful"
+msgstr "Éxito parcial"

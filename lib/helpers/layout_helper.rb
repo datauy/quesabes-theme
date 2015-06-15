@@ -24,6 +24,6 @@ module LayoutHelper
             "success"
           end
     css
-    "<h4 class=\"status #{css}\">#{status}</h4>".html_safe
+    "<h4 class=\"status #{css}\"> #{ _(status)}</h4>".html_safe
   end
 end
