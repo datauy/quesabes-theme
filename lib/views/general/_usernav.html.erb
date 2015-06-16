@@ -1,20 +1,29 @@
-<ul class="submenu">
-  <% if @user %>
-    <li class="rounded <%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
-      <%=link_to _("My requests"), show_user_requests_path(:url_name => @user.url_name) %>
-    </li>
-    <li class="rounded <%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
-      <%=link_to _("My profile"), show_user_profile_path(:url_name => @user.url_name) %>
-    </li>
-    <li class="rounded <%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
-      <%= link_to _("Sign out"), signout_url() %>
-    </li>
+<% if @user %>
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+      <div class="b-image-rounded">
+        <img src="http://placehold.it/25x25" class="b-image-rounded__img" alt="" />
+      </div>
+      ¡Hola <b><%= @user.name %></b>!
+    </button>
 
-  <% else %>
-
-    <li class="rounded <%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
-      <%= link_to _("Sign in or sign up"), signin_path %>
-    </li>
-  <% end %>
-</ul>
-
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+      <li role="presentation">
+        <%=link_to _("My profile"), show_user_profile_path(:url_name => @user.url_name), html_options = {tabindex: -1, role: "menuItem"} %>
+      </li>
+      <li role="presentation">
+        <%=link_to _("My requests"), show_user_requests_path(:url_name => @user.url_name), html_options = {tabindex: -1, role: "menuItem"} %>
+      </li>
+      <li role="presentation">
+        <!--a href="#" tabindex="-1" role="menuItem">Mi Muro</a>-->
+      </li>
+      <li role="presentation">
+        <%= link_to _("Sign out"), signout_url(), html_options = {tabindex: -1, role: "menuItem"} %>
+      </li>
+    </ul>
+  </div>
+<% else %>
+  <li class="rounded <%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
+    <%= link_to _("Sign in or sign up"), signin_path %>
+  </li>
+<% end %>
