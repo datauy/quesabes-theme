@@ -63,7 +63,6 @@
             <h2><%= _("Novedades") %></h2>
             <a href="<%= blog_url %>" class="link">Mas novedades</a>
           </div>
-
           <% position = 0
              for item in @blog_items[0..3]
                position = position + 1 %>
@@ -80,18 +79,8 @@
                   <%= h item['title'][0] %>
                 </a>
               </h1>
-              <% if item.has_key?('thumbnail') %>
-                <img src="<%= ((item['thumbnail'])[0])['url']%>" width="278" height="128"/>
-              <% else %>
-                <img src="/quesabes-theme/images/posts/novedades.png" width="278" height="128"/>
-              <% end %>
-              <h4>
-                <a href='<%= item['link'][0] %>' target="_blank"><%= h item['title'][0] %></a>
-              </h4>
               <p>
-                <a href="<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}"%>">
-                  <%= _("Leer más »") %>
-                </a>
+                <%= word_wrap(item["description"][0], line_width: 5).html_safe %>
               </p>
             </article>
           <% end %>
