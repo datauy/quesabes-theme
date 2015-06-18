@@ -1,0 +1,29 @@
+<div id="blog" class="maincontent page">
+  <div class="content">
+    <div class="row">
+      <%= render partial: 'help/sidebar' %>
+
+      <% if !@twitter_user.empty? %>
+        <%= render 'blog_twitter' %>
+      <% end %>
+
+      <div class="col-md-8">
+        <section>
+          <% for item in @blog_items %>
+          <article>
+            <a href="<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>">
+              <h1><%= h item['title'][0] %></h1>
+            </a>
+              <div><%= item["description"][0].html_safe %></div>
+              <p class="subtitle">
+                <%= _("Publicado en {{date}} por {{author}}",
+                :date=>simple_date(Time.parse(item['pubDate'][0])),
+                :author=>item['creator'][0]) %>
+              </p>
+            </article>
+          <% end %>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

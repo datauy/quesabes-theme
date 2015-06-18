@@ -1,44 +1,58 @@
-<div id="right_column_flip">
-    <h2>Ayuda</h2>
-    
-    <h3><%= link_to_unless_current _("Quiénes somos"), help_about_path %></h3>
-    <ul class="no_bullets">
+<div class="col-md-4">
+  <aside>
+    <div class="item">
+      <h4>Ayuda</h4>
+      <h5>
+        <%= link_to_unless_current _("Quiénes somos"), help_about_path %>
+      </h5>
+      <ul>
         <li><%= link_to _("¿Cómo funciona?"), help_about_path(:anchor => 'how') %></li>
         <li><%= link_to _("¿Quién creó quesabes.org?"), help_about_path(:anchor => 'who') %></li>
         <li><%= link_to _("Patrocinadores"), help_about_path(:anchor => 'supporters') %></li>
-    </ul>
-    
-    <h3><%= link_to_unless_current _("¿Cómo nos puedes ayudar?"), help_help_out_path %></h3>
-    
-    <h3><%= link_to_unless_current _("Guía para solicitantes"), help_requesting_path %></h3>
-    <ul class="no_bullets">
+      </ul>
+    </div>
+
+    <div class="item">
+      <h4>
+        <%= link_to_unless_current _("¿Cómo nos puedes ayudar?"), help_help_out_path %>
+      </h4>
+
+      <h5>
+        <%= link_to_unless_current _("Guía para solicitantes"), help_requesting_path %>
+      </h5>
+      <ul>
         <li><%= link_to _("Solicitar información"), help_requesting_path(:anchor => 'making_requests') %></li>
         <li><%= link_to _("Localizar la institución adecuada"), help_requesting_path(:anchor => 'finding_bodies') %></li>
         <li><%= link_to _("Idiomas"), help_requesting_path(:anchor => 'languages') %></li>
         <li><%= link_to _("Consejos sobre las solicitudes"), help_requesting_path(:anchor => 'tips') %></li>
         <li><%= link_to _("Respuestas y apelaciones"), help_requesting_path(:anchor => 'answers_appeals') %></li>
         <li><%= link_to _("Moderación de las solicitudes"), help_requesting_path(:anchor => 'request_moderation') %></li>
-    </ul>
-            
-    <h3><%= link_to_unless_current _("Tu privacidad"), help_privacy_path %></h3>
-    
-    <h3><%= link_to_unless_current _("Información para instituciones"), help_officers_path %></h3>
-    <ul class="no_bullets">
+      </ul>
+    </div>
+
+    <div class="item">
+      <h4><%= link_to_unless_current _("Tu privacidad"), help_privacy_path %></h4>
+      <h5>
+        <%= link_to_unless_current _("Información para instituciones"), help_officers_path %>
+      </h5>
+      <ul>
         <li><%= link_to _("¿Qué es quesabes.org?"), help_officers_path(:anchor => 'what') %></li>
         <li><%= link_to _("Proceso de las solicitudes"), help_officers_path(:anchor => 'processing_requests') %></li>
         <li><%= link_to _("Privacidad"), help_officers_path(:anchor => 'privacy_issues') %></li>
-    </ul>
+      </ul>
+    </div>
 
-    <h3></h3>
-    <h3><%= link_to_unless_current _("Basado en Alaveteli"), help_alaveteli_path %></h3>
+    <div class="item">
+      <h5><%= link_to_unless_current _("Basado en Alaveteli"), help_alaveteli_path %></h5>
+      <h5><%= link_to_unless_current _("API para programadores"), help_api_path %></h5>
+      <h5><%= link_to_unless_current _("Agradecimientos"), help_credits_path %></h5>
+    </div>
 
-    <h3><%= link_to_unless_current _("API para programadores"), help_api_path %></h3>
-    
-    <h3><%= link_to_unless_current _("Agradecimientos"), help_credits_path %></h3>
-
-    <h2 id="contact"><%= _("Contáctanos") %></h2>
-    <p><%= _("Si tu pregunta no está resuelta aquí, o quieres hacernos llegar algún comentario sobre la web, ") %><%= link_to _('contáctanos'), help_contact_path %>.
-    </p>
+    <div class="item">
+      <h4><%= _("Contáctanos") %></h4>
+      <p><%= _("Si tu pregunta no está resuelta aquí, o quieres hacernos llegar algún comentario sobre la web, ") %></p>
+        <%= link_to _('contáctanos'), help_contact_path %>.
+    </div>
+  </aside>
 </div>
-
 

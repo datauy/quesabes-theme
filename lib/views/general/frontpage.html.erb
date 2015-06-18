@@ -75,7 +75,7 @@
                 <% end %>
               </figure>
               <h1>
-                <a href='<%= item['link'][0] %>' target="_blank">
+                <a href="<%= "#{blog_url}\##{Time.parse(item['pubDate'][0]).to_i}" %>">
                   <%= h item['title'][0] %>
                 </a>
               </h1>

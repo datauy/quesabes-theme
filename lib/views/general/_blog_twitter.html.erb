@@ -1,0 +1,40 @@
+<div id="header_right">
+  <div class="act_link">
+    <h2><%= _("Stay up to date") %></h2>
+    <img src="/images/twitter-16.png" alt="twitter icon"  class="twitter-icon"> <a href="http://www.twitter.com/<%= MySociety::Config.get('TWITTER_USERNAME') %>"><%= _("Follow us on twitter") %></a><br/><br/>
+    <img src="/images/feed-16.png" alt="RSS icon" valign="middle"> <a href="<%= MySociety::Config.get('BLOG_FEED') %>"><%= _("Subscribe to blog") %></a>
+  </div>
+  <div id="twitter">
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script type="text/javascript">
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 15,
+        interval: 6000,
+        width: 'auto',
+        height: 500,
+        theme: {
+          shell: {
+            background: '#eaeaea',
+            color: '#000000'
+          },
+          tweets: {
+            background: '#ffffff',
+            color: '#000000',
+            links: '#0b004a'
+          }
+        },
+        features: {
+          scrollbar: false,
+          loop: false,
+          live: false,
+          hashtags: true,
+          timestamp: true,
+          avatars: true,
+          behavior: 'all'
+        }
+      }).render().setUser('<%=@twitter_user %>').start();
+    </script>
+  </div>
+</div>
