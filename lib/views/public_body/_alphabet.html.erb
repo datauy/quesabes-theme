@@ -1,0 +1,9 @@
+<div class="alphabet">
+  <div class="btn-group" role="group" aria-label="First group">
+    <%- "A".upto("Z") do |l| -%>
+      <span class="btn btn-default">
+        <%= link_to_unless (@tag == l), l, list_public_bodies_path(:tag => l.downcase) %>
+      </span>
+      <% end %>
+  </div>
+</div>

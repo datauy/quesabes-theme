@@ -1,0 +1,69 @@
+<div class="maincontent page">
+  <div class="content">
+    <div class="row">
+      <div class="col-md-4">
+        <aside>
+
+          <div class="item">
+            <h2><%=_('Show only...')%></h2>
+            <h4><%=_('Beginning with') %></h4>
+            <%= render :partial => 'alphabet' %>
+          </div>
+
+          <!-- TODO: Get Publi Body Categories -->
+          <% first_row = true %>
+          <% for row in PublicBodyCategory.get().with_headings() %>
+            <% if row.instance_of?(Array) %>
+              <li>
+                <%= link_to_unless (@tag == row[0]), row[1], list_public_bodies_path(:tag => row[0]) %>
+              </li>
+            <% else %>
+              <% if not first_row %>
+                </ul>
+              <% else %>
+                <% first_row = false %>
+              <% end %>
+              <h3><%=h row%></h3>
+              <ul>
+            <% end %>
+          <% end %>
+          <% if not first_row %>
+            </ul>
+          <% end %>
+          <%= render :partial => "list_sidebar_extra" %>
+        </aside>
+      </div>
+      <% @title = @description.empty? ? _("Public authorities") : _("Public authorities - {{description}}", :description => @description) %>
+
+      <div class="col-md-8">
+        <section>
+          <div id="search">
+            <h1><%= _('Public authorities') %></h1>
+            <%= form_tag(list_public_bodies_default_url, :method => "get", :id=>"search_form") do %>
+              <div class="input rounded">
+                <%= text_field_tag(:public_body_query, params[:public_body_query], { placeholder: _("Ejemplo: Salario anual de Ministros") } ) %>
+                <%= submit_tag(_("Search"), {class: "submit", type: "submit", value: _("Buscar pedido") } ) %>
+              </div><!-- input-->
+            <% end %>
+          </div>
+
+          <div id="search-result">
+            <h5>
+              <%= n_('Found {{count}} public authority
+                  {{description}}', 'Found {{count}} public
+                  authorities {{description}}',
+                  @public_bodies.total_entries, :count =>
+                  @public_bodies.total_entries, :description =>
+                  @description) %>
+            </h5>
+            <%= render :partial => 'body_listing', :locals => { :public_bodies => @public_bodies } %>
+            <%= will_paginate(@public_bodies) %><br/>
+          </div><!-- search-result-->
+
+          <%= link_to _("Can't find the one you want?"), help_requesting_path + '#missing_body' %>
+        </section>
+      </div><!-- col-md-8-->
+    </div><!-- row -->
+  </div><!-- content -->
+</div><!-- maincontent -->
+

@@ -8,7 +8,8 @@ para empezar.
 
 El tema contiene:
 
-* Personalización CSS en public/stylesheets/custom.css
+* Personalización CSS en `public/stylesheets/`, imágenes en
+  `public/images/` y JavaScripts en `public/js`.
 * Versiones personalizadas de páginas (como "acerca de" y otras tantas
  en `lib/views/help`).
 * Personalizaciones de las vistas básicas del sistema en `lib/views`
@@ -43,3 +44,5 @@ y algunas cosas que se fueron encontrando al hacer la migración al
 tema nuevo.
 
 
+Originalmente basado en:
+https://github.com/civio/tuderechoasaber-theme

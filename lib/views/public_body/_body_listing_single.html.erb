@@ -1,0 +1,49 @@
+<%
+  if @highlight_words.nil?
+    @highlight_words = []
+  end
+
+  request_link = false unless defined?(request_link)
+%>
+
+<div class="result">
+  <h4>
+    <%= link_to highlight_words(public_body.name, @highlight_words),
+        public_body_path(public_body) %>
+  </h4>
+  <% if !public_body.short_name.empty? || !public_body.notes_without_html.empty? %>
+    <% if !public_body.short_name.empty? %>
+    <h5>
+      <%= _("Also called {{other_name}}.", :other_name =>
+      highlight_words(public_body.short_name, @highlight_words)) %>
+    </h5>
+    <% end %>
+    <% if !public_body.notes_without_html.empty? %>
+      <%= highlight_and_excerpt(public_body.notes_without_html, @highlight_words, 150) %>
+    <% end %>
+  <% end %>
+
+  <p>
+    <%= n_('{{count}} request made.', '{{count}} requests made.',
+        public_body.info_requests.size, :count =>
+        public_body.info_requests.size) %>
+  </p>
+  <p>
+    <%= _("Added on {{date}}", :date => simple_date(public_body.created_at)) %>.
+  </p>
+
+  <% if public_body.special_not_requestable_reason? %>
+  <% if public_body.not_requestable_reason == 'not_apply' %>
+  <%= _('FOI law does not apply to this authority.')%>
+  <% elsif public_body.not_requestable_reason == 'defunct' %>
+  <%= _('Defunct.')%>
+  <% end %>
+  <% end %>
+
+  <% if request_link && !public_body.special_not_requestable_reason? %>
+  <div class="make-request-quick-button">
+    <%= link_to _("Make a request"), new_request_to_body_path(:url_name => public_body.url_name), :class => "link_button_green" %>
+  </div>
+  <% end %>
+</div>
+
