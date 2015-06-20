@@ -26,4 +26,11 @@ module LayoutHelper
     css
     "<h4 class=\"status #{css}\"> #{ _(status)}</h4>".html_safe
   end
+
+  def public_body_follower_count(public_body)
+    TrackThing.count(
+      :all,
+      conditions: ["public_body_id = ?", public_body.id]
+    )
+  end
 end
