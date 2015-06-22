@@ -27,35 +27,35 @@ Rails.configuration.to_prepare do
 
   PublicBodyController.class_eval do
     def index
-      @public_bodies = PublicBody.where(false).paginate(:page => 10)
+      @public_bodies = PublicBody.where(false).paginate(page: 10)
       @description = ''
-      render :template => "public_body/list"
+      render template: "public_body/list"
     end
   end
 
   HelpController.class_eval do
     def help_out
-      render :template => "help/help_out"
+      render template: "help/help_out"
     end
 
     def press
-      render :template => "help/press"
+      render template: "help/press"
     end
 
     def privacy_policy
-      render :template => "help/privacy_policy"
+      render template: "help/privacy_policy"
     end
 
     def terms_of_use
-      render :template => "help/terms_of_use"
+      render template: "help/terms_of_use"
     end
 
     def borrador_transparencia
-      render :template => "help/borrador_transparencia"
+      render template: "help/borrador_transparencia"
     end
 
     def proyecto_transparencia
-      render :template => "help/proyecto_transparencia"
+      render template: "help/proyecto_transparencia"
     end
   end
 end
