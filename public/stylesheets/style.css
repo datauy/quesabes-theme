@@ -61,7 +61,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#567494', end
 #intro small { font-size: 14px; color: #fff; padding: 5px;}
 #intro .big { text-align: center;background: #fff; padding: 11px 35px;font-size: 19px;color:#36a3d3;border-radius: 40px;border:none; display: inline-block; margin-top: 30px;}
 #intro a {display: inline-block; margin: 5px 0}
-.slink {font-size: 14px;color: #aac7e8;text-decoration: underline;}
+.slink {font-size: 14px;color: #aac7e8;text-decoration: underline; width: 100%}
 
 #intro .steps { width: 100%; display: inline-block;}
 #intro .step { display: inline-block; width: 25%; margin-bottom: 30px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1)}
