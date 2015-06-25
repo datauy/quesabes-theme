@@ -11,7 +11,7 @@
         <section>
           <% for item in @blog_items %>
             <article>
-              <a href="<%=item['link'][0]%>">
+              <a href="<%=item['link'][0]%>" id="<%= Time.parse(item['pubDate'][0]).to_i %>">
                 <h1><%= h item['title'][0] %></h1>
               </a>
               <div>
