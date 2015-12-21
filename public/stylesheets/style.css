@@ -296,4 +296,42 @@ footer {
 #list li {list-style-type: none; margin: 20px 10px; display: inline-block;}
 
 
+#sign_together .left_half, #sign_together .right_half {
+  float: right;
+  width: 420px;
+  padding: 0 60px;
+  margin: 10px 0;
+}
 
+#sign_together .left_half {
+  border-left: 1px solid #839ba7;
+}
+
+#sign_together label {
+  width: 120px;
+}
+
+#sign_together input {
+  width: 175px;
+}
+
+#sign_together #sign_in_reason {
+  display: none;
+}
+
+#sign_together .form_checkbox input {
+  width: auto;
+}
+
+#sign_together .form_checkbox label {
+  width: 280px;
+  font-weight: normal;
+}
+
+#sign_together .form_button {
+  text-align: right;
+}
+
+#sign_together .form_button input {
+  width: 120px;
+}
