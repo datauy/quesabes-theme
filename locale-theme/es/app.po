@@ -61,6 +61,8 @@ msgstr "[dirección editada]"
 msgid "[{{site_name}} contact email]"
 msgstr "[dirección de {{site_name}}]"
 
+msgid "Sign in or sign up"
+msgstr "Iniciar sesión"
 
 # Custom states
 

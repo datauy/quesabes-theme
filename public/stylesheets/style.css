@@ -35,6 +35,7 @@ a { color: #36a3d3}
   transition-timing-function: ease-out;
 }
 .rounded:hover {padding-bottom:8px;text-decoration: none; padding-top: 8px}
+.rounded.rounded-active { background: #fff }
 
 #main_header {
 padding-bottom: 40px;
