@@ -20,7 +20,7 @@ h3 {font-size: 16px; color: #839ba7; font-weight: 300;}
 h4 {font-size: 14px; color: #839ba7; font-weight: 300;}
 h5 {font-size: 16px; color: #384a52; font-weight: 300;}
 
-p { font-size:16px; color: #839ba7;}
+p, li { font-size:16px; color: #839ba7;}
 a { color: #36a3d3}
 
 .headline { border-bottom: 1px solid #dbe7ed; width: 100%; display: inline-block; padding: 10px 0;}
@@ -88,7 +88,7 @@ header .logo-color { background: url(/quesabes-theme/images/logocolor.png) no-re
 header .logo-blanco {background: url(/quesabes-theme/images/logoblanco.png) no-repeat;}
 
 header nav ul { display: inline-block; margin: 0; padding: 0}
-header nav ul li { list-style-type:none; display: inline-block; padding-bottom: 15px;}
+header nav ul li { list-style-type:none; display: inline-block; padding-bottom: 15px; font-size: 14px; }
 
 header .dropdown { float: right}
 header .dropdown button { border: none; position: relative;z-index: 4; color: #839ba7; font-size: 14px;font-weight: 100;}
