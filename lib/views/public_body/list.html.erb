@@ -41,17 +41,17 @@
             <h1><%= _('Public authorities') %></h1>
             <%= form_tag(list_public_bodies_default_url, :method => "get", :id=>"search_form") do %>
               <div class="input rounded">
-                <%= text_field_tag(:public_body_query, params[:public_body_query], { placeholder: _("Ejemplo: Salario anual de Ministros") } ) %>
-                <%= submit_tag(_("Search"), {class: "submit", type: "submit", value: _("Buscar pedido") } ) %>
+                <%= text_field_tag(:public_body_query, params[:public_body_query], { placeholder: _("Ejemplo: Intendencia") } ) %>
+                <%= submit_tag(_("Search"), {class: "submit", type: "submit", value: _("Buscar organismo") } ) %>
               </div><!-- input-->
             <% end %>
           </div>
 
           <div id="search-result">
             <h5>
-              <%= n_('Found {{count}} public authority
-                  {{description}}', 'Found {{count}} public
-                  authorities {{description}}',
+              <%= n_('Se encontró {{count}} organismo público
+                  {{description}}', 'Se encontraron {{count}} organismos
+                  públicos {{description}}',
                   @public_bodies.total_entries, :count =>
                   @public_bodies.total_entries, :description =>
                   @description) %>

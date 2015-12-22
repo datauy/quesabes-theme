@@ -356,3 +356,7 @@ footer {
   padding-left: 20px;
   margin-bottom: 20px;
 }
+
+.pagination .previous_page, .pagination .next_page {
+  display: none;
+}

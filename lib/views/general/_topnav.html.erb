@@ -9,7 +9,7 @@
     <%= link_to _("¿Como funciona?"), help_requesting_path %>
   </li>
   <li class="<%= 'active' if params[:controller] == 'public_body' || ((params[:controller] == 'request' && !['list'].include?(params[:action]))) %>">
-    <%= link_to _("Hacer un pedido"), body_index_path, :class => 'make-request-link' %>
+    <%= link_to _("Hacer un pedido"), list_public_bodies_default_path, :class => 'make-request-link' %>
   </li>
   <li class="<%= 'active' if params[:controller] == 'request' && ['list'].include?(params[:action]) %>">
     <%= link_to _("Buscar pedido"), request_list_all_url %>
