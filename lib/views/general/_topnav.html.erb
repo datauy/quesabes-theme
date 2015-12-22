@@ -5,13 +5,13 @@
         { class: logo_class }
         %>
   </li>
-  <li class="<%= 'selected' if params[:controller] == 'help' and params[:action] == 'requesting'%>">
+  <li class="<%= 'active' if params[:controller] == 'help' %>">
     <%= link_to _("¿Como funciona?"), help_requesting_path %>
   </li>
-  <li class="<%= 'selected' if params[:controller] == 'public_body' or (params[:controller] == 'request' and !['list'].include?(params[:action])) %>">
+  <li class="<%= 'active' if params[:controller] == 'public_body' || ((params[:controller] == 'request' && !['list'].include?(params[:action]))) %>">
     <%= link_to _("Hacer un pedido"), body_index_path, :class => 'make-request-link' %>
   </li>
-  <li class="<%= 'selected' if params[:controller] == 'request' and ['list'].include?(params[:action]) %>">
+  <li class="<%= 'active' if params[:controller] == 'request' && ['list'].include?(params[:action]) %>">
     <%= link_to _("Buscar pedido"), request_list_all_url %>
   </li>
 </ul>
