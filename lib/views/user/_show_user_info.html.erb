@@ -9,10 +9,21 @@
 
 <% if @is_you %>
   <div class="buttons">
-    <% if @display_user.profile_photo %>
-      <%= link_to _('Change profile photo'), set_profile_photo_path, html_options = {class: "rounded"} %>
-    <% end %>
+    <%= link_to _('Change profile photo'), set_profile_photo_path, html_options = {class: "rounded"} %>
     <%= link_to _('Change your password'), edit_password_change_path, html_options = {class: "rounded"}  %>
     <%= link_to _('Change your email'), signchangeemail_path, html_options = {class: "rounded"}  %>
+  </div>
+<% else %>
+  <div class="buttons">
+    <% @track_thing = TrackThing.create_track_for_user(@display_user) %>
+    <% existing_track = TrackThing.find_existing(@user, @track_thing) if @user %>
+    <% if existing_track %>
+      <%= link_to _("✓ Following {{username}}", :username => @display_user.name), { :controller => 'track', :action => 'update', :track_id => existing_track.id, :track_medium => "delete", :r => request.fullpath }, :class => "rounded following unsubscribe-request-action" %>
+    <% else %>
+      <%= link_to _("Follow {{username}}", :username => @display_user.name), do_track_path(@track_thing), :class => "rounded track-request-action" %>
+    <% end %>
+    <% unless @is_you %>
+      <%= link_to _('Send them a message'), contact_user_path(:id => @display_user.id), :class => "rounded" %>
+    <% end %>
   </div>
 <% end %>

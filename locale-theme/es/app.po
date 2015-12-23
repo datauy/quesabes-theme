@@ -76,6 +76,27 @@ msgstr "Envíenme el email"
 msgid "<strong>Note:</strong> We will send you an email to confirm you are the owner of this account. Follow the instructions in it to change your password."
 msgstr "<strong>Nota:</strong> Te enviaremos un email para confirmar que esta es tu cuenta. Sigue las instrucciones para cambiar tu contraseña."
 
+msgid "Send them a message"
+msgstr "Enviarle un mensaje"
+
+msgid "Follow {{username}}"
+msgstr "Seguir a {{username}}"
+
+msgid "✓ Following {{username}}"
+msgstr "✓ Siguiendo a {{username}}"
+
+msgid "You will now be emailed updates about '{{link_to_user}}', a person."
+msgstr "Se te estarán enviando correos con actualizaciones relacionadas a {{link_to_user}}."
+
+msgid "You are no longer following '{{link_to_user}}', a person."
+msgstr "Ya no estás siguiendo a {{link_to_user}}."
+
+msgid "You are now <a href=\"{{wall_url_user}}\">following</a> updates about '{{link_to_user}}', a person."
+msgstr "Ahora estas <a href=\"{{wall_url_user}}\"> siguiendo</a> actualizaciones sobre {{link_to_user}}."
+
+msgid "Prefer not to receive emails?"
+msgstr "¿Prefieres no recibir mensajes de correo electrónico?"
+
 # Custom states
 
 msgid "Authority has provided an unsatisfactory response."
