@@ -93,11 +93,12 @@ header .logo-blanco {background: url(/quesabes-theme/images/logoblanco.png) no-r
 header nav ul { display: inline-block; margin: 0; padding: 0}
 header nav ul li { list-style-type:none; display: inline-block; padding-bottom: 15px; font-size: 14px; }
 
-header .dropdown { float: right}
-header .dropdown button { border: none; position: relative;z-index: 4; color: #839ba7; font-size: 14px;font-weight: 100;}
+header .dropdown { float: right; margin-top: -5px; }
+header .dropdown button { border: none; position: relative;z-index: 4; color: #839ba7; font-size: 14px;font-weight: 100;margin-right: 1px;}
 header .dropdown button b { font-weight: 400;}
+header .dropdown .b-image-rounded { margin-left: 0; }
+header .dropdown button:hover, .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {background-color: white; color: #36a3d3; text-decoration: underline;}
 
-header .dropdown button:hover , .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default{background: none}
 header .dropdown-menu { 
 		box-shadow: none;
 	  border-color: #dbe7ed;
@@ -113,7 +114,8 @@ header .dropdown-menu li {padding-bottom: 7px;}
 header .dropdown-menu li a {color: #bbc7cd !important}
 header .dropdown-menu li a:hover, header .dropdown-menu li a:focus , header .dropdown-menu li a.active {
 	background: none;
-	color: #839ba7;
+	color: #839ba7 !important;
+  text-decoration: underline;
 }
 .b-image-rounded {
   float: left;	
