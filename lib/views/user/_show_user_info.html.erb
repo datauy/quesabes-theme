@@ -12,7 +12,7 @@
     <% if @display_user.profile_photo %>
       <%= link_to _('Change profile photo'), set_profile_photo_path, html_options = {class: "rounded"} %>
     <% end %>
-    <%= link_to _('Change your password'), signchangepassword_path, html_options = {class: "rounded"}  %>
+    <%= link_to _('Change your password'), edit_password_change_path, html_options = {class: "rounded"}  %>
     <%= link_to _('Change your email'), signchangeemail_path, html_options = {class: "rounded"}  %>
   </div>
 <% end %>

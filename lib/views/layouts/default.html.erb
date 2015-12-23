@@ -27,9 +27,10 @@
     <![endif]-->
 
     <% if @profile_photo_javascript %>
-      <script type="text/javascript" src="/javascripts/jquery.Jcrop.js"></script>
-      <script type="text/javascript" src="/javascripts/profile_photo.js"></script>
-      <link rel="stylesheet" href="/stylesheets/jquery.Jcrop.css" type="text/css" >
+      <%= javascript_include_tag 'jquery.min' %>
+      <%= javascript_include_tag 'jquery.Jcrop.min' %>
+      <%= javascript_include_tag 'profile_photo' %>
+      <%= stylesheet_link_tag 'jquery.Jcrop.min' %>
     <% end %>
 
     <% if @feed_autodetect %>

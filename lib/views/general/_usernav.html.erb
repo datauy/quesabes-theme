@@ -1,9 +1,11 @@
 <% if @user %>
   <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-      <div class="b-image-rounded">
-        <img src="http://placehold.it/25x25" class="b-image-rounded__img" alt="" />
-      </div>
+      <% if @user.profile_photo %>
+        <div class="b-image-rounded">
+          <img src="<%= get_profile_photo_url(:url_name => @user.url_name) %>" alt="" width="25" height="25">
+        </div>
+      <% end %>
       ¡Hola <b><%= @user.name %></b>!
     </button>
 

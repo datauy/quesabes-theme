@@ -25,7 +25,7 @@
         <h1> <%= h(@display_user.name) + (@is_you ? _(" (you)") : "") %></h1>
 
         <h4>
-          <%= _('Joined {{site_name}} in', :site_name=>site_name) %> <%= @display_user.created_at.to_formatted_s(:long_ordinal) %>
+          <%= _('Joined {{site_name}} in', :site_name=>site_name) %> <%= I18n.l(@display_user.created_at, :format => '%d de %B de %Y') %>
         </h4>
         <% if !@user.nil? && @user.admin_page_links? %>
           (<%= link_to "admin", admin_user_path(@display_user) %>)

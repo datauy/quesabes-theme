@@ -34,6 +34,9 @@ a { color: #36a3d3}
   display:table;
   clear:both;
 }
+body > .content:last-of-type {
+  padding-bottom: 10px;
+}
 .rounded { border-radius: 20px; border: 1px solid; padding:5px 20px;
   transition-property: all;
   transition-duration: 0.1s;
@@ -359,4 +362,16 @@ footer {
 
 .pagination .previous_page, .pagination .next_page {
   display: none;
+}
+
+#about_me_about_me {
+  width: 100%;
+}
+
+#signchangeemail_form label {
+  width: 170px;
+}
+
+#signchangeemail_form input:not([type=submit]) {
+  width: 200px;
 }

@@ -64,6 +64,18 @@ msgstr "[dirección de {{site_name}}]"
 msgid "Sign in or sign up"
 msgstr "Iniciar sesión"
 
+msgid "Change profile photo"
+msgstr "Cambia tu foto de perfil"
+
+msgid " (you)"
+msgstr " (tú)"
+
+msgid "Send me the email"
+msgstr "Envíenme el email"
+
+msgid "<strong>Note:</strong> We will send you an email to confirm you are the owner of this account. Follow the instructions in it to change your password."
+msgstr "<strong>Nota:</strong> Te enviaremos un email para confirmar que esta es tu cuenta. Sigue las instrucciones para cambiar tu contraseña."
+
 # Custom states
 
 msgid "Authority has provided an unsatisfactory response."
