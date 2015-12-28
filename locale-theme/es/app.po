@@ -114,6 +114,21 @@ msgstr "La respuesta no ha sido satisfactoria."
 msgid "Search contributions"
 msgstr "Buscar aportaciones"
 
+msgid "Everything that you enter on this page, including <strong>your name</strong>, will be <strong>displayed publicly</strong> on this website <a href="{{url}}">forever</a>"
+msgstr "Todo lo que escribas en esta página, incluyendo <strong>tu nombre</strong>, será <strong>mostrado públicamente</strong> en este sitio <a href="{{url}}">por siempre</a>"
+
+msgid "Everything that you enter on this page will be <strong>displayed publicly</strong> on this website forever (<a href="{{url}}">why?</a>)."
+msgstr "Todo lo que escribas en esta página será <strong>mostrado públicamente</strong> en este sitio por siempre (<a href="{{url}}">¿por qué?</a>)."
+
+msgid "<strong> Can I request information about myself?</strong>\n\t\t\t<a href=\"{{url}}\">No!</a>"
+msgstr "<strong>¿Puedo pedir información sobre mí?</strong>\n\t\t\t<a href=\"{{url}}\">¡No!</a>"
+
+msgid "Preview your request"
+msgstr "Revisa tu solicitud"
+
+msgid "This is your own request, so you will be automatically emailed when new responses arrive."
+msgstr "Ésta es tu propia solicitud, así que te avisaremos automaticamente cuando lleguen nuevas respuestas."
+
 # Statuses
 
 msgid "internal_review"
