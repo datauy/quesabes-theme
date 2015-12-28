@@ -42,11 +42,14 @@
           <div class="item">
             <h4><%= _("En esta página") %></h4>
             <ul>
-              <% if @is_you %>
-                <li><a href="#email_subscriptions">Email</a></li>
-              <% else %>
+              <% if @show_requests %>
                 <li><a href="#foi_requests">Solicitudes</a></li>
+              <% end %>
+              <% if @show_requests && @xapian_comments %>
                 <li><a href="#annotations">Comentarios</a></li>
+              <% end %>
+              <% if @show_profile && @is_you %>
+                <li><a href="#email_subscriptions">Email</a></li>
               <% end %>
             </ul>
           </div><!-- item -->
