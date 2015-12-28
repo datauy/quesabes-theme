@@ -42,9 +42,12 @@
           <div class="item">
             <h4><%= _("En esta página") %></h4>
             <ul>
-              <li><a href="#">Solicitudes</a></li>
-              <li><a href="#">Comentarios</a></li>
-              <li><a href="#email_subscriptions">Email</a></li>
+              <% if @is_you %>
+                <li><a href="#email_subscriptions">Email</a></li>
+              <% else %>
+                <li><a href="#foi_requests">Solicitudes</a></li>
+                <li><a href="#annotations">Comentarios</a></li>
+              <% end %>
             </ul>
           </div><!-- item -->
         </aside>
@@ -115,43 +118,27 @@
 
           <% if @show_requests %>
           <div id="user_profile_search">
-              <%= form_tag(show_user_url, :method => "get", :id=>"search_form") do %>
-              <div>
-                  <%= text_field_tag(:user_query, params[:user_query], {:title => "type your search term here" }) %>
-                  <%= select_tag :request_latest_status,
-                                 options_from_collection_for_select(@request_states, 'value', 'text', params[:request_latest_status]),
-                                 :prompt => _('Filter by Request Status (optional)') %>
-                  <% if @is_you %>
-                      <%= submit_tag(_("Search your contributions")) %>
-                  <% else %>
-                      <%= submit_tag(_("Search contributions by this person")) %>
-                  <% end %>
+            <h2 class="foi_results" id="foi_requests"><%= @is_you ? _('Freedom of Information requests made by you') : _('Freedom of Information requests made by this person') %></h2>
+            <%= form_tag(show_user_url, :method => "get", :id=>"search_form") do %>
+              <div id="search">
+                <div class="input rounded">
+                    <%= text_field_tag(:user_query, params[:user_query], {:placeholder => "Ejemplo: Salario anual de Ministros" }) %>
+                    <%= submit_tag(_("Search contributions"), :class => 'submit') %>
+                </div>
               </div>
-              <% end %>
+            <% end %>
 
-              <% if !@xapian_requests.nil? %>
-                  <% if @xapian_requests.results.empty? %>
-                      <% if @page == 1 %>
-                          <h2 class="foi_results" id="foi_requests"><%= @is_you ? _('Freedom of Information requests made by you') : _('Freedom of Information requests made by this person') %> <%= @match_phrase %>
-          </h2>
-                          <p><%= @is_you ? _('You have made no Freedom of Information requests using this site.') : _('This person has made no Freedom of Information requests using this site.') %>
-                          <%= @page_desc %>
-                      <% end %>
-                  <% else %>
-                      <h2 class="foi_results" id="foi_requests">
-                          <%= @is_you ? n_('Your {{count}} Freedom of Information request', 'Your {{count}} Freedom of Information requests', @xapian_requests.matches_estimated, :count => @xapian_requests.matches_estimated) : n_("This person's {{count}} Freedom of Information request", "This person's {{count}} Freedom of Information requests",  @xapian_requests.matches_estimated, :count => @xapian_requests.matches_estimated) %>
-                          <!-- matches_estimated <%=@xapian_requests.matches_estimated%> -->
-                          <%= @match_phrase %>
-                          <%= @page_desc %>
-                      </h2>
-
-
-                      <% for result in @xapian_requests.results %>
-                          <%= render :partial => 'request/request_listing_via_event', :locals => { :event => result[:model] } %>
-                      <% end %>
-
-                      <%= will_paginate WillPaginate::Collection.new(@page, @per_page, @display_user.info_requests.size) %>
+              <% if @xapian_requests %>
+                <% if @xapian_requests.results.empty? && @page == 1 %>
+                  <p><%= @is_you ? _('You have made no Freedom of Information requests using this site.') : _('This person has made no Freedom of Information requests using this site.') %>
+                  <%= @page_desc %>
+                <% else %>
+                  <% for result in @xapian_requests.results %>
+                    <%= render :partial => 'request/request_listing_via_event', :locals => { :event => result[:model] } %>
                   <% end %>
+
+                  <%= will_paginate WillPaginate::Collection.new(@page, @per_page, @display_user.info_requests.size) %>
+                <% end %>
               <% else %>
                 <% if @show_requests %>
                   <h2 class="foi_results" id="foi_requests"><%= @is_you ? _('Freedom of Information requests made by you') : _('Freedom of Information requests made by this person') %> </h2>
@@ -159,31 +146,21 @@
                 <% end %>
               <% end %>
 
-              <% if !@xapian_comments.nil? %>
-                  <% if @xapian_comments.results.empty? %>
-                      <% if @page == 1 %>
-                          <h2><%= @is_you ? _('Your annotations') : _('This person\'s annotations') %>
-                              <%= @match_phrase %>
-                          </h2>
-                          <p><%= _('None made.')%></p>
-                      <% end %>
-                  <% else %>
-                      <h2 id="annotations">
-                          <%= @is_you ? n_('Your {{count}} annotation', 'Your {{count}} annotations', @display_user.visible_comments.size, :count => @display_user.visible_comments.size) : n_("This person's {{count}} annotation", "This person's {{count}} annotations", @display_user.visible_comments.size, :count => @display_user.visible_comments.size) %>
-                            <!-- matches_estimated <%=@xapian_comments.matches_estimated%> -->
-                          <%= @page_desc %>
-                      </h2>
-
-                      <% for result in @xapian_comments.results %>
-                          <%= render :partial => 'request/request_listing_via_event', :locals => { :event => result[:model] } %>
-                      <% end %>
-
-                      <%= will_paginate WillPaginate::Collection.new(@page, @per_page, @display_user.visible_comments.size) %>
+              <% if @xapian_comments %>
+                <h2 id="annotations"><%= @is_you ? _('Your annotations') : _('This person\'s annotations') %></h2>
+                <% if @xapian_comments.results.empty? && @page == 1 %>
+                  <p><%= _('None made.')%></p>
+                <% else %>
+                  <% for result in @xapian_comments.results %>
+                    <%= render :partial => 'request/request_listing_via_event', :locals => { :event => result[:model] } %>
                   <% end %>
-              <% end %>
 
-          </div>
+                  <%= will_paginate WillPaginate::Collection.new(@page, @per_page, @display_user.visible_comments.size) %>
+                <% end %>
+              <% end %>
+            </div>
           <% end %>
+
           <% if @show_profile && @is_you %>
               <h2 id="email_subscriptions"> <%= _("Things you're following")%></h2>
               <%= render :partial => 'change_receive_email' %>
@@ -199,7 +176,7 @@
                               <%= hidden_field_tag 'user', @display_user.id %>
                               <%= hidden_field_tag 'r', request.fullpath %>
                               <% if @track_things.size > 1 %>
-                                  <%= submit_tag _('unsubscribe all') %>
+                                <%= submit_tag _('unsubscribe all'), :class => 'btn btn-danger' %>
                               <% end %>
                           </h3>
                       <% end %>
@@ -213,7 +190,7 @@
                                   <%= hidden_field_tag 'user', @display_user.id %>
                                   <%= hidden_field_tag 'r', request.fullpath %>
                                   <% if track_things.size > 1 %>
-                                      <%= submit_tag _('unsubscribe all')%>
+                                    <%= submit_tag _('unsubscribe all'), :class => 'btn btn-danger' %>
                                   <% end %>
                               </h3>
                           <% end %>
@@ -227,7 +204,7 @@
                                       <%= track_description(track_thing) %>
                                       <%= hidden_field_tag 'track_medium', "delete", { :id => 'track_medium_' + track_thing.id.to_s } %>
                                       <%= hidden_field_tag 'r', request.fullpath, { :id => 'r_' + track_thing.id.to_s }  %>
-                                      <%= submit_tag _('unsubscribe') %>
+                                      <%= submit_tag _('unsubscribe'), :class => 'btn btn-danger' %>
                                   </div>
                               <% end %>
                           </li>

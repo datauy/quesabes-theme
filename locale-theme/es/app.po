@@ -111,6 +111,8 @@ msgstr "La respuesta <strong>no ha sido satisfactoria</strong>"
 msgid "The response has been unsatisfactory."
 msgstr "La respuesta no ha sido satisfactoria."
 
+msgid "Search contributions"
+msgstr "Buscar aportaciones"
 
 # Statuses
 
