@@ -452,7 +452,27 @@ footer {
   color: #009a9d;
 }
 
-#user_profile_search .request_listing .request_right {
+#user_profile_search .request_listing .request_right, #search_requests .request_listing .request_right {
   display: none;
 }
 
+.filter-request-types ul {
+  padding-left: 0;
+}
+
+.filter-request-types ul li {
+  display: inline;
+  list-style-type: none;
+  padding-left: 0.3em;
+  font-size: 14px;
+  border-left: 1px solid #93a8b2;
+}
+
+.filter-request-types ul li:first-child {
+  border: none;
+  padding-left: 0;
+}
+
+.filter-request-types ul li span {
+  font-weight: bold;
+}

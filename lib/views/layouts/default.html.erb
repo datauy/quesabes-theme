@@ -26,8 +26,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag 'jquery.ui.datepicker' %>
+
     <% if @profile_photo_javascript %>
-      <%= javascript_include_tag 'jquery.min' %>
       <%= javascript_include_tag 'jquery.Jcrop.min' %>
       <%= javascript_include_tag 'profile_photo' %>
       <%= stylesheet_link_tag 'jquery.Jcrop.min' %>
@@ -95,7 +97,6 @@
 
 <%= render :partial => 'general/footer' %>
 <!--%= render "general/uservoice" %-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/quesabes-theme/js/bootstrap.min.js"></script>
 </body>
 </html>
