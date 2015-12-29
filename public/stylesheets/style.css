@@ -387,7 +387,7 @@ footer {
   padding: 6px;
 }
 
-#user_profile_search .request_left {
+.request_listing {
   width: 100%;
   display: inline-block;
   border-bottom: 1px solid #dbe7ed;
@@ -395,7 +395,7 @@ footer {
   margin-bottom: 10px;
 }
 
-#user_profile_search .request_left .head {
+.request_listing .head {
   font-size: 16px;
   color: #839ba7;
   font-weight: 300;
@@ -405,40 +405,54 @@ footer {
   display: block;
 }
 
-#user_profile_search .request_left .requester {
+.request_listing .requester {
   color: #93a8b2;
   font-size: 14px;
 }
 
-#user_profile_search .request_right {
-  display: none;
-}
-
-.bottomline {
+.request_listing .bottomline {
   font-weight: 300;
 }
 
-.bottomline:before {
+.request_listing .bottomline:before {
   content: "\25CF ";
   padding-right: 5px;
 }
 
-.bottomline strong {
+.request_listing .bottomline strong {
   font-weight: 300;
 }
 
-.bottomline.icon_successful {
+.icon_successful,
+.icon_partially_successful {
   color: #00c853;
 }
 
-.bottomline.icon_waiting_classification, .bottomline.icon_waiting_response {
+.icon_attention_requested,
+.icon_waiting_classification,
+.icon_waiting_clarification,
+.icon_waiting_response {
   color: #ffa311;
 }
 
-.bottomline.icon_waiting_response_overdue {
-  color: #e74c3c;
+.icon_error_message,
+.icon_rejected,
+.icon_failed,
+.icon_unsatisfactory_response,
+.icon_user_withdrawn,
+.icon_waiting_response_overdue,
+.icon_waiting_response_very_overdue {
+  color: #34495e;
 }
 
-.bottomline.icon_icon_gone_postal {
+.icon_internal_review,
+.icon_requires_admin,
+.icon_not_held,
+.icon_gone_postal {
   color: #009a9d;
 }
+
+#user_profile_search .request_listing .request_right {
+  display: none;
+}
+

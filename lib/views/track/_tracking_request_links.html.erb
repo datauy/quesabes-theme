@@ -7,7 +7,7 @@
   <%= last_message = track_thing.info_request.incoming_messages.last
       last_message.mail_from %> el <%= last_message.sent_at.to_formatted_s(:long) %></h4>
   <% end %>
-  <%= show_status(track_thing.info_request.described_state) %>
+  <h4 class="status icon_<%= track_thing.info_request.described_state %>"><%= _(track_thing.info_request.described_state) %></h4>
 </div>
 
 
