@@ -190,12 +190,6 @@ aside .item h3 { color:#384a52}
 .status {font-weight:300;}
 .status:before{ content: "\25CF "; padding-right: 5px }
 
-.success {color: #00c853;}
-.wrong { color: #e74c3c}
-.delate {color: #34495e}
-.waiting { color: #ffa311}
-
-
 
 /**PAGE**/
 .page article { border-bottom: none}
@@ -442,7 +436,7 @@ footer {
 .icon_user_withdrawn,
 .icon_waiting_response_overdue,
 .icon_waiting_response_very_overdue {
-  color: #34495e;
+  color: #e74c3c;
 }
 
 .icon_internal_review,
@@ -475,4 +469,36 @@ footer {
 
 .filter-request-types ul li span {
   font-weight: bold;
+}
+
+.errorExplanation ul li {
+  color: #e74c3c;
+}
+
+.outgoing.correspondence.box, .incoming.correspondence.box, .comment_in_request.box {
+  background: #f1f1f1;
+  border: 1px solid #BCC1C3;
+  border-radius: 5px;
+  padding: 0 20px 10px 20px;
+  margin: 10px 0;
+}
+
+.user_photo_on_comment {
+  float: right;
+  margin-top: 12px;
+}
+
+.user_photo_on_comment img {
+  width: 64px;
+  height: 64px;
+}
+
+#left_column {
+  float: right;
+  width: 66.66666666%;
+}
+
+#right_column {
+  float: left;
+  width: 33.33333333%;
 }
