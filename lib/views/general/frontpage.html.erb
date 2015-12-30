@@ -44,7 +44,7 @@
 <div class="maincontent">
   <div id="search">
     <div class="content">
-      <%= form_tag({:controller => "general", :action => "search_redirect"}, {:id => "navigation_search_form"}) do %>
+      <%= form_tag({:controller => "request", :action => "list"}, {:id => "navigation_search_form"}) do %>
       <div class="input rounded">
         <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query", placeholder: "Ejemplo: Salario anual del Presidente de la República" } %>
         <input class="submit" type="submit" value="Buscar pedido">
