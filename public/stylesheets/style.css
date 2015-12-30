@@ -443,7 +443,7 @@ footer {
 .icon_requires_admin,
 .icon_not_held,
 .icon_gone_postal {
-  color: #009a9d;
+  color: #34495e;
 }
 
 #user_profile_search .request_listing .request_right, #search_requests .request_listing .request_right {
@@ -488,7 +488,11 @@ footer {
   margin-top: 12px;
 }
 
-.user_photo_on_comment img {
+.user_photo_on_request {
+  float: right;
+}
+
+.user_photo_on_comment img, .user_photo_on_request img {
   width: 64px;
   height: 64px;
 }

@@ -50,8 +50,7 @@
         <input class="submit" type="submit" value="Buscar pedido">
         <% end %>
       </div>
-      <!-- TODO: localizar este texto -->
-      <p>First, type in the name of the UK public authority you'd like information from. By law, they have to respond <a href="#">(why?)</a>.</p>
+      <p>Comienza escribiendo el nombre del ente público del cual precisas información. Por ley, tienen que responderte. <a href="/help/requesting#making_requests#1">(¿Por qué?)</a>.</p>
     </div>
   </div>
 
@@ -98,7 +97,8 @@
                                    :locals => {
                                    :track_thing => TrackThing.create_track_for_request(featured_request),
                                    :own_request => featured_request.user == @user,
-                                   :location => "frontpage"
+                                   :location => "frontpage",
+                                   :show_tracking_links => false,
                                    }
           %>
           <% end %>
