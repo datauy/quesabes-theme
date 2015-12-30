@@ -446,7 +446,7 @@ footer {
   color: #34495e;
 }
 
-#user_profile_search .request_listing .request_right, #search_requests .request_listing .request_right {
+#user_profile_search .request_listing .request_right, #search_requests .request_listing .request_right, #hacerpedido .request_listing .request_right {
   display: none;
 }
 

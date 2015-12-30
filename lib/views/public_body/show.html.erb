@@ -84,74 +84,37 @@
                 <p class="authority__header__notes">
                   <%= _('You can only request information about the environment from this authority.')%>
                 </p>
-            <% end %>
+              <% end %>
             <% elsif @public_body.special_not_requestable_reason? %>
-            <p class="authority__header__notes">
-              <%= public_body_not_requestable_reasons(@public_body).first %>
-            </p>
+              <p class="authority__header__notes">
+                <%= public_body_not_requestable_reasons(@public_body).first %>
+              </p>
             <% end %>
+          <% end %>
 
-            <% end %>
+          <h2><%= _('Freedom of Information requests made using this site')%></h2>
 
-            <% if @public_body.info_requests.size > 0 %>
-              <%= n_('{{count}} request',
-                     '{{count}} requests',
-                     @public_body.info_requests.size,
-                     count: @public_body.info_requests.size) %>
+          <% if !@xapian_requests.nil? %>
+            <% if @xapian_requests.results.empty? %>
+              <h5><%= _('Nobody has made any Freedom of Information requests to {{public_body_name}} using this site yet.', :public_body_name => h(@public_body.name))%></h5>
             <% end %>
-
-
-            <% if @public_body.info_requests.size == 0 %>
-              <% if @public_body.is_requestable? or @public_body.not_requestable_reason != 'defunct' %>
-                <% if @public_body.eir_only? %>
-                  <h2><%= _('Environmental Information Regulations requests made using this site') %></h2>
-                  <p>Nobody has made any Environmental Information Regulations requests to <%=h(@public_body.name)%> using this site yet.</p>
-            <% else %>
-                  <h2><%= _('Freedom of Information requests made using this site')%></h2>
-                  <p><%= _('Nobody has made any Freedom of Information requests to {{public_body_name}} using this site yet.', :public_body_name => h(@public_body.name))%></p>
-            <% end %>
-            <% end %>
-            <% else %>
-            <% unless @page_desc.blank? %>
-              <%= @page_desc %>
-            <% end %>
-
-            <% if  @public_body.info_requests.size > 4 %>
-              <%= render partial: 'request/request_filter_form' %>
-            <% end %>
-            <% end %>
-
-            <% if !@xapian_requests.nil? %>
-
-              <% for result in @xapian_requests.results %>
-                <%= render partial: 'request/request_listing_via_event', locals: { event: result[:model] } %>
+            <% for result in @xapian_requests.results %>
+              <%= render partial: 'request/request_listing_via_event', locals: { event: result[:model] } %>
             <% end %>
 
             <%= will_paginate WillPaginate::Collection.new(@page, @per_page, @xapian_requests.matches_estimated) %>
-
-            <% if @xapian_requests.results.empty? %>
-              <p><% _('There were no requests matching your query.') %></p>
-            <% else %>
-              <p>
-                <%= _('Only requests made using {{site_name}} are shown.', :site_name => site_name) %>
-                <%= link_to _('?'), help_about_path %>
-              </p>
-            <% end %>
-
-            <% else %>
+          <% else %>
             <% if @public_body.eir_only? %>
               <h2><%= _('Environmental Information Regulations requests made') %></h2>
             <% else %>
               <h2> <%= _('Freedom of Information requests made')%></h2>
             <% end %>
             <p> <%= _('The search index is currently offline, so we can\'t show the Freedom of Information requests that have been made to this authority.')%></p>
-            <% end %>
+          <% end %>
 
-            <% if  @public_body.info_requests.size > 4 %>
-              <%= render partial: 'request/request_search_form' %>
-            <% end %>
-
-            <%= render partial: 'track/tracking_links', locals: { :track_thing => @track_thing, :own_request => false, location: 'sidebar' } %>
+          <% if  @public_body.info_requests.size > 4 %>
+            <%= render partial: 'request/request_search_form' %>
+          <% end %>
         </section>
       </div>
     </div><!-- .row -->
