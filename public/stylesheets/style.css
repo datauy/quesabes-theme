@@ -21,7 +21,8 @@ h4 {font-size: 14px; color: #839ba7; font-weight: 300;}
 h5 {font-size: 16px; color: #384a52; font-weight: 300;}
 
 p, li { font-size:16px; color: #839ba7;}
-a { color: #36a3d3}
+a { color: #36a3d3; outline: 0; }
+a:hover, a:active, a:focus { outline: 0; }
 
 .headline { border-bottom: 1px solid #dbe7ed; width: 100%; display: inline-block; padding: 10px 0;}
 .headline a {float: right; text-transform: uppercase;color: #839ba7;}
