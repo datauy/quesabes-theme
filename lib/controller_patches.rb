@@ -17,7 +17,7 @@ Rails.configuration.to_prepare do
       end
 
       begin
-        @featured_requests = InfoRequest.all(limit: 5)
+        @featured_requests = InfoRequest.where(:prominence => 'normal').limit(5)
         #@featured_requests = MySociety::Config.get("FRONTPAGE_FEATURED_REQUESTS", []).map{|i| InfoRequest.find(i)}
       rescue
         @featured_requests = []
