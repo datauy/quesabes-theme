@@ -476,7 +476,7 @@ footer {
   color: #e74c3c;
 }
 
-.outgoing.correspondence.box, .incoming.correspondence.box, .comment_in_request.box {
+.correspondence.box, .comment_in_request.box {
   background: #f1f1f1;
   border: 1px solid #BCC1C3;
   border-radius: 5px;
@@ -506,4 +506,16 @@ footer {
 #right_column {
   float: left;
   width: 33.33333333%;
+}
+
+.request_search_ahead_results {
+  background: #f1f1f1;
+  border: 1px solid #bcc1c3;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 7px;
+}
+
+.request_search_ahead_results .close-button {
+  float: right;
 }
