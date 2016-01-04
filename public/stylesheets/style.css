@@ -447,7 +447,7 @@ footer {
   color: #34495e;
 }
 
-#user_profile_search .request_listing .request_right, #search_requests .request_listing .request_right, #hacerpedido .request_listing .request_right {
+#user_profile_search .request_listing .request_right, #search_requests .request_listing .request_right, #hacerpedido .request_listing .request_right, #search_everything .request_right {
   display: none;
 }
 
@@ -470,6 +470,19 @@ footer {
 
 .filter-request-types ul li span {
   font-weight: bold;
+}
+
+.variety-filter, .search_controls {
+  font-weight: bold;
+  color: #839ba7;
+}
+
+.variety-filter a, .search_controls a {
+  font-weight: normal;
+}
+
+.search_controls {
+  margin-top: 20px;
 }
 
 .errorExplanation ul li {
