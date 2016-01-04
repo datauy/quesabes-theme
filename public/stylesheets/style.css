@@ -536,3 +536,79 @@ footer {
 input.form-control[type=file] {
   height: auto;
 }
+
+@media screen and (max-width:881px) {
+  .content {
+    width: auto;
+  }
+
+  header nav ul li {
+    display: block;
+  }
+
+  header .dropdown {
+    float: none;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  header #logo a {
+    margin: 0 auto;
+  }
+
+  .main-menu {
+    display: block;
+    text-align: center;
+  }
+
+  .main-menu li {
+    display: block;
+    margin: 0;
+  }
+
+  .main-menu li.active, .main-menu li:hover {
+    border-bottom: none;
+  }
+
+  .submenu {
+    text-align: center;
+    display: block;
+    float: none;
+  }
+
+  .submenu li {
+    margin: 0;
+  }
+
+  .submenu .start-now-button {
+    display: none;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .maincontent article figure img {
+    max-width: 210px;
+  }
+
+  #search .input {
+    width: 100%;
+  }
+
+  #search .input input {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  #search .input .submit {
+    font-size: 13px;
+    height: 100%;
+    width: 100px;
+    padding: 7px;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
