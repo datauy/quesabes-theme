@@ -540,6 +540,17 @@ input.form-control[type=file] {
 @media screen and (max-width:881px) {
   .content {
     width: auto;
+    margin: 0 10px;
+  }
+
+  #left_column {
+    float: none;
+    width: 100%;
+  }
+
+  #right_column {
+    float: none;
+    width: 100%;
   }
 
   header nav ul li {
@@ -619,7 +630,7 @@ input.form-control[type=file] {
   #search .input .submit {
     font-size: 13px;
     height: 100%;
-    width: 100px;
+    width: 110px;
     padding: 7px;
   }
 
