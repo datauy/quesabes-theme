@@ -158,7 +158,7 @@
                     <%= render :partial => 'request/request_listing_via_event', :locals => { :event => result[:model] } %>
                   <% end %>
 
-                  <%= will_paginate WillPaginate::Collection.new(@page, @per_page, @display_user.visible_comments.size) %>
+                  <%= will_paginate WillPaginate::Collection.new(@page, @per_page, @display_user.comments.visible.size) %>
                 <% end %>
               <% end %>
             </div>

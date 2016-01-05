@@ -97,6 +97,9 @@ msgstr "Ahora estas <a href=\"{{wall_url_user}}\"> siguiendo</a> actualizaciones
 msgid "Prefer not to receive emails?"
 msgstr "¿Prefieres no recibir mensajes de correo electrónico?"
 
+msgid "This person's annotations"
+msgstr "Comentarios de esta persona"
+
 # Custom states
 
 msgid "Authority has provided an unsatisfactory response."
