@@ -17,9 +17,6 @@
         <%=link_to _("My requests"), show_user_requests_path(:url_name => @user.url_name), html_options = {tabindex: -1, role: "menuItem"} %>
       </li>
       <li role="presentation">
-        <!--a href="#" tabindex="-1" role="menuItem">Mi Muro</a>-->
-      </li>
-      <li role="presentation">
         <%= link_to _("Sign out"), signout_url(), html_options = {tabindex: -1, role: "menuItem"} %>
       </li>
     </ul>
