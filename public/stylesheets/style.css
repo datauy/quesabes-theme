@@ -611,4 +611,32 @@ input.form-control[type=file] {
   footer {
     text-align: center;
   }
+
+  #sign_together #left_half {
+    float: none;
+    border: none;
+    margin: 0 auto;
+    width: auto;
+    padding: 0 15px;
+  }
+
+  #sign_together #signup_form input {
+    width: 100%;
+  }
+
+  #sign_together #right_half {
+    float: none;
+    margin: 0 auto;
+    width: auto;
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+
+  #sign_together #signin_form input {
+    width: 100%;
+  }
+
+  #sign_together #signin_form #remember_me {
+    width: auto;
+  }
 }
