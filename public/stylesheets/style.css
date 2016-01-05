@@ -557,11 +557,18 @@ input.form-control[type=file] {
   }
 
   header .dropdown-menu {
-    position: static;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 36px 0 0 0;
     text-align: center;
     margin-top: -33px;
+    z-index: 991;
+  }
+
+  header #dropdownMenu1 {
+    z-index: 992;
   }
 
   .main-menu {
@@ -646,5 +653,9 @@ input.form-control[type=file] {
 
   #sign_together #signin_form #remember_me {
     width: auto;
+  }
+
+  .user .buttons .rounded {
+    line-height: 3;
   }
 }
