@@ -357,8 +357,21 @@ footer {
   margin-bottom: 20px;
 }
 
-.pagination .previous_page, .pagination .next_page {
+/* we can't fix the locale for these, so we hack it with some css */
+.pagination .previous_page span, .pagination .gap span, .pagination .next_page span {
   display: none;
+}
+
+.pagination .previous_page::after {
+  content: "<";
+}
+
+.pagination .gap::after {
+  content: "...";
+}
+
+.pagination .next_page::after {
+  content: ">";
 }
 
 #about_me_about_me {
@@ -519,6 +532,7 @@ footer {
 #right_column {
   float: left;
   width: 33.33333333%;
+  padding-right: 20px;
 }
 
 .request_search_ahead_results {
