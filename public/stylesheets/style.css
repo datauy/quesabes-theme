@@ -395,6 +395,10 @@ footer {
   padding: 6px;
 }
 
+#notice.request-sent-message {
+  padding: 0 20px 10px 20px;
+}
+
 .request_listing {
   width: 100%;
   display: inline-block;
