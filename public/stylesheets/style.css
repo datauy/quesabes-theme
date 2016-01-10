@@ -539,6 +539,10 @@ footer {
   padding-right: 20px;
 }
 
+.act_link {
+  margin-bottom: 5px;
+}
+
 .request_search_ahead_results {
   background: #f1f1f1;
   border: 1px solid #bcc1c3;
