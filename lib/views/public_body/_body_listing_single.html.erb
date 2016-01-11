@@ -42,7 +42,7 @@
 
   <% if request_link && !public_body.special_not_requestable_reason? %>
   <div class="make-request-quick-button">
-    <%= link_to _("Make a request"), new_request_to_body_path(:url_name => public_body.url_name), :class => "link_button_green" %>
+    <%= link_to _("Make a request"), new_request_to_body_path(:url_name => public_body.url_name, :default_letter => default_letter), :class => "link_button_green" %>
   </div>
   <% end %>
 </div>

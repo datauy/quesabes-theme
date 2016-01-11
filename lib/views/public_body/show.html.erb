@@ -67,8 +67,7 @@
           </p>
           <% if @public_body.is_requestable? || @public_body.not_requestable_reason == 'bad_contact' %>
             <%= link_to _("Make a request to this authority"),
-            new_request_to_body_path(:url_name =>
-            @public_body.url_name), class: "rounded" %>
+            new_request_to_body_path(:url_name => @public_body.url_name, :default_letter => default_letter), class: "rounded" %>
           <% end %>
 
           <% if @public_body.has_notes? || @public_body.eir_only? || @public_body.special_not_requestable_reason? %>
