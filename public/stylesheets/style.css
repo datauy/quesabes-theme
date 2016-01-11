@@ -382,10 +382,6 @@ footer {
   width: 170px;
 }
 
-#signchangeemail_form input:not([type=submit]) {
-  width: 200px;
-}
-
 #notice {
   background: #edffed;
   border-radius: 3px;
