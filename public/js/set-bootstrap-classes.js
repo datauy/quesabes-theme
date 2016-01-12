@@ -15,4 +15,11 @@ $(function (){
   $('#new_public_body_change_request #public_body_change_request_notes').addClass('form-control');
   $('#new_public_body_change_request .form_item_note').addClass('help-block');
   $('#new_public_body_change_request input[type=submit]').removeClass('btn-default').addClass('btn btn-success');
+  $('#sign_together #user_signin_email').addClass('form-control');
+  $('#sign_together #user_signin_password').addClass('form-control');
+  $('#sign_together #user_signup_name').addClass('form-control');
+  $('#sign_together #user_signup_email').addClass('form-control');
+  $('#sign_together #user_signup_password').addClass('form-control');
+  $('#sign_together #user_signup_password_confirmation').addClass('form-control');
+  $('#sign_together input[type=submit]').removeClass('btn-default').addClass('btn btn-success');
 });

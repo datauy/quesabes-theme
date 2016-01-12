@@ -315,14 +315,6 @@ footer {
   border-left: 1px solid #dbe7ed;
 }
 
-#sign_together label {
-  width: 125px;
-}
-
-#sign_together input {
-  width: 190px;
-}
-
 #sign_together #sign_in_reason {
   display: none;
 }
