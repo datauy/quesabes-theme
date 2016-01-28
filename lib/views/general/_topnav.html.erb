@@ -6,7 +6,7 @@
         %>
   </li>
   <li class="<%= 'active' if params[:controller] == 'help' %>">
-    <%= link_to _("¿Como funciona?"), help_requesting_path %>
+    <%= link_to _("Ayuda"), help_path %>
   </li>
   <li class="<%= 'active' if params[:controller] == 'public_body' || ((params[:controller] == 'request' && !['list'].include?(params[:action]))) %>">
     <%= link_to _("Hacer un pedido"), list_public_bodies_default_path, :class => 'make-request-link' %>
