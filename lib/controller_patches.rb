@@ -17,8 +17,7 @@ Rails.configuration.to_prepare do
       end
 
       begin
-        @featured_requests = InfoRequest.where(:prominence => 'normal').order('created_at desc').limit(5)
-        #@featured_requests = MySociety::Config.get("FRONTPAGE_FEATURED_REQUESTS", []).map{|i| InfoRequest.find(i)}
+        @featured_requests = InfoRequest.where(:prominence => 'normal').order('created_at desc').limit(2)
       rescue
         @featured_requests = []
       end
