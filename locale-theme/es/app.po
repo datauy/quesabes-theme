@@ -5,7 +5,7 @@
 # Temporary location for items in tuderechoasaber branch
 
 msgid "Make and browse Freedom of Information (FOI) requests"
-msgstr "Ejerce tu derecho a saber. Solicita información."
+msgstr "Hacé y buscá solicitudes de acceso a la información."
 
 msgid "Too many requests"
 msgstr "Demasiadas solicitudes"
@@ -14,22 +14,22 @@ msgid " - Freedom of Information requests"
 msgstr " - Solicitudes de acceso a la información"
 
 msgid " - user profile"
-msgstr " - perfil del usuario"
+msgstr " - perfil de usuario"
 
 msgid "Freedom of Information requests made by you"
-msgstr "Solicitudes de información realizadas por ti"
+msgstr "Tus solicitudes de acceso a la información"
 
 msgid "Freedom of Information requests made by this person"
-msgstr "Solicitudes de información realizadas por este usuario"
+msgstr "Solicitudes de acceso a la información del usuario"
 
 msgid "{{title}} - a Freedom of Information request to {{public_body}}"
-msgstr "{{title}} - una solicitud de información realizada a {{public_body}}"
+msgstr "{{title}} - una solicitud de acceso realizada a {{public_body}}"
 
 msgid "You can make a complain to the Public Information Access Unit by filling the form: "
-msgstr "Puede realizar una denuncia frente a la Unidad de Acceso a la Información Pública llenando el formulario: "
+msgstr "Podés denunciar ante la Unidad de Acceso a la Información Pública completando el formulario: "
 
 msgid "If you think the rejection was unjustified, please make a complain through the Public Information Access Unit "
-msgstr "Si cree que el rechazo de la información fue injustificado, por favor haga una denuncia frente a la Unidad de Acceso a la Información Pública "
+msgstr "Si crees que la denegatoria es injustificada, podés denunciarla ante la Unidad de Acceso a la Información Pública "
 
 msgid "Complain to the UAIP"
 msgstr "Denunciar ante la UAIP"
@@ -41,16 +41,16 @@ msgid "hide quoted sections"
 msgstr "ocultar el final del mensaje"
 
 msgid "Clarify your FOI request - "
-msgstr "Clarifica tu solicitud de información - "
+msgstr "Aclarar tu solicitud de información - "
 
 msgid "{{public_body}} has asked you to explain part of your {{law_used}} request."
-msgstr "{{public_body}} ha pedido que clarifiques tu solicitud de información."
+msgstr "{{public_body}} ha pedido que aclares tu pedido de acceso."
 
 msgid "{{law_used}} requests at {{public_body}}"
 msgstr "{{public_body}}"
 
 msgid "details"
-msgstr "más detalles"
+msgstr "detalles"
 
 msgid "[{{public_body}} request email]"
 msgstr "[dirección de {{public_body}}]"
@@ -65,19 +65,19 @@ msgid "Sign in or sign up"
 msgstr "Iniciar sesión"
 
 msgid "Change profile photo"
-msgstr "Cambia tu foto de perfil"
+msgstr "Cambiá tu foto de perfil"
 
 msgid " (you)"
-msgstr " (tú)"
+msgstr " (vos)"
 
 msgid "Send me the email"
-msgstr "Envíenme el email"
+msgstr "Mándenme el correo"
 
 msgid "<strong>Note:</strong> We will send you an email to confirm you are the owner of this account. Follow the instructions in it to change your password."
-msgstr "<strong>Nota:</strong> Te enviaremos un email para confirmar que esta es tu cuenta. Sigue las instrucciones para cambiar tu contraseña."
+msgstr "<strong>Nota:</strong> Te vamos a mandar un correo para confirmar tu cuenta. Seguí las instrucciones para cambiar tu contraseña."
 
 msgid "Send them a message"
-msgstr "Enviarle un mensaje"
+msgstr "Enviar un mensaje"
 
 msgid "Follow {{username}}"
 msgstr "Seguir a {{username}}"
@@ -86,16 +86,16 @@ msgid "✓ Following {{username}}"
 msgstr "✓ Siguiendo a {{username}}"
 
 msgid "You will now be emailed updates about '{{link_to_user}}', a person."
-msgstr "Se te estarán enviando correos con actualizaciones relacionadas a {{link_to_user}}."
+msgstr "Ahora te van a llegar correos con actualizaciones relacionadas a {{link_to_user}}."
 
 msgid "You are no longer following '{{link_to_user}}', a person."
 msgstr "Ya no estás siguiendo a {{link_to_user}}."
 
 msgid "You are now <a href=\"{{wall_url_user}}\">following</a> updates about '{{link_to_user}}', a person."
-msgstr "Ahora estas <a href=\"{{wall_url_user}}\"> siguiendo</a> actualizaciones sobre {{link_to_user}}."
+msgstr "Ahora estas <a href=\"{{wall_url_user}}\">siguiendo</a> actualizaciones de {{link_to_user}}."
 
 msgid "Prefer not to receive emails?"
-msgstr "¿Prefieres no recibir mensajes de correo electrónico?"
+msgstr "¿Preferís no recibir correos?"
 
 msgid "This person's annotations"
 msgstr "Comentarios de esta persona"
@@ -103,34 +103,34 @@ msgstr "Comentarios de esta persona"
 # Custom states
 
 msgid "Authority has provided an unsatisfactory response."
-msgstr "La respuesta no ha sido satisfactoria."
+msgstr "La respuesta fue instatisfactoria."
 
 msgid "Unsatisfactory response."
-msgstr "Respuesta no satisfactoria."
+msgstr "Respuesta instatisfactoria."
 
 msgid "Authority has provided an <strong>unsatisfactory response</strong>"
-msgstr "La respuesta <strong>no ha sido satisfactoria</strong>"
+msgstr "La respuesta <strong>no fue satisfactoria</strong>"
 
 msgid "The response has been unsatisfactory."
-msgstr "La respuesta no ha sido satisfactoria."
+msgstr "La respuesta no fue satisfactoria."
 
 msgid "Search contributions"
-msgstr "Buscar aportaciones"
+msgstr "Buscar contribuciones"
 
 msgid "Everything that you enter on this page, including <strong>your name</strong>, will be <strong>displayed publicly</strong> on this website <a href="{{url}}">forever</a>"
-msgstr "Todo lo que escribas en esta página, incluyendo <strong>tu nombre</strong>, será <strong>mostrado públicamente</strong> en este sitio <a href="{{url}}">por siempre</a>"
+msgstr "Todo lo que escribas en esta página, incluyendo <strong>tu nombre</strong>, será <strong>mostrado públicamente</strong> en el sitio <a href="{{url}}">para siempre</a>"
 
 msgid "Everything that you enter on this page will be <strong>displayed publicly</strong> on this website forever (<a href="{{url}}">why?</a>)."
-msgstr "Todo lo que escribas en esta página será <strong>mostrado públicamente</strong> en este sitio por siempre (<a href="{{url}}">¿por qué?</a>)."
+msgstr "Todo lo que escribas en esta página será <strong>mostrado públicamente</strong> en este sitio para siempre (<a href="{{url}}">¿por qué?</a>)."
 
 msgid "<strong> Can I request information about myself?</strong>\n\t\t\t<a href=\"{{url}}\">No!</a>"
 msgstr "<strong>¿Puedo pedir información sobre mí?</strong>\n\t\t\t<a href=\"{{url}}\">¡No!</a>"
 
 msgid "Preview your request"
-msgstr "Revisa tu solicitud"
+msgstr "Revisá tu solicitud"
 
 msgid "This is your own request, so you will be automatically emailed when new responses arrive."
-msgstr "Ésta es tu propia solicitud, así que te avisaremos automaticamente cuando lleguen nuevas respuestas."
+msgstr "Ésta solicitud es tuya, así que te vamos a avisar automáticamente cuando lleguen respuestas."
 
 # Statuses
 
@@ -138,16 +138,16 @@ msgid "internal_review"
 msgstr "En revisión interna"
 
 msgid "requires_admin"
-msgstr "Requiere intervención de administración"
+msgstr "Requiere intervención del administrador"
 
 msgid "not_held"
-msgstr "No celebrada"
+msgstr "No tienen la información"
 
 msgid "waiting_response"
 msgstr "Esperando respuesta"
 
 msgid "waiting_clarification"
-msgstr "Esperando clarificación"
+msgstr "Esperando aclaración"
 
 msgid "error_message"
 msgstr "Mensaje de Error"
@@ -159,7 +159,7 @@ msgid "unsatisfactory_response"
 msgstr "Respuesta instatisfactoria"
 
 msgid "gone_postal"
-msgstr "Postal"
+msgstr "Respondida por correo ordinario o personalmente"
 
 msgid "user_withdrawn"
 msgstr "Retirada por el usuario"
