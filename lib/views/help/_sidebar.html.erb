@@ -40,14 +40,19 @@
     </div>
 
     <div class="item">
-      <h4><%= link_to_unless_current _("Tu privacidad"), help_privacy_path %></h4>
-      <h5>
-        <%= link_to_unless_current _("Información para instituciones"), help_officers_path %>
-      </h5>
+      <h4>
+        <%= link_to_unless_current _("Información para organismos públicos"), help_officers_path %>
+      </h4>
       <ul>
-        <li><%= link_to _("¿Qué es quesabes.org?"), help_officers_path(:anchor => 'what') %></li>
-        <li><%= link_to _("Proceso de las solicitudes"), help_officers_path(:anchor => 'processing_requests') %></li>
-        <li><%= link_to _("Privacidad"), help_officers_path(:anchor => 'privacy_issues') %></li>
+        <li><%= link_to _("¿Por qué se publican las respuestas a las solicitudes de información?"), help_officers_path(:anchor => '1') %></li>
+        <li><%= link_to _("¿Las personas que realizan solicitudes son reales?"), help_officers_path(:anchor => '2') %></li>
+        <li><%= link_to _("¡Me están mandando demasiadas solicitudes!"), help_officers_path(:anchor => '3') %></li>
+        <li><%= link_to _("¡Veo una solicitud a mi organismo en ¿Qué Sabés? pero nunca nos llegó!"), help_officers_path(:anchor => 'spam_problems') %></li>
+        <li><%= link_to _("¿Cómo calculan la fecha límite que aparece en la página de peticiones?"), help_officers_path(:anchor => 'days') %></li>
+        <li><%= link_to _("¿Cómo respondo a la solicitud?"), help_officers_path(:anchor => '6') %></li>
+        <li><%= link_to _("¿Cómo puedo enviar un archivo grande que no puede ir por email?"), help_officers_path(:anchor => '7') %></li>
+        <li><%= link_to _("¿Cómo le hago saber a quien solicita información que debe pasar por la oficina a retirar las copias? ¿ Que pasa si no puedo enviarlos en formato digital?"), help_officers_path(:anchor => '8') %></li>
+        <li><%= link_to _("¿Publican las direcciones de correo o teléfonos?"), help_officers_path(:anchor => 'mobiles') %></li>
       </ul>
     </div>
 
