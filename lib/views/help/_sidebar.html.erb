@@ -15,19 +15,27 @@
 
     <div class="item">
       <h4>
-        <%= link_to_unless_current _("¿Cómo nos puedes ayudar?"), help_help_out_path %>
+        <%= link_to_unless_current _("Preguntas frecuentes"), help_requesting_path %>
       </h4>
 
-      <h5>
-        <%= link_to_unless_current _("Guía para solicitantes"), help_requesting_path %>
-      </h5>
       <ul>
-        <li><%= link_to _("Solicitar información"), help_requesting_path(:anchor => 'making_requests') %></li>
-        <li><%= link_to _("Localizar la institución adecuada"), help_requesting_path(:anchor => 'finding_bodies') %></li>
-        <li><%= link_to _("Idiomas"), help_requesting_path(:anchor => 'languages') %></li>
-        <li><%= link_to _("Consejos sobre las solicitudes"), help_requesting_path(:anchor => 'tips') %></li>
-        <li><%= link_to _("Respuestas y apelaciones"), help_requesting_path(:anchor => 'answers_appeals') %></li>
-        <li><%= link_to _("Moderación de las solicitudes"), help_requesting_path(:anchor => 'request_moderation') %></li>
+        <li><%= link_to _("¿Tengo derecho a hacer un pedido de información?"), help_requesting_path(:anchor => '1') %></li>
+        <li><%= link_to _("¿A quién puedo hacer un pedido?"), help_requesting_path(:anchor => 'missing_body') %></li>
+        <li><%= link_to _("¿Qué información puedo pedir?"), help_requesting_path(:anchor => '3') %></li>
+        <li><%= link_to _("¿Me pueden negar información?"), help_requesting_path(:anchor => '4') %></li>
+        <li><%= link_to _("¿Qué puedo hacer si me niegan información o no recibo respuesta?"), help_requesting_path(:anchor => '5') %></li>
+        <li><%= link_to _("¿Cuánto tarda y qué debo esperar de la respuesta?"), help_requesting_path(:anchor => 'quickly_response') %></li>
+        <li><%= link_to _("¿Qué tiene que tener una buena solicitud?"), help_requesting_path(:anchor => 'focused') %></li>
+        <li><%= link_to _("¿Qué pasa si no sé a qué organismo dirigirme?"), help_requesting_path(:anchor => '8') %></li>
+        <li><%= link_to _("¿Puedo enviar la misma solicitud a distintos lugares?"), help_requesting_path(:anchor => '9') %></li>
+        <li><%= link_to _("¿Puedo pedir información sobre mí mismo?"), help_requesting_path(:anchor => 'data_protection') %></li>
+        <li><%= link_to _("¿Tengo que pagar por solicitar información?"), help_requesting_path(:anchor => '11') %></li>
+        <li><%= link_to _("¿Puedo reutilizar la información recibida?"), help_requesting_path(:anchor => '12') %></li>
+        <li><%= link_to _("¿Quién puede ver mis datos personales?"), help_requesting_path(:anchor => '13') %></li>
+        <li><%= link_to _("¿Me van a mandar spam?"), help_requesting_path(:anchor => '14') %></li>
+        <li><%= link_to _("¿Puedo solicitar información usando un seudónimo?"), help_requesting_path(:anchor => '15') %></li>
+        <li><%= link_to _("¿Pueden eliminar mi solicitud o modificar mi nombre?"), help_requesting_path(:anchor => '16') %></li>
+        <li><%= link_to _("¿Pueden eliminar información privada relativa a mi persona?"), help_requesting_path(:anchor => '17') %></li>
       </ul>
     </div>
 

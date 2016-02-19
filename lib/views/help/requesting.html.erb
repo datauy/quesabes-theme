@@ -1,174 +1,82 @@
-﻿<% @title = "Guía para solicitantes" %>
+﻿<% @title = "Preguntas frecuentes" %>
 
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip">
-    <h1>Guía para solicitantes</h1>
-    <p>En esta sección te explicamos cómo pedir información a las instituciones públicas uruguayas. Parte de este texto esta basado en la <a href="/quesabes-theme/docs/leyguia-para-periodistas.pdf">guia de acceso a la información para periodistas</a> elaborada por <a href="http://www.cainfo.org.uy" target="_blank">CAINFO</a> y el <a href="http://www.bancomundial.org" target="_blank">Banco Mundial</a> y la guia de <a href="https://twitter.com/tuderechoasaber" target="_blank">tuderechoasaber.es</a>.</p>
+    <h1>Preguntas frecuentes</h1>
 
-    <h3><a href="#making_requests">Como pedir información</a></h3>
-    <h3><a href="#finding_bodies">Localizar la institución pública adecuada</a></h3>
-    <h3><a href="#tips">Consejos sobre las solicitudes</a></h3>
-    <h3><a href="#answers_appeals">Respuestas y apelaciones</a></h3>
-    <h3><a href="#request_moderation">Moderación de las solicitudes</a></h3>
+    <h2 id="1">¿Tengo derecho a hacer un pedido de información?</h2>
+    <p>Claro que sí. De acuerdo al artículo 3 de la <a href="http://www.impo.com.uy/informacionpublica">Ley 18.381</a>, cualquier persona uruguaya o extranjera, tiene derecho a pedir información en manos del Estado. Asimismo, el solicitante no necesita justificar las razones por las cuales solicita la información, o especificar su ocupación.</p>
 
-    <h1 id="making_requests">Como pedir información</h1>
+    <h2 id="missing_body">¿A quién puedo hacer un pedido?</h2>
+    <p>A todos los organismos públicos, sean o no estatales, de la administración pública uruguaya (que incluye los 3 poderes del Estado: Ejecutivo, Legislativo y Judicial) así como organismos paraestatales (Cajas de Jubilaciones, Personas públicas no estatales), Tribunal de Cuentas, Corte Electoral y Tribunal de lo Contencioso Administrativo. Puede ocurrir que ¿Qué Sabés? no tenga algunos contactos o nos falte alguna institución. En este caso, por favor, avísanos e intentaremos encontrarla lo antes posible. <%= link_to 'Click aquí para ver la lista completa de instituciones', list_public_bodies_default_path %></p>
 
-    <h2 id="1">1. ¿Tengo derecho a hacer un pedido de información al estado uruguayo?</h2>
+    <h2 id="3">¿Qué información puedo pedir?</h2>
+    <p>Cualquier información -sin importar su formato- que esté en manos de los organismos públicos puede ser pedida, con la excepción de los límites expresados en la ley.</p>
 
-    <p> De acuerdo con el articulo 3 de la <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18381">ley 18381</a>, cualquier persona, sea uruguaya o extranjera, tiene derecho a pedir información en manos del Estado uruguayo. Asimismo, el solicitante no necesita justificar las razones por las cuales solicita la información, o especificar su ocupación.</a>
+    <h2 id="4">¿Me pueden negar información?</h2>
+    <p>Si, en algunos casos. Para negarte la información la autoridad competente debe darte una razón fundada (o sea una explicación que te indique la razón por la cuál se te niega la información y en base a que norma jurídica) . La autoridad competente puede negarte la información básicamente por tres motivos: la misma no existe o no está dentro de sus competencias producirla, la información es reservada, o la información es confidencial</p>
+    <p>El artículo 14 de la ley establece que los organismos no están obligados a producir información que no tienen o que se encuentra fuera de los deberes del organismo hacerlo. Como contrapartida se espera que si la producción de la información requerida estuviera dentro de su competencia, y no la hubieran producido, deberían hacerlo.</p>
+    <p>La clasificación de la información reservada debe realizarse en el momento que se genere, obtenga o modifique, mediante resolución debidamente fundada y motivada, demostrando la existencia de elementos objetivos que determinen que la divulgación genera un riesgo de daño al interés público, de acuerdo con las excepciones referidas en el artículo 9 de la Ley 18.381.</p>
+    <p>Excepcionalmente, la información puede clasificarse como reservada en el momento en que se reciba una solicitud de acceso a la misma. En este caso, la resolución deberá remitirse en el plazo de cinco días hábiles a la Unidad de Acceso a la Información Pública, la que solicitará al sujeto obligado su desclasificación si la misma no se ajustase a lo dispuesto.</p>
+    <p>Únicamente podrá clasificarse como reservada la información cuya difusión pueda:</p>
+    <ol type="A">
+      <li>Comprometer la seguridad pública o la defensa nacional.</li>
+      <li>Menoscabar la conducción de las negociaciones o bien, de las relaciones internacionales, incluida aquella información que otros estados u organismos internacionales entreguen con carácter de reservado al Estado uruguayo.</li>
+      <li>Dañar la estabilidad financiera, económica o monetaria del país.</li>
+      <li>Poner en riesgo la vida, la dignidad humana, la seguridad o la salud de cualquier persona.</li>
+      <li>Suponer una pérdida de ventajas competitivas para el sujeto obligado o pueda dañar su proceso de producción.</li>
+      <li>Desproteger descubrimientos científicos, tecnológicos o culturales desarrollados o en poder de los sujetos obligados.</li>
+      <li>Afectar la provisión libre y franca de asesoramientos, opiniones o recomendaciones que formen parte del proceso deliberativo de los sujetos obligados hasta que sea adoptada la decisión respectiva, la cual deberá estar documentada.</li>
+    </ol>
+    <p>La ley establece también la categoría de información confidencial cuando se refiere al patrimonio de una persona física o jurídica o se encuentra cubierta por una cláusula de confidencialidad.</p>
+    <p>Es importante señalar que no basta con que el organismo respectivo debe explicar de forma clara como llegó a la conclusión de que información tiene carácter reservado o confidencial.</p>
 
-    <h2 id="2">2. ¿Qué información puedo pedir?</h2>
-    <p>Toda información, sin importar su formato, que esté en manos de los organismos públicos, puede ser pedida, por medio de una solicitud de información, con la única excepción de los límites expresados en la ley.</p>
+    <h2 id="5">¿Qué puedo hacer si me niegan información o no recibo respuesta?</h2>
+    <p>El sistema te va a notificar si los plazos se vencen y en ese caso o si el solicitante no está de acuerdo con los motivos que se aducen para una denegatoria, tiene dos opciones; acudir a la <a href="http://www.uaip.gub.uy/">Unidad de Acceso a la Información Pública</a> y/o entablar una acción judicial que se realiza frente a los Juzgados Letrados de Primera Instancia en lo Contencioso Administrativo (si se tratase de organismos públicos estatales), a los Juzgados Letrados de Primera Instancia en lo Civil (si se tratase de un organismo no estatal en la Capital) o los Juzgados de Primera Instancia a los que se haya asignado competencia en la materia, si se encontrase en el Interior del país.</p>
 
-    <h2 id="3">3. ¿Qué tipo de información puede ser negada por parte del Estado?</h2>
-    <p>Toda información a la que no se pueda acceder, deberá ser aquella, que al ser
-    publicada, pueda:
+    <h2 id="quickly_response">¿Cuánto tarda y qué debo esperar de la respuesta?</h2>
+    <p>La respuesta tiene un plazo máximo de 20 días hábiles y el organismo puede pedir una prórroga de otros 20 días hábiles, sólo por una razón fundada (razones excepcionales). Cumplido el plazo, el organismo deberá entregar la información al solicitante, o una respuesta especificando los motivos por los cuales se niega el acceso y deberá estar firmada por la autoridad máxima del organismo que niega el acceso. Si el plazo se ha cumplido y el organismo no ha emitido una respuesta al respecto, el solicitante podrá acceder a la información, considerándose que el organismo se encuentra en falta si no hace entrega de dicha información. Esto se conoce como "silencio positivo".</p>
+
+    <h2 id="focused">¿Qué tiene que tener una buena solicitud?</h2>
+    <p id="moderation">La plantilla de pedidos te va a guiar en los datos que se deben ingresar, pero más allá de eso hay varios consejos que se pueden seguir para mejorar las chances de recibir la información deseada en el menor plazo posible.</p>
     <ul>
-      <li>Comprometer la seguridad publica o la defensa nacional;</li>
-      <li>Menoscabar la conducción de las negociaciones o bien, de las relaciones internacionales;</li>
-      <li>Dañar la estabilidad financiera, económica o monetaria del país;</li>
-      <li> Poner en riesgo la vida, la dignidad humana, la seguridad o la salud de cualquier persona;</li>
-      <li>Suponer una pérdida de ventajas competitivas para el sujeto obligado o pueda dañar el proceso de producción; y/o</li>
-      <li>Desproteger descubrimientos científicos, tecnológicos o culturales desarrollado o en poder de los sujetos obligados. Asimismo, tampoco podrá accederse a aquella información que haya sido entregada a los sujetos obligados en carácter confidencial, y/o los datos personales que requieran consentimiento antes de ser entregados. De todos modos, si se producen discrepancias entre el órgano de la administración, a quien ha sido solicitada la información, y el solicitante acerca del encuadre de dicha información en alguno de los criterios mencionados, se pueden recurrir a los mecanismos que establece la ley para <a href="/es/help/requesting#5">apelar esta decisión</a>.</li>
-     </ul>
-    </p>
-
-    <h2 id="4">4. ¿A quién puedo dirigirme?</h2>
-    <p>Todos los organismos públicos, sean o no estatales, de la administración pública uruguaya (que incluye los 3 poderes del Estado: Ejecutivo, Legislativo y Judicial), tienen la obligación de brindar acceso a la información que obra en su poder, a toda persona que así lo solicite.</p>
-    <p>Seguimos construyendo quesabes.org, por lo que puede ocurrir que aún no tengamos algunos contactos o nos falte alguna institución. En este caso, por favor, avísanos e intentaremos encontrarla lo antes posible. Por otra parte, si puedes darnos la información sería estupendo. Así podríamos incluirla rápidamente en la web y otras personas se beneficiarán de tu aporte.</p>
-
-    <p><%= link_to 'Click aquí para ver la lista completa de instituciones', list_public_bodies_default_path %>.</p>
-
-    <h2 id="5">5. ¿Por qué debería solicitar información a las instituciones uruguayas?</h2>
-
-    <p>El derecho de acceso a la información pública es una herramienta clave para el ejercicio y protección de otros derechos humanos fundamentales. Al tener acceso a información producida por el gobierno (sobre planes sociales, prestaciones de servicios públicos, etc.), los ciudadanos pueden conocer acerca de su accionar y, de esa manera, interiorizarse acerca de las políticas que pueden llegar a repercutir en su cotidianeidad, para luego tomar las medidas necesarias al respecto.</p>
-    <p>En una democracia sana, los ciudadanos deben poder saber lo que hacen sus gobiernos.</p>
-    <p><strong>Para poder participar en la actividad pública:</strong> Para poder votar a nuestros representantes, necesitamos poder tener toda la información sobre quién toma las decisiones y en qué criterios se basan.</p>
-    <p><strong>Para exigir mayor transparencia:</strong> Debemos demandar más transparencia. <strong>La mejor manera de exigir nuestro derecho es ejercerlo.</strong></p>
-    <p><strong>Para prevenir los casos de corrupción:</strong> El derecho de acceso a la información tiene un efecto disuasorio y preventivo. La posibilidad de poder solicitar cualquier información relacionada con la actividad pública hace que haya menos tentación de cometer actos corruptos, e incluso mejora y hace más eficiente el trabajo de las instituciones públicas.</p>
-
-    <h2 id="6">6. ¿Qué hacer ante una denegatoria?</h2>
-    <p>Si el organismo, al que se le ha solicitado la entrega de información en su poder, se niega a entregarla y el solicitante no concuerda con los motivos que se aducen para dicha denegatoria, el solicitante tiene dos opciones:
-    - podrá acudir a la <a href="http://www.uaip.gub.uy" target="_blank">unidad de acceso a la información pública</a>.
-    - podrá entablar una acción judicial para que se garantice su derecho de acceder a la información pública la cual se realiza frente a los:
-        - Los Juzgados Letrados de Primera Instancia en lo Contencioso Administrativo (si se tratase de organismos públicos estatales) o a los Juzgados Letrados de Primera Instancia en lo Civil (si se tratase de un organismo no estatal), si se encontrase en la Capital.
-        - Los Juzgados de Primera Instancia a los que se haya asignado competencia en la materia, si se encontrase en el Interior del país.<p>
-
-    <h2 id="7">7. ¿Qué características debe presentar la respuesta?</h2>
-    <p>La respuesta deberá ser otorgada al solicitante en un plazo máximo de 20 días hábiles. El organismo público puede pedir una prórroga de otros 20 días hábiles, sólo por una razón fundada (razones excepcionales).
-    Cumplido el plazo, el organismo deberá entregar la información al solicitante, o una respuesta especificando los motivos por los cuales se niega el acceso. Esta denegatoria deberá estar fundada en alguno de los criterios que se especifican en la <a href="http://www0.parlamento.gub.uy/leyes/AccesoTextoLey.asp?Ley=18381#8">ley 18381, articulos 8 y 9</a>; asimismo, deberá estar firmada por la autoridad máxima del organismo que niega el acceso.
-    Si el plazo se ha cumplido y el organismo no ha emitido una respuesta al respecto, el solicitante podrá acceder a la información, considerándose que el organismo se encuentra en falta si no hace entrega de dicha información.
-    </p>
-
-    <h2 id="8">8. Qué características debe poseer el pedido?</h2>
-    <p>Para realizar un pedido de información, el solicitante no necesita patrimonio letrado, ni ninguna otra formalidad. Sugerimos que en el formulario de pedidos de quesabes.org indiques:
-    -        la identidad del solicitante, junto con su domicilio y sus datos de contacto;
-    -        la descripción de la información que se solicita en la forma mas detallada posible para facilitar su localización; y
-    -        el soporte en el cual se prefiere obtener la información.
-
-    Al ser el acceso a la información un procedimiento gratuito, el solicitante no deberá abonar ningún tipo de arancel.
-    </p>
-
-    <p></p>
-
-    <h1 id="finding_bodies">Localizar la institución pública adecuada</h1>
-
-    <h2 id="9">9. ¿Qué pasa si no sé a qué organismo tengo que dirigirme?</h2>
-    <p>Si tienes una pregunta pero no estás seguro del organismo público al que tienes que dirigirte para solicitar la información que necesitas, prueba lo siguiente:</p>
-    <ul>
-        <li>Consulta o busca en quesabes.org solicitudes similares a la tuya.</li>
-        <li>Lee la descripción de cada organismo público para informarte de lo que hacen.</li>
-        <li>Cuando hayas encontrado el organismo que, en tu opinión, posee la información deseada, usa el enlace de la “página principal” para consultar su sitio web.</li>
-        <li>En el caso de que no hayas acudido al organismo correcto, puedes preguntarle dónde deberías enviar tu solicitud. Si lo saben, deberían informarte de ello.</li>
-        <li>Si todavía tienes dudas, por favor <a href="<%= help_contact_url %>">pónte en contacto con nosotros</a> para que podamos ayudarte.</li>
+      <li>Ser lo más claro, conciso y explícito posible en qué se busca. Mientras que algo como "Gasto en tal o cual cosa" puede ser interpretado de diversas formas, "Presupuesto de obras de tal o cual cosa de 2010 a 2012" es mucho más claro. Identificación precisa, márgenes de tiempo, profundidad de la información deseada o granularidad de la misma son especificaciones que se recomiendan incluir.</li>
+      <li>También se puede solicitar el formato en el que se desea la información, aunque quizás no siempre sea posible obtenerlo. Por ejemplo, solicitando “ubicaciones de las oficinas” puede que me envien un listado, mientras que “archivo digital con la ubicación de las oficinas con sus coordenadas en formato GeoJSON” es quizás mucho más útil si lo que pretendo es usar la información para la web o una aplicación.</li>
+      <li>No incluyas argumentos basados en temas personales, declaraciones difamatorias u ofensivas. Podemos vernos obligados a rechazar tu pedido en esos casos.</li>
+      <li>Recuerda que del otro lado del correo hay un ser humano que lo recibe y en general palabras tales como por favor y gracias pueden ser de muy poderosas.</li>
     </ul>
 
-    <h1 id="tips">Consejos sobre las solicitudes</h1>
+    <h2 id="8">¿Qué pasa si no sé a qué organismo dirigirme?</h2>
+    <p>El primer paso es buscar solicitudes similares a la tuya y leer la descripción y/o página web de los organismos para informarte de lo que hacen. En el caso de que no hayas acudido al organismo correcto, podrías preguntarle dónde deberías enviar tu solicitud.</p>
 
-    <h2 id="focused">10. ¿Qué constituye una buena solicitud?</h2>
-    <p>Por favor, incluye en tu solicitud la información necesaria para identificar fácilmente la información que estás pidiendo.</p>
-    <p>Los mensajes cortos y concisos hacen que sea más fácil para los servidores públicos identificar la información que pides, lo que significa que recibirás una respuesta más rápidamente.</p>
-    <p>Además, una petición bien formulada da menos razones a los servidores públicos para rechazarla por considerarla vaga o poco precisa. Sin embargo, no te preocupes por hacerla perfecta: en principio, en caso de que tu solicitud no sea clara, la institución a la que la envíes debería ponerse en contacto contigo para aclararla.</p>
-    <p>Por favor, no incluyas:</p>
-    <ul>
-        <li>Argumentos basados en un tema o causa de tipo personal;</li>
-        <li>Declaraciones que puedan difamar o insultar a terceras personas;</li>
-        <li>Lenguaje ofensivo.</li>
-    </ul>
-    <p>En caso contrario, nos veremos obligados a rechazar tu petición. Si fuera así, te lo haríamos saber y estaríamos siempre dispuestos a discutir caso por caso.</p>
+    <h2 id="9">¿Puedo enviar la misma solicitud a distintos lugares?</h2>
+    <p>Si, pero es recomendable empezar por la institución que tenga más posibilidades de tener la información que necesitas. Si esa institución no cuenta con todos los datos, podés preguntar a quién deberías enviar tu solicitud. Actualmente no existe un sistema automático para enviar peticiones al múltiples organismos, tenés que copiarlo y pegarlo a mano. En algunos casos los organismos transfieren los pedidos al organismo competente, aunque esto no es muy usual.</p>
 
-    <h2 id="data_protection">11. ¿Puedo pedir información sobre mí mismo?</h2>
-    <p>No utilices quesabes.org para acceder a tu propia información personal. Si quieres información sobre ti mismo, utiliza preferiblemente las normas de Protección de Datos. <a href="http://www.datospersonales.gub.uy" target="_blank">Haz clic aquí para más información.</a></p>
+    <h2 id="data_protection">¿Puedo pedir información sobre mí mismo?</h2>
+    <p>No uses ¿Qué Sabés? para acceder a tu información personal porque todos los pedidos de la plataforma quedan públicos y ésto podría vulnerar tu privacidad. Si buscás información sobre tí mismo, recomendamos los mecanismos previstos por la Ley de de Protección de Datos Personales. <a href="http://www.datospersonales.gub.uy/">Hacé clic aquí para más información.</a></p>
 
-    <h2>12. ¿Puedo enviar la misma solicitud a distintos órganos?</h2>
-    <p>Puedes pedir la misma información a más de una institución, si bien es mejor empezar por la institución que tenga más posibilidades de tener la información que necesitas.</p>
-    <p>Si esa institución no cuenta con todos los documentos relevantes, puedes preguntar a quién deberías enviar tu solicitud.</p>
-    <p>Actualmente no existe un sistema automático para enviar las peticiones al resto de autoridades, tendrás que copiarlo y pegarlo a mano.</p>
+    <h2 id="11">¿Tengo que pagar por solicitar información?</h2>
+    <p>No, solicitar información en Uruguay es gratuito. El interesado puede llegar a tener que pagar el costo del soporte de la información (el medio que puede ser electrónico o papel, por ejemplo) Es recomendable indicar siempre en qué formato se prefiere recibir la información. En el caso en que se quiera recibir información impresa, la institución puede cobrar una tasa por realizar las copias, equivalente al precio real de la copia y sin suponer un lucro.</p>
 
-    <h1 id="answers_appeals">Respuestas y apelaciones</h1>
+    <h2 id="12">¿Puedo reutilizar la información recibida?</h2>
+    <p>En general, la información en manos del estado es pública y libre en su utilización, aunque existen normas que regulan la reutilización de la información del sector público si pediste un gran volumen de información o una base de datos. En caso de duda, especialmente si tenés pensado utilizar el material para propósitos comerciales, preguntá al organismo al que has solicitado la información.</p>
 
-    <h2>13. ¿Tendré que pagar por solicitar información?</h2>
-    <p>Solicitar información en Uruguay es gratuito.</p>
-    <p>Recibir información en formato electrónico es gratuito. Es recomendable indicar que en qué formato se prefiere recibir la información.</p>
-    <p>En el caso en que se quiera recibir información impresa, la institución puede cobrar una tasa por realizar estas copias, estas tasas no deberían equivaler únicamente al precio real de la copia y no debería suponer un lucro para la institución.</p>
+    <h2 id="13">¿Quién puede ver mis datos personales?</h2>
+    <p>Sólo tu nombre de usuario será público, a menos que proporciones otra información en la propia solicitud. En el caso de que un funcionario necesite hablar contigo por teléfono para aclarar la solicitud, te recomendamos que le mandes tu número directamente, no a través de esta página web.</p>
+    <p>Tu dirección de correo electrónico no será publicada, ni tu dirección postal o tu nombre real, salvo que estemos obligados por ley o que nos lo pidas específicamente. Sí es visible para otros usuarios si les enviás un mensaje pero te lo recordaremos antes de que lo envíes.</p>
 
-    <h2 id="quickly_response">13. ¿Cuándo obtendré una respuesta?</h2>
-    <p>Según la legislación vigente, en general, las instituciones uruguayas tienen hasta <strong>20 días habiles</strong> para contestar a las solicitudes de información.</p>
-    <p>En quesabes.org te avisaremos cuando hayan pasado 20 días, para que si quieres reclames tu información. Puedes llamar a la institución a la que realizaste la solicitud para preguntar en qué estado se encuentra tu petición.</p>
-    <p>No te preocupes por tener todo esto en la cabeza. El sistema también te avisará si pasa el plazo y no recibes respuesta.</p>
-    <p>Normalmente, al enviar tu solicitud, las instituciones deben darte algún tipo de recibo o e-mail de confirmación. Es recomendable exigir este tipo de documentos por si tuvieras que recurrir en un futuro.</p>
+    <h2 id="14">¿Me van a mandar spam?</h2>
+    <p>¡No! Ni vamos a compartir datos con nadie, salvo que estemos obligados por ley o que nos lo pidas. Te van a llegar exclusivamente correos relacionados con tu solicitud o asuntos por los que nos hayas contactado específicamente, como explicamos en nuestra <% link_to 'Política de Privacidad.', help_privacy_policy_path %></p>
 
-    <h2>15. ¿Puedo reutilizar la información recibida?</h2>
-    <p>En general, la información en manos de las instituciones públicas uruguayas es “pública” en el sentido de que han sido creadas con el dinero de los contribuyentes. Por lo tanto tendrías que ser libre de utilizar los documentos que recibes y la información que contienen.</p>
-    <p>Sin embargo, existen normas que regulan la reutilización de la información del sector público, pero esto solo te concierne si has solicitado un gran volumen de información o una base de datos.</p>
-    <p>En caso de duda, especialmente si tienes pensado utilizar el material para propósitos comerciales, pregunta al organismo al que has solicitado la información o ponte en contacto con nosotros.</p>
+    <h2 id="15">¿Puedo solicitar información usando un seudónimo?</h2>
+    <p>No, es necesario tu verdadero nombre cuando solicites acceso a la información. Si detectamos nombres ridículos o seudónimos demasiado obvios, eliminaremos la solicitud y nos pondremos en contacto contigo para buscar una solución. Te pedimos por favor que no te hagas pasar por otra persona.</p>
 
-    <h2>16. ¿Qué pasa si no recibo una respuesta?</h2>
-    <p>Si no recibes una respuesta a tiempo, quesabes.org te enviará un correo.
-    En principio el organismo obligado sólo podrá negarse a la entrega de la información a través de una resolución fundada, con indicación de la normativa que fundamenta la negativa del jerarca, en la que se establezca el carácter secreto, reservado o confidencial de la información solicitada. En caso de no responder en tiempo y forma, y de no haber mediado resolución de prórroga del plazo, el solicitante podrá tener acceso a la información que solicita.(fuente <a href="http://www.uaip.gub.uy/" target="_blank">Unidad de Acceso a la Informacion Publica</a>)
+    <h2 id="16">¿Pueden eliminar mi solicitud o modificar mi nombre?</h2>
+    <p>En general, no. ¿Qué Sabés? es un archivo público de solicitudes de acceso. Aunque la respuesta a tu consulta ya no te parezca de utilidad, puede resultar de interés a otras personas. Por eso no eliminamos solicitudes, <% link_to 'excepto en circunstancias excepcionales', help_privacy_policy_path(:anchor => 'takedown') %> relacionadas con información confidencial.</p>
 
-    <h2>17. ¿Qué pasa si recibo una respuesta que no me satisface?</h2>
-    <p>Hay cierto número de casos en los que puedes estar insatisfecho con la respuesta a tu solicitud:</p>
-    <ul>
-        <li>Sólo has recibido parte de la información que solicitaste (pero no un rechazo formal), o la información que te ha sido facilitada es irrelevante o no responde completamente a tu pregunta – puedes calificar tu respuesta como “respuesta incompleta”;</li>
-        <li>Te han dicho que la información “no está en poder” del organismo al que enviaste tu solicitud;</li>
-        <li>Te han denegado el acceso a la información o a los documentos que has solicitado (mira también el punto sobre excepciones);</li>
-        <li>No has recibido ninguna respuesta (“silencio administrativo”).</li>
-    </ul>
-    <p>Tendrás la posibilidad de “clasificar” tu respuesta según una lista de categorías (ver punto 18). Si no sabes cómo hacerlo te ayudaremos.</p>
-    <p>Si piensas que la respuesta es incorrecta, puedes contactar con la institución o interponer un recurso administrativo. Para más información sobre esto, <a href="#9">haz clic aquí</a>.</p>
-
-    <h2>18. Clasificación de las respuestas</h2>
-    <p>Las respuestas de las administraciones pueden ser muy diversas y según lo que nos contesten deberemos reaccionar de una u otra manera:</p>
-    <p>
-      <ul>
-        <li>Información recibida: La institución ha contestado a tiempo y con la información solicitada.</li>
-        <li>Información recibida parcialmente: La institución ha contestado a tiempo pero no con toda la información solicitada porque considera que una parte de esta información no debe ser pública.</li>
-        <li>No tiene la información: La institución contesta alegando que no tienen la información</li>
-        <li>Información incompleta: La institución ha contestado a tiempo pero no incluye toda la información solicitada.</li>
-        <li>Información inadecuada: La respuesta de la institución no corresponde a la información solicitada.</li>
-        <li>Silencio: Transcurrido el tiempo que tiene para contestar, la institución no ha contestado.</li>
-        <li>Esperando respuesta</li>
-        <li>Esperando una aclaración</li>
-        <li>Información denegada: la institución ha contestado denegando la información</li>
-        <li>Requiere revisión del administrador: Marca esta casilla si quieres que el administrador revise la pregunta o la respuesta de esta solicitud.</li>
-      </ul>
-    </p>
-    <p>En los casos en los que no quedemos satisfechos con la respuesta por falta de respuesta, por ser incompleta o inadecuada, recomendamos antes de plantear un recurso dirigirnos de nuevo a la institución que nos contesta para intentar recibir la información solicitada.</p>
-
-    <h1 id="request_moderation">Moderación de las solicitudes</h1>
-
-    <h2>19. ¿Cómo se moderan las solicitudes y los comentarios?</h2>
-    <p>Animamos a todo el mundo a realizar solicitudes y ofrecemos la posibilidad de que cualquier persona que esté registrada inserte comentarios en tus consultas.</p>
-    <p>Nuestro equipo consulta los contenidos con regularidad y nos reservamos el derecho de eliminar declaraciones poco apropiadas, como las de naturaleza ofensiva o potencialmente difamatoria. Si elimináramos alguno de tus comentarios, te lo haríamos saber para que podamos aclararlo y buscar una solución.</p>
-    <p>Del mismo modo, tú puedes denunciar contenidos inadecuados si los encuentras. Solo tiene que categorizar la solicitud como “Requiere revisión del administrador” y en seguida miraremos la solicitud, también puedes ponerte en contacto con nosotros y nos lo dejas saber.</p>
-
-    <h2>20. Soy periodista o investigador, ¿es posible mantener la confidencialidad de mi solicitud hasta la publicación de mi artículo?</h2>
-    <p>quesabes.org está diseñado para realizar solicitudes públicas. Todas las respuestas que recibimos se publican automáticamente en la web, para que todo el mundo las pueda consultar.</p>
-    <p>Si eres un periodista, una ONG, investigador o simplemente deseas mantener el carácter confidencial de tu consulta hasta que hayas escrito tu artículo o por otras razones, tienes que enviar la solicitud de acceso directamente a la institución que creas conveniente, pero no a través de este sitio web.</p>
-
-    <h2>21. He realizado solicitudes de las que he conseguido respuesta, ¿puedo compartirla en este sitio?</h2>
-    <p>Lamentamos decirte que no es posible. Quesabes.org archiva las solicitudes realizadas a través del sitio web pero no pretende ser un archivo de todas las solicitudes de información. No se permite cargar otras solicitudes en esta página puesto que no podemos verificar si las respuestas proceden efectivamente de una institución pública.</p>
-    <p>Si deseas hacer pública una respuesta, tienes que volver a realizar la solicitud a través de quesabes.org.</p>
+    <h2 id="17">¿Pueden eliminar información privada relativa a mi persona?</h2>
+    <p>Si encontrás información confidencial relacionada contigo que te gustaría que eliminemos, <% link_to 'avisanos lo antes posible', help_contact_path %>. Especificá exactamente de qué información se trata y dónde aparece. Aunque la información personal o confidencial no sea tuya, si detectás que hay un error te rogamos que nos lo hagas saber para poder subsanarlo.</p>
+    <p>Existe sin embargo interés público en retener los nombres de los funcionarios o trabajadores públicos. Solo los eliminaremos en circunstancias excepcionales, por ejemplo si revelar el nombre y el puesto desempeñado puede conllevar un riesgo para la seguridad de la persona. Si sos funcionario y querés que eliminemos tu nombre con urgencia por las razones mencionadas, <% link_to 'ponete en contacto con nosotros.', help_contact_path %></p>
+    <p>Asumimos que toda la información liberada por el estado es pública. Naturalmente entendemos pueden cometerse errores de buena fe y consideraremos caso a caso las circunstancias conforme a la normativa vigente en Uruguay.</p>
 </div>
