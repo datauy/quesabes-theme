@@ -57,15 +57,21 @@
     </div>
 
     <div class="item">
-      <h5><%= link_to_unless_current _("Basado en Alaveteli"), help_alaveteli_path %></h5>
-      <h5><%= link_to_unless_current _("API para programadores"), help_api_path %></h5>
-      <h5><%= link_to_unless_current _("Agradecimientos"), help_credits_path %></h5>
+      <h4>
+        <%= link_to_unless_current _("Información para desarrolladores"), help_api_path %>
+      </h4>
+      <ul>
+        <li><%= link_to _("API"), help_api_path(:anchor => '1') %></li>
+        <li><%= link_to _("Enlaces a nuevas solicitudes"), help_api_path(:anchor => '2') %></li>
+        <li><%= link_to _("Feeds RSS (en realidad, Atom)"), help_api_path(:anchor => '3') %></li>
+        <li><%= link_to _("Datos estructurados en JSON"), help_api_path(:anchor => '4') %></li>
+        <li><%= link_to _("Información sobre todos los organismos en ¿Qué Sabés?"), help_api_path(:anchor => '5') %></li>
+      </ul>
     </div>
 
     <div class="item">
-      <h4><%= _("Contáctanos") %></h4>
-      <p><%= _("Si tu pregunta no está resuelta aquí, o quieres hacernos llegar algún comentario sobre la web, ") %></p>
-        <%= link_to _('contáctanos'), help_contact_path %>.
+      <h4><%= _("Contactanos") %></h4>
+      <p><%= _("Si tu pregunta no está respondida acá o si querés hacernos llegar algún comentario, ") %><%= link_to _('contactanos'), help_contact_path %>.</p>
     </div>
   </aside>
 </div>
