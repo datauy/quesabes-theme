@@ -28,13 +28,13 @@
 
   <p>
     <small>Organismos como:</small><br>
-    Presidencia y Org. Asociados
+    Presidencia, Ministerios, Entes...
   </p>
 
 </div>
-<%= link_to( _("Comenzar ahora"), body_index_path, {class: "rounded big start-now-button"} )%>
+<%= link_to( _("Empezar ahora"), body_index_path, {class: "rounded big start-now-button"} )%>
 
-<%= link_to( _("Conoce más acerca de QuéSabés?"), help_about_path, {class: "slink"} )%>
+<%= link_to( _("Conocé más sobre ¿QuéSabés?"), help_about_path, {class: "slink"} )%>
 </div>
 </div>
 </div>
@@ -46,11 +46,11 @@
     <div class="content">
       <%= form_tag({:controller => "request", :action => "list"}, {:id => "navigation_search_form"}) do %>
       <div class="input rounded">
-        <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query", placeholder: "Ejemplo: Salario anual del Presidente de la República" } %>
-        <input class="submit" type="submit" value="Buscar pedido">
+        <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query", placeholder: "Ejemplo: Estadísticas de sinistralidad en rutas en 2015" } %>
+        <input class="submit" type="submit" value="Buscar pedidos">
         <% end %>
       </div>
-      <p>Comienza escribiendo el nombre del ente público del cual precisas información. Por ley, tienen que responderte. <a href="/help/requesting#making_requests#1">(¿Por qué?)</a>.</p>
+      <p>Empezá escribiendo el nombre del ente público del que querés información. Por leyc tienen que responderte. <a href="/help/requesting#making_requests#1">(¿Por qué?)</a>.</p>
     </div>
   </div>
 
@@ -60,7 +60,7 @@
         <section>
           <div class="headline">
             <h2><%= _("Novedades") %></h2>
-            <a href="<%= blog_url %>" class="link">Mas novedades</a>
+            <a href="<%= blog_url %>" class="link">Más novedades</a>
           </div>
           <% position = 0
              for item in @blog_items[0..3]
