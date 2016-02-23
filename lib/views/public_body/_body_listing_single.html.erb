@@ -18,9 +18,6 @@
       highlight_words(public_body.short_name, @highlight_words)) %>
     </h5>
     <% end %>
-    <% if !public_body.notes_without_html.empty? %>
-      <%= highlight_and_excerpt(public_body.notes_without_html, @highlight_words, 150) %>
-    <% end %>
   <% end %>
 
   <p>
