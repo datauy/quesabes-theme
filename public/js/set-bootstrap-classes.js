@@ -22,4 +22,7 @@ $(function (){
   $('#sign_together #user_signup_password').addClass('form-control');
   $('#sign_together #user_signup_password_confirmation').addClass('form-control');
   $('#sign_together input[type=submit]').removeClass('btn-default').addClass('btn btn-success');
+  $('input#contact_subject').addClass('form-control');
+  $('textarea#contact_message').addClass('form-control');
+  $('input#submitted_contact_form+input[type=submit]').removeClass('btn-default').addClass('btn btn-success');
 });
