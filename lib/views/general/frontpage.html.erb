@@ -46,11 +46,11 @@
     <div class="content">
       <%= form_tag({:controller => "request", :action => "list"}, {:id => "navigation_search_form"}) do %>
       <div class="input rounded">
-        <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query", placeholder: "Ejemplo: Estadísticas de sinistralidad en rutas en 2015" } %>
+        <%= text_field_tag 'query', params[:query], { :size => 40, :id => "navigation_search_query", placeholder: "Ejemplo: Estadísticas de siniestralidad en rutas en 2015" } %>
         <input class="submit" type="submit" value="Buscar pedidos">
         <% end %>
       </div>
-      <p>Empezá escribiendo el nombre del ente público del que querés información. Por leyc tienen que responderte. <a href="/help/requesting#making_requests#1">(¿Por qué?)</a>.</p>
+      <p>Empezá escribiendo el nombre del ente público del que querés información. Por ley tienen que responderte. <a href="/help/requesting#making_requests#1">(¿Por qué?)</a>.</p>
     </div>
   </div>
 
